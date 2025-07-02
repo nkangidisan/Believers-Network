@@ -7,12 +7,11 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen w-full">
       <Image
-        src="https://placehold.co/1920x1080"
+        src="/hero-bg.jpg"
         alt="A diverse group of youth in a moment of worship and prayer"
         layout="fill"
         objectFit="cover"
         className="brightness-50"
-        data-ai-hint="youth prayer outreach"
         priority
       />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
@@ -41,7 +40,7 @@ export default function HeroSection() {
             size="lg"
             className="font-bold text-base animate-glow shadow-primary group"
           >
-            <Link href="#what-we-do">
+            <Link href="/what-we-do">
               <Compass className="mr-2 h-5 w-5" />
               Explore What We Do
             </Link>
@@ -52,9 +51,9 @@ export default function HeroSection() {
             variant="outline"
             className="font-bold text-base bg-white/10 backdrop-blur-sm border-white/50 hover:bg-white/20 text-white"
           >
-            <Link href="#get-involved">
-              <Users className="mr-2 h-5 w-5" />
-              Join the Mission
+            <Link href="/who-we-are">
+              <User className="mr-2 h-5 w-5" />
+              Meet the Vision Bearer
               </Link>
           </Button>
           <Button
@@ -63,7 +62,7 @@ export default function HeroSection() {
             variant="default"
             className="font-bold text-base bg-gold hover:bg-gold/90 text-gold-foreground shadow-lg"
           >
-            <Link href="#donate">
+            <Link href="/donate">
               <Heart className="mr-2 h-5 w-5" />
               Donate Now
             </Link>

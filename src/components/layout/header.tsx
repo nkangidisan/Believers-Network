@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#what-we-do", label: "What We Do" },
-  { href: "#stories", label: "Stories of Impact" },
-  { href: "#get-involved", label: "Partner" },
-  { href: "#donate", label: "Donate" },
+  { href: "/", label: "Home" },
+  { href: "/what-we-do", label: "What We Do" },
+  { href: "/who-we-are", label: "Who We Are" },
+  { href: "/stories-of-impact", label: "Stories" },
+  { href: "/get-involved", label: "Get Involved" },
+  { href: "/donate", label: "Donate" },
 ];
 
 export default function Header() {
@@ -23,16 +24,21 @@ export default function Header() {
       setHasScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check scroll position on initial load
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
+  const isTransparent = !hasScrolled && isHomePage;
+
+
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${hasScrolled ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-b-transparent'}`}>
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isTransparent ? 'bg-transparent border-b-transparent' : 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'}`}>
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Church className={`h-7 w-7 transition-colors ${hasScrolled ? 'text-primary' : 'text-white'}`} />
-            <span className={`font-bold font-headline text-xl transition-colors ${hasScrolled ? 'text-foreground' : 'text-white'}`}>
+            <Church className={`h-7 w-7 transition-colors ${isTransparent ? 'text-white' : 'text-primary'}`} />
+            <span className={`font-bold font-headline text-xl transition-colors ${isTransparent ? 'text-white' : 'text-foreground'}`}>
               Believers' Network
             </span>
           </Link>
@@ -42,7 +48,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors uppercase tracking-wider ${hasScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-primary/80'}`}
+              className={`transition-colors uppercase tracking-wider ${isTransparent ? 'text-white hover:text-primary/80' : 'text-foreground hover:text-primary'}`}
             >
               {link.label}
             </Link>
@@ -54,7 +60,7 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className={`md:hidden transition-colors ${hasScrolled ? 'text-foreground' : 'text-white bg-white/10 border-white/20 hover:bg-white/20'}`}
+                className={`md:hidden transition-colors ${isTransparent ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
                 aria-label="Open navigation menu"
               >
                 <Menu className="h-5 w-5" />

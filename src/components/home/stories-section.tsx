@@ -6,22 +6,19 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    image: "https://placehold.co/600x400",
-    hint: "student testimony",
+    image: "/story-1.jpg",
     category: "Campus Revival",
     title: "From Doubt to Devotion: A Student's Story",
     excerpt: "See how a university student's life was turned around after an encounter with God at one of our campus events.",
   },
   {
-    image: "https://placehold.co/600x400",
-    hint: "community outreach",
+    image: "/story-2.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
     excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
   },
    {
-    image: "https://placehold.co/600x400",
-    hint: "mission trip",
+    image: "/story-3.jpg",
     category: "Missions",
     title: "A Life Changed on a Mission Trip",
     excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
@@ -49,13 +46,12 @@ export default function StoriesSection() {
                 width={600}
                 height={400}
                 className="w-full h-48 object-cover"
-                data-ai-hint={story.hint}
               />
               <CardContent className="p-6">
                 <p className="text-sm text-primary font-semibold mb-2">{story.category}</p>
                 <h3 className="font-headline text-xl font-bold mb-3">{story.title}</h3>
                 <p className="text-foreground/80 mb-4">{story.excerpt}</p>
-                <Link href="/stories" className="font-bold text-accent hover:underline">
+                <Link href="/stories-of-impact" className="font-bold text-accent hover:underline">
                   Read More <ArrowRight className="inline h-4 w-4" />
                 </Link>
               </CardContent>

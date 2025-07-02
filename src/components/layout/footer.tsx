@@ -64,10 +64,11 @@ export default function Footer() {
            <div className="space-y-4">
             <h3 className="text-lg font-semibold font-headline uppercase tracking-wider">Quick Links</h3>
              <ul className="space-y-2">
-                <li><Link href="#what-we-do" className="text-muted-foreground hover:text-primary">What We Do</Link></li>
-                <li><Link href="#who-we-are" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link href="#stories" className="text-muted-foreground hover:text-primary">Stories of Impact</Link></li>
-                <li><Link href="#donate" className="text-muted-foreground hover:text-primary">Donate</Link></li>
+                <li><Link href="/what-we-do" className="text-muted-foreground hover:text-primary">What We Do</Link></li>
+                <li><Link href="/who-we-are" className="text-muted-foreground hover:text-primary">About Us</Link></li>
+                <li><Link href="/stories-of-impact" className="text-muted-foreground hover:text-primary">Stories of Impact</Link></li>
+                <li><Link href="/get-involved" className="text-muted-foreground hover:text-primary">Get Involved</Link></li>
+                <li><Link href="/donate" className="text-muted-foreground hover:text-primary">Donate</Link></li>
              </ul>
           </div>
         </div>

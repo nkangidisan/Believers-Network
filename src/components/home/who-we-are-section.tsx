@@ -30,12 +30,11 @@ export default function WhoWeAreSection() {
           </div>
           <div className="order-1 lg:order-2">
             <Image
-              src="https://placehold.co/600x700"
+              src="/vision-bearer.jpg"
               alt="Portrait of the Vision Bearer, Iradukunda Pacifique"
               width={600}
               height={700}
               className="rounded-lg shadow-2xl object-cover w-full h-full"
-              data-ai-hint="portrait african man"
             />
           </div>
         </div>
