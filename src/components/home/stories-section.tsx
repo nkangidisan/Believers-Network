@@ -10,18 +10,21 @@ const stories = [
     category: "Campus Revival",
     title: "From Doubt to Devotion: A Student's Story",
     excerpt: "See how a university student's life was turned around after an encounter with God at one of our campus events.",
+    aiHint: "student praying"
   },
   {
     image: "/story-2.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
     excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
+    aiHint: "community help"
   },
    {
     image: "/story-3.jpg",
     category: "Missions",
     title: "A Life Changed on a Mission Trip",
     excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
+    aiHint: "mission trip"
   },
 ];
 
@@ -46,6 +49,7 @@ export default function StoriesSection() {
                 width={600}
                 height={400}
                 className="w-full h-48 object-cover"
+                data-ai-hint={story.aiHint}
               />
               <CardContent className="p-6">
                 <p className="text-sm text-primary font-semibold mb-2">{story.category}</p>

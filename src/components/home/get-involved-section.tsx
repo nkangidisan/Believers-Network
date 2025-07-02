@@ -9,13 +9,13 @@ const waysToHelp = [
     title: "Volunteer",
     description: "Use your gifts and skills to serve God and be a part of what He is doing through our network.",
     href: "/get-involved",
-    cta: "Find Opportunities"
+    cta: "Volunteer"
   },
   {
     icon: <School className="w-10 h-10 text-primary" />,
-    title: "Sponsor a School",
+    title: "Sponsor a Program",
     description: "Help us bring the gospel to an entire school by sponsoring an outreach program.",
-    href: "/get-involved",
+    href: "/sponsor-a-program",
     cta: "Sponsor Now"
   },
   {
@@ -56,6 +56,11 @@ export default function GetInvolvedSection() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="text-center mt-12">
+            <Button asChild size="lg">
+                <Link href="/get-involved">Get Involved Now</Link>
+            </Button>
         </div>
       </div>
     </section>

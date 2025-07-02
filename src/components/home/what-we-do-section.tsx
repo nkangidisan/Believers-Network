@@ -4,12 +4,12 @@ import { School, Zap, Users } from "lucide-react";
 const features = [
     {
         icon: <School className="w-12 h-12 text-accent" />,
-        title: "Spreading the Gospel in Schools",
+        title: "School Evangelism",
         description: "Bringing the light of the Gospel to students in schools and on campuses through dynamic outreach events."
     },
     {
         icon: <Zap className="w-12 h-12 text-accent" />,
-        title: "Connecting People to the Power of God",
+        title: "Connecting to the Power of God",
         description: "Building a strong foundation of faith through mentorship, biblical teaching, and spiritual growth programs."
     },
     {
@@ -21,7 +21,7 @@ const features = [
 
 export default function WhatWeDoSection() {
   return (
-    <section id="what-we-do" className="w-full py-20 md:py-28 bg-background">
+    <section id="what-we-do" className="w-full py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">

@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/who-we-are", label: "Who We Are" },
   { href: "/stories-of-impact", label: "Stories" },
   { href: "/get-involved", label: "Get Involved" },
-  { href: "/donate", label: "Donate" },
 ];
 
 export default function Header() {
@@ -48,13 +47,16 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors uppercase tracking-wider ${isTransparent ? 'text-white hover:text-primary/80' : 'text-foreground hover:text-primary'}`}
+              className={`transition-colors uppercase tracking-wider ${isTransparent ? 'text-white hover:text-primary' : 'text-foreground hover:text-primary'}`}
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-4">
+          <Button asChild className="hidden md:flex bg-gold hover:bg-gold/90 text-gold-foreground">
+              <Link href="/donate">Donate Now</Link>
+          </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
@@ -80,7 +82,7 @@ export default function Header() {
                     </Button>
                 </div>
                 <nav className="mt-8 flex flex-col gap-6">
-                  {navLinks.map((link) => (
+                  {[...navLinks, { href: "/donate", label: "Donate" }].map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}

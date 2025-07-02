@@ -23,7 +23,7 @@ export default function WhoWeAreSection() {
             </p>
             <Button asChild size="lg">
               <Link href="/who-we-are">
-                Read Our Story
+                Meet the Vision Bearer
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -35,6 +35,7 @@ export default function WhoWeAreSection() {
               width={600}
               height={700}
               className="rounded-lg shadow-2xl object-cover w-full h-full"
+              data-ai-hint="portrait man"
             />
           </div>
         </div>

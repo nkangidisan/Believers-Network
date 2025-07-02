@@ -1,19 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, User, Heart, Compass, Users } from "lucide-react";
+import { ArrowRight, User, Heart, Compass } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative h-screen w-full">
-      <Image
-        src="/hero-bg.jpg"
-        alt="A diverse group of youth in a moment of worship and prayer"
-        layout="fill"
-        objectFit="cover"
-        className="brightness-50"
-        priority
-      />
+    <section id="home" className="relative h-screen w-full flex items-center justify-center">
+      <div className="absolute inset-0">
+        <Image
+          src="/hero-bg.jpg"
+          alt="A diverse group of youth in a moment of worship and prayer"
+          layout="fill"
+          objectFit="cover"
+          className="brightness-50"
+          priority
+          data-ai-hint="worship youth"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
         <div className="max-w-4xl space-y-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h1 
@@ -38,7 +42,7 @@ export default function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="font-bold text-base animate-glow shadow-primary group"
+            className="font-bold text-base animate-glow shadow-primary group bg-primary/80 hover:bg-primary"
           >
             <Link href="/what-we-do">
               <Compass className="mr-2 h-5 w-5" />
@@ -51,9 +55,9 @@ export default function HeroSection() {
             variant="outline"
             className="font-bold text-base bg-white/10 backdrop-blur-sm border-white/50 hover:bg-white/20 text-white"
           >
-            <Link href="/who-we-are">
+            <Link href="/get-involved">
               <User className="mr-2 h-5 w-5" />
-              Meet the Vision Bearer
+              Join the Mission
               </Link>
           </Button>
           <Button
