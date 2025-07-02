@@ -75,7 +75,7 @@ export default function Donate() {
                         <p className="text-lg text-foreground/80">"Because of your support, we were able to provide Bibles to over 500 new believers at a recent high school outreach. Many of them had never owned a Bible before. Thank you for putting God's Word into their hands!"</p>
                         <cite className="block mt-2 font-semibold">- Outreach Team Lead</cite>
                     </div>
-                    <Image src="/seegiving.jpg" data-ai-hint="community help" alt="Giving Impact" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/seegiving1.jpg" data-ai-hint="community help" alt="Giving Impact" width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>

@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    image: "/community.jpg",
+    image: "/community1.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
     excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
@@ -22,7 +22,7 @@ const stories = [
     aiHint: "outreach missions"
   },
   {
-    image: "/missions.jpg",
+    image: "/mission1.jpg",
     category: "Missions",
     title: "Taking the Gospel to the Nations",
     excerpt: "See how our missions team is making a difference in unreached communities across the globe.",
