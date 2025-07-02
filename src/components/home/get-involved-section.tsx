@@ -1,9 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { HeartHandshake, Users, Plane } from "lucide-react";
+import { HandHeart, School, HeartHandshake } from "lucide-react";
 import Link from "next/link";
 
 const waysToHelp = [
+  {
+    icon: <HandHeart className="w-10 h-10 text-primary" />,
+    title: "Volunteer",
+    description: "Use your gifts and skills to serve God and be a part of what He is doing through our network.",
+    href: "/get-involved/volunteer",
+    cta: "Find Opportunities"
+  },
+  {
+    icon: <School className="w-10 h-10 text-primary" />,
+    title: "Sponsor a School",
+    description: "Help us bring the gospel to an entire school by sponsoring an outreach program.",
+    href: "/get-involved/sponsor",
+    cta: "Sponsor Now"
+  },
   {
     icon: <HeartHandshake className="w-10 h-10 text-primary" />,
     title: "Partner With Us",
@@ -11,20 +25,6 @@ const waysToHelp = [
     href: "/get-involved/partner",
     cta: "Become a Partner"
   },
-  {
-    icon: <Users className="w-10 h-10 text-primary" />,
-    title: "Volunteer",
-    description: "Use your gifts and skills to serve God and be a part of what He is doing through our network.",
-    href: "/get-involved/volunteer",
-    cta: "Find Opportunities"
-  },
-  {
-    icon: <Plane className="w-10 h-10 text-primary" />,
-    title: "Join a Mission",
-    description: "Experience the mission field firsthand by joining one of our short-term or long-term mission trips.",
-    href: "/get-involved/missions",
-    cta: "Explore Mission Trips"
-  }
 ];
 
 export default function GetInvolvedSection() {

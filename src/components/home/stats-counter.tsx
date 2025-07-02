@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Globe, Users, HeartHandshake, BookOpen } from "lucide-react";
+import { Globe, GraduationCap, HeartHandshake, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const stats = [
@@ -12,7 +12,7 @@ const stats = [
     suffix: "+",
   },
   {
-    icon: Users,
+    icon: GraduationCap,
     value: 200000,
     label: "Students Reached",
     suffix: "+",
@@ -20,13 +20,13 @@ const stats = [
   {
     icon: HeartHandshake,
     value: 20000,
-    label: "Souls Won to Christ",
+    label: "Lives Transformed",
     suffix: "+",
   },
   {
     icon: BookOpen,
     value: 1000000,
-    label: "Gospel Resources Distributed",
+    label: "Gospel Resources Shared",
     suffix: "+",
   },
 ];

@@ -1,20 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { BookOpenCheck, School, Handshake } from "lucide-react";
+import { School, Zap, Users } from "lucide-react";
 
 const features = [
     {
-        icon: <BookOpenCheck className="w-12 h-12 text-accent" />,
-        title: "Discipleship",
-        description: "Building a strong foundation of faith through mentorship, biblical teaching, and spiritual growth programs."
-    },
-    {
         icon: <School className="w-12 h-12 text-accent" />,
-        title: "School Evangelism",
+        title: "Spreading the Gospel in Schools",
         description: "Bringing the light of the Gospel to students in schools and on campuses through dynamic outreach events."
     },
     {
-        icon: <Handshake className="w-12 h-12 text-accent" />,
-        title: "Community Outreach",
+        icon: <Zap className="w-12 h-12 text-accent" />,
+        title: "Connecting People to the Power of God",
+        description: "Building a strong foundation of faith through mentorship, biblical teaching, and spiritual growth programs."
+    },
+    {
+        icon: <Users className="w-12 h-12 text-accent" />,
+        title: "Equipping a Global Generation",
         description: "Impacting communities with the love of Christ through practical service, missions, and partnerships."
     }
 ]

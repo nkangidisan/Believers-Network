@@ -14,11 +14,11 @@
     --primary-foreground: 222.2 84% 4.9%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 200 100% 94%; /* Desaturated Sky Blue */
+    --muted: 0 0% 98%; /* Light Grey */
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 145 58% 55%; /* Emerald Green */
+    --accent: 145 63% 49%; /* Emerald Green */
     --accent-foreground: 0 0% 100%;
-    --gold: 43 74% 49%; /* Gold */
+    --gold: 51 100% 50%; /* Gold */
     --gold-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -53,9 +53,9 @@
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 145 58% 55%;
+    --accent: 145 63% 49%;
     --accent-foreground: 0 0% 100%;
-    --gold: 43 74% 49%;
+    --gold: 51 100% 50%;
     --gold-foreground: 222.2 84% 4.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -74,7 +74,7 @@
     --sidebar-accent: 217.2 32.6% 17.5%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 197 71% 73%;
+    --sidebar-ring: 217.2 32.6% 17.5%;
   }
 }
 

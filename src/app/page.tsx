@@ -16,8 +16,8 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <StatsCounter />
-        <WhatWeDoSection />
         <WhoWeAreSection />
+        <WhatWeDoSection />
         <StoriesSection />
         <DevotionalSection />
         <GetInvolvedSection />

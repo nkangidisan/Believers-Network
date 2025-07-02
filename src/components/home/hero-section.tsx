@@ -1,22 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, User, Heart, Compass } from "lucide-react";
+import { ArrowRight, User, Heart, Compass, Users } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative h-[calc(100vh-4rem)] w-full">
+    <section id="home" className="relative h-screen w-full">
       <Image
         src="https://placehold.co/1920x1080"
-        alt="A diverse group of youth in a moment of worship and evangelism"
+        alt="A diverse group of youth in a moment of worship and prayer"
         layout="fill"
         objectFit="cover"
         className="brightness-50"
-        data-ai-hint="youth worship evangelism"
+        data-ai-hint="youth prayer outreach"
         priority
       />
-      <div className="relative z-10 flex h-full flex-col items-start justify-center text-left text-white container mx-auto px-4">
-        <div className="space-y-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
+        <div className="max-w-4xl space-y-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h1 
             className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight drop-shadow-lg"
           >
@@ -27,13 +27,13 @@ export default function HeroSection() {
             Spreading the Gospel.
           </h1>
           <p 
-            className="max-w-2xl text-lg md:text-xl text-white/90"
+            className="max-w-3xl mx-auto text-lg md:text-xl text-white/90"
           >
             Join a global move of God reaching students, schools, and communities across Africa and beyond.
           </p>
         </div>
         <div 
-          className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 opacity-0 animate-fade-in-up"
+          className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 opacity-0 animate-fade-in-up"
           style={{ animationDelay: '0.4s' }}
         >
           <Button
@@ -52,9 +52,9 @@ export default function HeroSection() {
             variant="outline"
             className="font-bold text-base bg-white/10 backdrop-blur-sm border-white/50 hover:bg-white/20 text-white"
           >
-            <Link href="#who-we-are">
-              <User className="mr-2 h-5 w-5" />
-              Meet the Vision Bearer
+            <Link href="#get-involved">
+              <Users className="mr-2 h-5 w-5" />
+              Join the Mission
               </Link>
           </Button>
           <Button
