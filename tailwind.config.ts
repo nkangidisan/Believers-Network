@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
         headline: ['"Playfair Display"', 'serif'],
         code: ['monospace'],
       },
@@ -44,6 +44,10 @@ export default {
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
+        },
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          foreground: 'hsl(var(--gold-foreground))',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

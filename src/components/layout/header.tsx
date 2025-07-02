@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#home", label: "HOME" },
-  { href: "#about", label: "WHAT WE DO" },
-  { href: "#impact", label: "STORIES" },
-  { href: "#contact", label: "PARTNER" },
-  { href: "#donate", label: "DONATE" },
+  { href: "#home", label: "Home" },
+  { href: "#what-we-do", label: "What We Do" },
+  { href: "#who-we-are", label: "About Us" },
+  { href: "#stories", label: "Impact" },
+  { href: "#get-involved", label: "Partner" },
+  { href: "#donate", label: "Donate" },
 ];
 
 export default function Header() {
@@ -33,7 +34,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary"
+              className="transition-colors hover:text-primary uppercase tracking-wider"
             >
               {link.label}
             </Link>

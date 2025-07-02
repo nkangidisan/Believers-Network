@@ -26,7 +26,7 @@ const stats = [
   {
     icon: BookOpen,
     value: 1000000,
-    label: "Gospel Resources",
+    label: "Gospel Resources Distributed",
     suffix: "+",
   },
 ];
@@ -93,6 +93,14 @@ export default function StatsCounter() {
   return (
     <section id="impact" ref={ref} className="w-full py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                Our Global Impact
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                By God's grace, our network is growing and reaching thousands across the world.
+            </p>
+        </div>
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center">
