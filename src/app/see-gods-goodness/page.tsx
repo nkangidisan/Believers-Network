@@ -6,10 +6,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const galleryImages = {
     schoolMissions: [
-        { src: "https://placehold.co/600x400.png", alt: "School Mission 1", aiHint: "school mission" },
         { src: "/story-1.jpg", alt: "Student Prayer", aiHint: "student prayer" },
-        { src: "https://placehold.co/600x400.png", alt: "School Mission 3", aiHint: "school mission" },
-        { src: "https://placehold.co/600x400.png", alt: "School Mission 4", aiHint: "school mission" },
+        { src: "/story-2.jpg", alt: "Community Outreach", aiHint: "community help" },
+        { src: "/story-3.jpg", alt: "Mission Trip", aiHint: "mission trip" },
+        { src: "/hero-bg.jpg", alt: "Youth Worship", aiHint: "youth worship" },
     ],
     baptisms: [
         { src: "https://placehold.co/600x400.png", alt: "Baptism 1", aiHint: "water baptism" },
@@ -17,8 +17,8 @@ const galleryImages = {
     ],
     prayerEvents: [
         { src: "/hero-bg.jpg", alt: "Prayer Event 1", aiHint: "prayer event" },
-        { src: "https://placehold.co/600x400.png", alt: "Prayer Event 2", aiHint: "prayer event" },
-        { src: "https://placehold.co/600x400.png", alt: "Prayer Event 3", aiHint: "prayer event" },
+        { src: "/story-1.jpg", alt: "Student Prayer during an event", aiHint: "student prayer" },
+        { src: "/vision-bearer.jpg", alt: "Founder speaking at event", aiHint: "man portrait" },
     ],
 };
 

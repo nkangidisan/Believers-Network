@@ -32,11 +32,11 @@ export default function WhatWeDo() {
                             <Link href="/sponsor-a-program">Sponsor an Outreach</Link>
                         </Button>
                     </div>
-                    <Image src="https://placehold.co/600x400.png" data-ai-hint="school evangelism" alt="School Evangelism" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/story-1.jpg" data-ai-hint="student prayer" alt="School Evangelism" width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                     <Image src="https://placehold.co/600x400.png" data-ai-hint="discipleship bible study" alt="Discipleship" width={600} height={400} className="rounded-lg shadow-lg md:order-2" />
+                     <Image src="/story-2.jpg" data-ai-hint="community help" alt="Discipleship" width={600} height={400} className="rounded-lg shadow-lg md:order-2" />
                     <div className="md:order-1">
                         <h2 className="font-headline text-3xl font-bold mb-4">Discipleship</h2>
                         <p className="text-lg text-foreground/80 mb-6">Salvation is just the beginning of a lifelong journey with Christ. We are committed to discipleship, helping new believers grow in their faith. We provide mentorship, Bible studies, and a supportive community where individuals can deepen their relationship with God, understand His Word, and learn to walk in the power of the Holy Spirit. </p>
@@ -54,7 +54,7 @@ export default function WhatWeDo() {
                             <Link href="/get-involved">Join a Mission Trip</Link>
                         </Button>
                     </div>
-                    <Image src="https://placehold.co/600x400.png" data-ai-hint="mission outreach africa" alt="Outreach & Missions" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/story-3.jpg" data-ai-hint="mission trip" alt="Outreach & Missions" width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>

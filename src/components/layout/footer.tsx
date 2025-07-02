@@ -27,19 +27,19 @@ const activeCountries = ["Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi", "Ma
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-white border-t border-gray-800">
+    <footer id="contact" className="bg-muted/50 text-foreground/80 border-t border-border">
       <div className="container py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Church className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold font-headline">Believers' Network</span>
+              <span className="text-xl font-bold font-headline text-foreground">Believers' Network</span>
             </Link>
-            <p className="text-gray-400">Transforming Lives. Impacting Nations. Spreading the Gospel.</p>
+            <p className="text-muted-foreground">Transforming Lives. Impacting Nations. Spreading the Gospel.</p>
              <div className="flex space-x-2">
               {socialLinks.map((social) => (
                 <Button key={social.name} variant="ghost" size="icon" asChild>
-                  <a href={social.href} aria-label={social.name} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
+                  <a href={social.href} aria-label={social.name} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                     <social.icon className="h-5 w-5" />
                   </a>
                 </Button>
@@ -47,8 +47,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-gray-200">Contact Us</h3>
-            <ul className="space-y-2 text-gray-400">
+            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-foreground">Contact Us</h3>
+            <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary" />
                 <a href="tel:+256752948431" className="hover:text-primary transition-colors">+256 752 948 431</a>
@@ -68,23 +68,23 @@ export default function Footer() {
             </ul>
           </div>
            <div className="space-y-4">
-            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-gray-200">Active In</h3>
-            <div className="grid grid-cols-2 gap-1 text-gray-400">
+            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-foreground">Active In</h3>
+            <div className="grid grid-cols-2 gap-1 text-muted-foreground">
               {activeCountries.map((country) => (
                 <span key={country}>{country}</span>
               ))}
             </div>
           </div>
            <div className="space-y-4">
-            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-gray-200">Quick Links</h3>
+            <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-foreground">Quick Links</h3>
              <ul className="space-y-2">
                 {pageLinks.map(link => (
-                    <li key={link.href}><Link href={link.href} className="text-gray-400 hover:text-primary">{link.label}</Link></li>
+                    <li key={link.href}><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
                 ))}
              </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-800 pt-8 text-center text-gray-400">
+        <div className="mt-8 border-t border-border pt-8 text-center text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Believers' Network. All Rights Reserved.</p>
         </div>
       </div>
