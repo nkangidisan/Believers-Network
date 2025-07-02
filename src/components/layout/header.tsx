@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "What We Do" },
-  { href: "#impact", label: "Stories of Impact" },
-  { href: "#devotionals", label: "Daily Devotionals" },
-  { href: "#contact", label: "Contact" },
+  { href: "#home", label: "HOME" },
+  { href: "#about", label: "WHAT WE DO" },
+  { href: "#impact", label: "STORIES" },
+  { href: "#contact", label: "PARTNER" },
+  { href: "#donate", label: "DONATE" },
 ];
 
 export default function Header() {
@@ -40,7 +40,6 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-4">
-          <Button className="hidden sm:flex" variant="default">Donate Now</Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
@@ -77,7 +76,6 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                 <Button className="mt-8 w-full" variant="default" onClick={() => setIsOpen(false)}>Donate Now</Button>
               </div>
             </SheetContent>
           </Sheet>
