@@ -12,6 +12,8 @@ const galleryImages = {
         { src: "/outreach.jpg", alt: "Missions Outreach", aiHint: "outreach missions" },
         { src: "/missions.jpg", alt: "Global Missions", aiHint: "global missions" },
         { src: "/discipleship.jpg", alt: "Discipleship Group", aiHint: "discipleship group" },
+        { src: "/sponsored.jpg", alt: "Sponsored Program", aiHint: "sponsored program" },
+        { src: "/seegiving.jpg", alt: "Giving Impact", aiHint: "community help" },
     ],
     baptisms: [
         { src: "https://placehold.co/600x400.png", alt: "Baptism 1", aiHint: "water baptism" },
@@ -22,6 +24,7 @@ const galleryImages = {
         { src: "/back6.jpg", alt: "Prayer Meeting", aiHint: "prayer meeting" },
         { src: "/givingimpact.jpg", alt: "Impact of Giving", aiHint: "community support" },
         { src: "/visionbearer.jpg", alt: "Founder speaking at event", aiHint: "man portrait" },
+        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique", aiHint: "portrait man" }
     ],
 };
 

@@ -8,7 +8,7 @@ const waysToHelp = [
     icon: <HandHeart className="w-10 h-10 text-primary" />,
     title: "Volunteer",
     description: "Use your gifts and skills to serve God and be a part of what He is doing through our network.",
-    href: "/get-involved",
+    href: "/stay-connected",
     cta: "Volunteer"
   },
   {
@@ -22,7 +22,7 @@ const waysToHelp = [
     icon: <HeartHandshake className="w-10 h-10 text-primary" />,
     title: "Partner With Us",
     description: "Become a monthly partner to support the ongoing work of the ministry and fuel revival.",
-    href: "/get-involved",
+    href: "/stay-connected",
     cta: "Become a Partner"
   },
 ];
