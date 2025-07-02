@@ -22,7 +22,7 @@ const stories = [
     aiHint: "outreach missions"
   },
   {
-    image: "/mission1.jpg",
+    image: "/missions1.jpg",
     category: "Missions",
     title: "Taking the Gospel to the Nations",
     excerpt: "See how our missions team is making a difference in unreached communities across the globe.",
