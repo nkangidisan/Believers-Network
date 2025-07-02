@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const teamMembers = [
-    { name: "Iradukunda Pacifique", role: "Founder & Vision Bearer", image: "/visionbearer.jpg", aiHint: "man portrait" },
+    { name: "Iradukunda Pacifique", role: "Founder & Vision Bearer", image: "/pacifique.jpg", aiHint: "man portrait" },
     { name: "Missions Team", role: "Head of Missions", image: "/missions.jpg", aiHint: "global missions" },
     { name: "Community Outreach", role: "Outreach Coordinator", image: "/community.jpg", aiHint: "community help" },
     { name: "Team Member 4", role: "Worship Leader", image: "https://placehold.co/400x400.png", aiHint: "portrait woman" },

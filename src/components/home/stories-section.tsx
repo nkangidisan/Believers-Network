@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -6,24 +8,24 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    image: "/campus.jpg",
-    category: "Campus Revival",
-    title: "From Doubt to Devotion: A Student's Story",
-    excerpt: "See how a university student's life was turned around after an encounter with God at one of our campus events.",
-    aiHint: "campus revival"
-  },
-  {
     image: "/community.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
     excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
     aiHint: "community impact"
   },
-   {
+  {
+    image: "/outreach.jpg",
+    category: "Outreach",
+    title: "A Life Changed During an Outreach",
+    excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
+    aiHint: "outreach missions"
+  },
+  {
     image: "/missions.jpg",
     category: "Missions",
-    title: "A Life Changed on a Mission Trip",
-    excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
+    title: "Taking the Gospel to the Nations",
+    excerpt: "See how our missions team is making a difference in unreached communities across the globe.",
     aiHint: "global missions"
   },
 ];
