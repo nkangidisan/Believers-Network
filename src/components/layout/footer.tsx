@@ -13,7 +13,7 @@ const activeCountries = ["Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi", "Ma
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-foreground text-background">
+    <footer id="contact" className="bg-background text-foreground border-t border-border">
       <div className="container py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4 md:col-span-1">
@@ -24,9 +24,9 @@ export default function Footer() {
             <p className="text-muted-foreground">Transforming Lives. Impacting Nations. Spreading the Gospel.</p>
              <div className="flex space-x-2">
               {socialLinks.map((social) => (
-                <Button key={social.name} variant="outline" size="icon" asChild className="bg-background/10 border-background/20 hover:bg-background/20">
+                <Button key={social.name} variant="ghost" size="icon" asChild>
                   <a href={social.href} aria-label={social.name} target="_blank" rel="noopener noreferrer">
-                    <social.icon className="h-5 w-5 text-background" />
+                    <social.icon className="h-5 w-5" />
                   </a>
                 </Button>
               ))}
