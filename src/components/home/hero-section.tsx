@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section id="home" className="relative h-screen w-full flex items-center justify-center">
       <div className="absolute inset-0">
         <Image
-          src="/hero-bg.jpg"
+          src="/heroback.jpg"
           alt="A diverse group of youth in a moment of worship and prayer"
           layout="fill"
           objectFit="cover"
@@ -55,9 +55,9 @@ export default function HeroSection() {
             variant="outline"
             className="font-bold text-base bg-white/10 backdrop-blur-sm border-white/50 hover:bg-white/20 text-white"
           >
-            <Link href="/get-involved">
+            <Link href="/who-we-are">
               <User className="mr-2 h-5 w-5" />
-              Join the Mission
+              Meet the Vision Bearer
               </Link>
           </Button>
           <Button

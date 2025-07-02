@@ -6,19 +6,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const galleryImages = {
     schoolMissions: [
-        { src: "/story-1.jpg", alt: "Student Prayer", aiHint: "student prayer" },
-        { src: "/story-2.jpg", alt: "Community Outreach", aiHint: "community help" },
-        { src: "/story-3.jpg", alt: "Mission Trip", aiHint: "mission trip" },
-        { src: "/hero-bg.jpg", alt: "Youth Worship", aiHint: "youth worship" },
+        { src: "/campus.jpg", alt: "Student Revival", aiHint: "campus revival" },
+        { src: "/community.jpg", alt: "Community Outreach", aiHint: "community help" },
+        { src: "/school-evag.jpg", alt: "School Evangelism", aiHint: "school evangelism" },
+        { src: "/outreach.jpg", alt: "Missions Outreach", aiHint: "outreach missions" },
+        { src: "/missions.jpg", alt: "Global Missions", aiHint: "global missions" },
+        { src: "/discipleship.jpg", alt: "Discipleship Group", aiHint: "discipleship group" },
     ],
     baptisms: [
         { src: "https://placehold.co/600x400.png", alt: "Baptism 1", aiHint: "water baptism" },
         { src: "https://placehold.co/600x400.png", alt: "Baptism 2", aiHint: "water baptism" },
     ],
     prayerEvents: [
-        { src: "/hero-bg.jpg", alt: "Prayer Event 1", aiHint: "prayer event" },
-        { src: "/story-1.jpg", alt: "Student Prayer during an event", aiHint: "student prayer" },
-        { src: "/vision-bearer.jpg", alt: "Founder speaking at event", aiHint: "man portrait" },
+        { src: "/heroback.jpg", alt: "Worship Event", aiHint: "worship event" },
+        { src: "/back6.jpg", alt: "Prayer Meeting", aiHint: "prayer meeting" },
+        { src: "/givingimpact.jpg", alt: "Impact of Giving", aiHint: "community support" },
+        { src: "/visionbearer.jpg", alt: "Founder speaking at event", aiHint: "man portrait" },
     ],
 };
 

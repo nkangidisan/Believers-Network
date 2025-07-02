@@ -52,13 +52,15 @@ export default function StayConnected() {
                             <div>
                                 <h3 className="font-semibold">Phone</h3>
                                 <a href="tel:+256752948431" className="text-foreground/80 hover:text-primary">+256 752 948 431</a>
+                                <br/>
+                                <a href="tel:+256766754286" className="text-foreground/80 hover:text-primary">+256 766 754 286</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
                             <svg className="h-6 w-6 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M16.63 1.341a2.003 2.003 0 0 0-2.43.513l-1.63 2.45a1.002 1.002 0 0 0 .22 1.378l.49.327c.21.14.46.21.71.21a2.41 2.41 0 0 1 2.04 1.25c.3.56.46 1.18.46 1.8V19.5a1.5 1.5 0 0 1-1.5 1.5h-1.03a1.5 1.5 0 0 1-1.5-1.5v-3.48a1.5 1.5 0 0 0-1.5-1.5h-1.5a1.5 1.5 0 0 0-1.5 1.5V19.5a1.5 1.5 0 0 1-1.5 1.5H5.5a1.5 1.5 0 0 1-1.5-1.5v-7.15c0-.62.16-1.24.46-1.8a2.41 2.41 0 0 1 2.04-1.25c.25 0 .5-.07.71-.21l.49-.327a1.002 1.002 0 0 0 .22-1.378l-1.63-2.45a2.003 2.003 0 0 0-2.43-.514C2.38 2.26 1.18 3.998 1.18 6.05v9.45A4.5 4.5 0 0 0 5.68 24h12.64A4.5 4.5 0 0 0 22.82 15.5V6.05c0-2.05-1.2-3.79-3.19-4.71Z"/></svg>
                              <div>
                                 <h3 className="font-semibold">WhatsApp</h3>
-                                <a href="https://wa.me/256752948431" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary">+256 752 948 431</a>
+                                <a href="https://wa.me/256766754286" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary">+256 766 754 286</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">

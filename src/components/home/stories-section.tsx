@@ -6,25 +6,25 @@ import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
-    image: "/story-1.jpg",
+    image: "/campus.jpg",
     category: "Campus Revival",
     title: "From Doubt to Devotion: A Student's Story",
     excerpt: "See how a university student's life was turned around after an encounter with God at one of our campus events.",
-    aiHint: "student praying"
+    aiHint: "campus revival"
   },
   {
-    image: "/story-2.jpg",
+    image: "/community.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
     excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
-    aiHint: "community help"
+    aiHint: "community impact"
   },
    {
-    image: "/story-3.jpg",
+    image: "/missions.jpg",
     category: "Missions",
     title: "A Life Changed on a Mission Trip",
     excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
-    aiHint: "mission trip"
+    aiHint: "global missions"
   },
 ];
 

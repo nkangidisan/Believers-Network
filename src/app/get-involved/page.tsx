@@ -34,7 +34,7 @@ export default function GetInvolved() {
                         <h3 className="font-headline text-2xl font-bold mb-4">Pray With Us</h3>
                         <p className="text-lg text-foreground/80">Prayer is the engine of our ministry. We believe in the power of prayer to break down barriers, open doors, and bring heaven to earth. Join our global team of prayer warriors who stand with us for revival. Your prayers are essential for the advancement of the Gospel.</p>
                     </div>
-                    <Image src="/story-3.jpg" data-ai-hint="mission trip" alt="Prayer" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/back6.jpg" data-ai-hint="prayer meeting" alt="Prayer" width={600} height={400} className="rounded-lg shadow-lg" />
                  </div>
             </div>
          </section>

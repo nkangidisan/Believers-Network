@@ -30,7 +30,7 @@ export default function WhoWeAreSection() {
           </div>
           <div className="order-1 lg:order-2">
             <Image
-              src="/vision-bearer.jpg"
+              src="/pacifique.jpg"
               alt="Portrait of the Vision Bearer, Iradukunda Pacifique"
               width={600}
               height={700}
