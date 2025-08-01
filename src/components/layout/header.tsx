@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, X, Church } from "lucide-react";
+import { usePathname } from 'next/navigation'
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
@@ -20,19 +21,22 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [hasScrolled, setHasScrolled] = React.useState(false);
+  const [isTransparent, setIsTransparent] = React.useState(true);
+  const pathname = usePathname()
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check scroll position on initial load
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const isHomePage = pathname === '/';
 
-  const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/';
-  const isTransparent = !hasScrolled && isHomePage;
+    const handleScroll = () => {
+      const transparent = isHomePage && window.scrollY <= 20;
+      setIsTransparent(transparent);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check on initial load
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
 
   return (
