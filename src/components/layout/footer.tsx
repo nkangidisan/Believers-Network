@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Church, Mail, Phone, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const socialLinks = [
   { icon: Twitter, href: "#", name: "Twitter" },
@@ -32,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Church className="h-8 w-8 text-primary" />
+              <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} />
               <span className="text-xl font-bold font-headline text-foreground">Believers' Network</span>
             </Link>
             <p className="text-muted-foreground">Transforming Lives. Impacting Nations. Spreading the Gospel.</p>

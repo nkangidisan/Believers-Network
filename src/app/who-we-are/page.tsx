@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const teamMembers = [
-    { name: "Iradukunda Pacifique", role: "Founder & Vision Bearer", image: "/pacifique.jpg", aiHint: "man portrait" },
+    { name: "Iradukunda Pacifique", role: "Founder & Vision Bearer", image: "/paci.jpeg", aiHint: "man portrait" },
     { name: "Missions Team", role: "Head of Missions", image: "/missions.JPG", aiHint: "global missions" },
     { name: "Community Outreach", role: "Outreach Coordinator", image: "/community.JPG", aiHint: "community help" },
     { name: "Team Member 4", role: "Worship Leader", image: "https://placehold.co/400x400.png", aiHint: "portrait woman" },

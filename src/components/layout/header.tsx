@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Church } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -38,7 +39,7 @@ export default function Header() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Church className={`h-7 w-7 transition-colors ${isTransparent ? 'text-white' : 'text-primary'}`} />
+            <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} className={isTransparent ? 'invert' : ''} />
             <span className={`font-bold font-headline text-xl transition-colors ${isTransparent ? 'text-white' : 'text-foreground'}`}>
               Believers' Network
             </span>
@@ -74,7 +75,7 @@ export default function Header() {
               <div className="flex h-full flex-col">
                  <div className="flex items-center justify-between border-b pb-4">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                        <Church className="h-7 w-7 text-primary" />
+                        <Image src="/bnlogo.png" alt="Believers' Network Logo" width={32} height={32} />
                         <span className="font-bold font-headline text-lg">
                         Believers' Network
                         </span>
