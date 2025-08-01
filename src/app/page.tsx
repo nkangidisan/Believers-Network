@@ -10,7 +10,6 @@ import Footer from "@/components/layout/footer";
 import LifeSkillsSection from "@/components/home/life-skills-section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import DailyDevotionals from "./daily-devotionals/page";
 
 export default function Home() {
   return (
@@ -23,8 +22,12 @@ export default function Home() {
         <WhatWeDoSection />
         <StoriesSection />
         <section className="py-20 md:py-28 bg-muted">
-          <div className="container mx-auto px-4">
-            <DailyDevotionals />
+          <div className="container mx-auto px-4 text-center">
+             <h2 className="font-headline text-3xl font-bold">Daily Devotionals</h2>
+             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Start your day with a word from God. Check out our latest devotionals.</p>
+             <Button asChild className="mt-6">
+                <Link href="/daily-devotionals">Read Devotionals</Link>
+             </Button>
           </div>
         </section>
         <LifeSkillsSection />

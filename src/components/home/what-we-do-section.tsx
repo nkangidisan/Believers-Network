@@ -9,12 +9,12 @@ const features = [
     },
     {
         icon: <Zap className="w-12 h-12 text-accent" />,
-        title: "Connecting to the Power of God",
+        title: "Discipleship & Mentorship",
         description: "Building a strong foundation of faith through mentorship, biblical teaching, and spiritual growth programs."
     },
     {
         icon: <Users className="w-12 h-12 text-accent" />,
-        title: "Equipping a Global Generation",
+        title: "Community Outreach & Missions",
         description: "Impacting communities with the love of Christ through practical service, missions, and partnerships."
     }
 ]
