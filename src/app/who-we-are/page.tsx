@@ -1,17 +1,45 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhoWeAreSection from "@/components/home/who-we-are-section";
-import { CheckCircle, Flame, Handshake, MessageSquareQuote } from "lucide-react";
+import { CheckCircle, Flame, Handshake, MessageSquareQuote, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const teamMembers = [
-    { name: "Iradukunda Pacifique", role: "Founder & Vision Bearer", image: "/paci.jpeg", aiHint: "man portrait" },
-    { name: "Missions Team", role: "Head of Missions", image: "/missions.JPG", aiHint: "global missions" },
-    { name: "Community Outreach", role: "Outreach Coordinator", image: "/community.JPG", aiHint: "community help" },
-    { name: "Team Member 4", role: "Worship Leader", image: "https://placehold.co/400x400.png", aiHint: "portrait woman" },
+    { 
+        name: "Iradukunda Pacifique", 
+        role: "Founder & Vision Bearer", 
+        image: "/paci.jpeg", 
+        aiHint: "man portrait",
+        description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision of the ministry.",
+        linkedin: "#"
+    },
+    { 
+        name: "Nkangi Disan", 
+        role: "CEO", 
+        image: "/NkangiDisan1234.jpg", 
+        aiHint: "man portrait",
+        description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence.",
+        linkedin: "#"
+    },
+    { 
+        name: "Missions Team", 
+        role: "Head of Missions", 
+        image: "/missions.JPG", 
+        aiHint: "global missions",
+        description: "Spearheading our global outreach efforts, taking the Gospel to the furthest corners of the earth.",
+        linkedin: "#"
+    },
+    { 
+        name: "Community Outreach", 
+        role: "Outreach Coordinator", 
+        image: "/community.JPG", 
+        aiHint: "community help",
+        description: "Organizing local events and programs that demonstrate God's love through practical service and support.",
+        linkedin: "#"
+    },
 ]
 
 export default function WhoWeAre() {
@@ -120,10 +148,16 @@ export default function WhoWeAre() {
                     {teamMembers.map(member => (
                         <Card key={member.name} className="text-center border-0 shadow-lg">
                             <CardContent className="p-0">
-                                <Image src={member.image} alt={member.name} data-ai-hint={member.aiHint} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                <Link href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                                    <Image src={member.image} alt={member.name} data-ai-hint={member.aiHint} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                </Link>
                                 <div className="p-4">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
-                                    <p className="text-primary">{member.role}</p>
+                                    <p className="text-primary font-semibold">{member.role}</p>
+                                    <p className="text-foreground/70 mt-2 text-sm">{member.description}</p>
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-accent hover:text-primary">
+                                        <Linkedin className="h-5 w-5" />
+                                    </a>
                                 </div>
                             </CardContent>
                         </Card>
