@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import Image from "next/image";
 
 const navLinks = [
@@ -32,8 +32,10 @@ export default function Header() {
       setIsTransparent(transparent);
     };
     
+    // Set initial state
+    handleScroll();
+    
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check on initial load
     
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
@@ -77,6 +79,8 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
+                <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+                <SheetDescription className="sr-only">A list of links to navigate the Believers' Network website.</SheetDescription>
               <div className="flex h-full flex-col">
                  <div className="flex items-center justify-between border-b pb-4">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
