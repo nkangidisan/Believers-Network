@@ -1,6 +1,5 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import DevotionalSection from "@/components/home/devotional-section";
 
 export default function DailyDevotionals() {
   return (
@@ -17,8 +16,6 @@ export default function DailyDevotionals() {
             </p>
           </div>
         </section>
-
-        <DevotionalSection />
 
         <section className="py-20 md:py-28 bg-muted">
             <div className="container mx-auto px-4">
