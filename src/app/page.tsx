@@ -8,6 +8,7 @@ import DevotionalSection from "@/components/home/devotional-section";
 import GetInvolvedSection from "@/components/home/get-involved-section";
 import DonateSection from "@/components/home/donate-section";
 import Footer from "@/components/layout/footer";
+import LifeSkillsSection from "@/components/home/life-skills-section";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <WhatWeDoSection />
         <StoriesSection />
         <DevotionalSection />
+        <LifeSkillsSection />
         <GetInvolvedSection />
         <DonateSection />
       </main>

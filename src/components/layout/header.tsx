@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/who-we-are", label: "Who We Are" },
   { href: "/stories-of-impact", label: "Stories" },
   { href: "/get-involved", label: "Get Involved" },
+  { href: "/life-skills", label: "Life Skills" },
   { href: "/salvation", label: "Receive Salvation" },
   { href: "/stay-connected", label: "Stay Connected" },
 ];
