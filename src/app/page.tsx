@@ -8,8 +8,6 @@ import GetInvolvedSection from "@/components/home/get-involved-section";
 import DonateSection from "@/components/home/donate-section";
 import Footer from "@/components/layout/footer";
 import LifeSkillsSection from "@/components/home/life-skills-section";
-import DevotionalModal from "@/components/home/devotional-modal";
-import DailyDevotionals from "./daily-devotionals/page";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -41,7 +39,6 @@ function DevotionalSection() {
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
-      <DevotionalModal />
       <Header />
       <main className="flex-1">
         <HeroSection />
