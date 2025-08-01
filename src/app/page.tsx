@@ -9,6 +9,34 @@ import DonateSection from "@/components/home/donate-section";
 import Footer from "@/components/layout/footer";
 import LifeSkillsSection from "@/components/home/life-skills-section";
 import DevotionalModal from "@/components/home/devotional-modal";
+import DailyDevotionals from "./daily-devotionals/page";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+function DevotionalSection() {
+    return (
+        <section className="py-20 md:py-28 bg-muted">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                     <h2 className="font-headline text-3xl font-bold">Recent Devotionals</h2>
+                     <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">This section will display a feed of recent devotionals added from the admin dashboard.</p>
+                </div>
+                 {/* Placeholder for devotional feed */}
+                <div className="text-center text-foreground/50 mb-8">
+                    <p>Devotional feed coming soon.</p>
+                </div>
+                 <div className="text-center">
+                    <Button asChild size="lg">
+                        <Link href="/daily-devotionals">
+                            See All Devotionals
+                        </Link>
+                    </Button>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 
 export default function Home() {
   return (
@@ -21,6 +49,7 @@ export default function Home() {
         <WhoWeAreSection />
         <WhatWeDoSection />
         <StoriesSection />
+        <DevotionalSection />
         <LifeSkillsSection />
         <GetInvolvedSection />
         <DonateSection />
