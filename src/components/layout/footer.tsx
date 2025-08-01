@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Mail, Phone, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "../ui/button";
@@ -79,7 +80,7 @@ export default function Footer() {
            <div className="space-y-4">
             <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-foreground">Quick Links</h3>
              <ul className="space-y-2">
-                {pageLinks.map(link => (
+                {pageLinks.slice(0, 6).map(link => (
                     <li key={link.href}><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
                 ))}
              </ul>

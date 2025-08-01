@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -16,8 +17,8 @@ const galleryImages = {
         { src: "/seegiving.jpg", alt: "Giving Impact", aiHint: "community help" },
     ],
     baptisms: [
-        { src: "https://placehold.co/600x400.png", alt: "Baptism 1", aiHint: "water baptism" },
-        { src: "https://placehold.co/600x400.png", alt: "Baptism 2", aiHint: "water baptism" },
+        { src: "/baptism1.jpg", alt: "Baptism 1", aiHint: "water baptism" },
+        { src: "/baptism2.jpg", alt: "Baptism 2", aiHint: "water baptism" },
     ],
     prayerEvents: [
         { src: "/heroback.jpg", alt: "Worship Event", aiHint: "worship event" },
