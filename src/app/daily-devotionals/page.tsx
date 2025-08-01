@@ -35,6 +35,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { usePathname } from "next/navigation";
 
 const devotionalFormSchema = z.object({
   spiritualMaturityLevel: z.enum(["Beginner", "Intermediate", "Advanced"], {
@@ -52,6 +53,8 @@ export default function DailyDevotionals() {
   const [devotional, setDevotional] = useState<PersonalizedDevotionalOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const form = useForm<DevotionalFormValues>({
     resolver: zodResolver(devotionalFormSchema),
@@ -77,23 +80,8 @@ export default function DailyDevotionals() {
     }
   }
 
-  return (
-    <div className="flex min-h-screen w-full flex-col bg-background">
-      <Header />
-      <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold">
-              Daily Devotionals
-            </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              Start your day with a word from God. Generate a personalized devotional below or read our latest entries.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12">
+  const devotionalGenerator = (
+     <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <Card className="shadow-lg">
                 <CardHeader>
@@ -180,6 +168,31 @@ export default function DailyDevotionals() {
                     </div>
                 )}
             </div>
+          </div>
+  );
+
+  if (isHomePage) {
+    return devotionalGenerator;
+  }
+
+  return (
+    <div className="flex min-h-screen w-full flex-col bg-background">
+      <Header />
+      <main className="flex-1">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold">
+              Daily Devotionals
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+              Start your day with a word from God. Generate a personalized devotional below or read our latest entries.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4">
+             {devotionalGenerator}
           </div>
         </section>
 
