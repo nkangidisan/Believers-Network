@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Camera, PaintBrush, Cake, Music, ArrowRight } from "lucide-react";
+import { Camera, Paintbrush, Cake, Music, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useInView } from 'react-intersection-observer';
 import { cn } from "@/lib/utils";
@@ -15,7 +15,7 @@ const skills = [
     title: "Photography",
   },
   {
-    icon: <PaintBrush className="w-10 h-10 text-primary" />,
+    icon: <Paintbrush className="w-10 h-10 text-primary" />,
     title: "Graphic Design",
   },
   {

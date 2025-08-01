@@ -3,7 +3,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Camera, PaintBrush, Cake, Music, ArrowRight, Mail, Phone } from "lucide-react";
+import { Camera, Paintbrush, Cake, Music, ArrowRight, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -16,7 +16,7 @@ const skills = [
     description: "Learn to capture moments, tell stories, and create visually stunning content for ministry and personal projects."
   },
   {
-    icon: <PaintBrush className="w-12 h-12 text-primary" />,
+    icon: <Paintbrush className="w-12 h-12 text-primary" />,
     title: "Graphic Design",
     description: "Master the tools to create beautiful graphics for social media, events, and brand-building with a creative flair."
   },
