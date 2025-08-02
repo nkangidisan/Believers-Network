@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const galleryImages = {
     schoolMissions: [
-        { src: "/school-evag.jpg", alt: "Student Revival" },
+        { src: "/_MG_9115.JPG", alt: "Student Revival" },
         { src: "/missions1.jpg", alt: "Community Outreach" },
         { src: "/sponsored.jpg", alt: "School Evangelism" },
         { src: "/outreach.jpg", alt: "Missions Outreach" },
@@ -20,13 +20,13 @@ const galleryImages = {
         { src: "/discipleship.jpg", alt: "Discipleship Group" },
     ],
     baptisms: [
-        { src: "/seegiving.jpg", alt: "Baptism 1" },
+        { src: "/heroback.jpg", alt: "Baptism 1" },
         { src: "/paci.jpeg", alt: "Baptism 2" },
         { src: "/heroback.jpg", alt: "Baptism 3" },
     ],
     prayerEvents: [
         { src: "/back2.jpg", alt: "Worship Event" },
-        { src: "/seegiving.jpg", alt: "Prayer Meeting" },
+        { src: "/community1.jpg", alt: "Prayer Meeting" },
         { src: "/og-image.jpg", alt: "Impact of Giving" },
         { src: "/visionbearer.jpg", alt: "Founder speaking at event" },
         { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique" }

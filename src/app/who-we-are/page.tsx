@@ -17,13 +17,13 @@ const teamMembers = [
     { 
         name: "Iradukunda Pacifique", 
         role: "Founder & Vision Bearer", 
-        image: "/pacifique.jpg", 
+        image: "/paci.jpeg", 
         description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision of the ministry."
     },
     { 
         name: "Nkangi Disan", 
         role: "CEO", 
-        image: "/paci.jpeg",
+        image: "/NkangiDisan1234.jpg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence."
     },
     { 
