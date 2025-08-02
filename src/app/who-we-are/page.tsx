@@ -26,18 +26,6 @@ const teamMembers = [
         image: "/NkangiDisan1234.jpg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence."
     },
-    { 
-        name: "Missions Team", 
-        role: "Head of Missions", 
-        image: "/missions1.jpg", 
-        description: "Spearheading our global outreach efforts, taking the Gospel to the furthest corners of the earth."
-    },
-    { 
-        name: "Community Outreach", 
-        role: "Outreach Coordinator", 
-        image: "/community1.jpg",
-        description: "Organizing local events and programs that demonstrate God's love through practical service and support."
-    },
 ]
 
 export default function WhoWeAre() {
@@ -142,9 +130,9 @@ export default function WhoWeAre() {
                         God has assembled a dedicated team to carry this vision forward.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
                     {teamMembers.map(member => (
-                        <Card key={member.name} className="text-center border-0 shadow-lg">
+                        <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto">
                             <CardContent className="p-0">
                                 <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
                                 <div className="p-4">
