@@ -5,6 +5,12 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sponsor a Program",
+  description: "Be a catalyst for revival. Your sponsorship of a school assembly or mission allows us to bring the hope of the Gospel directly to thousands of students.",
+};
 
 const sponsorshipLevels = [
   {

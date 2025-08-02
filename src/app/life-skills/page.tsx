@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +7,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Life Skills Training",
+  description: "Empowering youth for ministry and the marketplace with practical skills like photography, graphic design, baking, and music. Learn a skill, shape your future.",
+};
+
 
 const skills = [
   {
@@ -104,7 +110,7 @@ export default function LifeSkills() {
                                 <CardDescription>Let us know you're interested.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form action="mailto:hello@believersnetwork.com" method="post" encType="text/plain" className="space-y-4">
+                                <form action="mailto:hello@believersnetwork.com?subject=Life%20Skills%20Inquiry" method="post" encType="text/plain" className="space-y-4">
                                     <Input name="name" placeholder="Your Name" required />
                                     <Input name="contact" placeholder="Your Phone Number or Email" required />
                                     <Input name="skill_interest" placeholder="Which skill are you interested in?" required />

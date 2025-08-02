@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -25,6 +24,11 @@ import { useToast } from '@/hooks/use-toast';
 import { getPersonalizedDevotional } from '../actions';
 import type { PersonalizedDevotionalOutput } from '@/ai/flows/personalized-devotionals';
 import { Loader2 } from 'lucide-react';
+import { Metadata } from 'next';
+
+// This is a client component, so we can't export metadata directly.
+// We'll rely on the metadata from layout.tsx for this page, 
+// or you could implement dynamic metadata generation if needed.
 
 export default function DailyDevotionals() {
   const [isLoading, setIsLoading] = useState(false);

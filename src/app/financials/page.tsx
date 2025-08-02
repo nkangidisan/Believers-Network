@@ -3,6 +3,12 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, BarChart2 } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Financial Transparency",
+  description: "We are committed to honoring God and our partners through faithful stewardship. View and download our annual impact and financial reports.",
+};
 
 const reports = [
     { year: 2023, title: "Annual Impact Report 2023", file: "/reports/2023-report.pdf" },

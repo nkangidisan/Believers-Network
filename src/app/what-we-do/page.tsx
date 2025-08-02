@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "What We Do",
+  description: "Learn about our core pillars: school evangelism, discipleship for new believers, and local and international outreach and missions. See how we're transforming lives.",
+};
 
 export default function WhatWeDo() {
   return (

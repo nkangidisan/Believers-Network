@@ -6,6 +6,12 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Who We Are",
+  description: "Meet the team behind Believers' Network, including our founder Iradukunda Pacifique. Learn about our mission, vision, and the passion that drives us.",
+};
 
 const teamMembers = [
     { 

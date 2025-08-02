@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stay Connected",
+  description: "Contact us! We'd love to hear from you. Send us a message, prayer request, or testimony. Find our phone number, WhatsApp, and email address.",
+};
 
 export default function StayConnected() {
   return (
@@ -27,18 +33,18 @@ export default function StayConnected() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-6">Send us a Message</h2>
-                <form className="space-y-4">
+                <form action="mailto:hello@believersnetwork.com" method="post" encType="text/plain" className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-1">Name</label>
-                    <Input id="name" placeholder="Your Name" />
+                    <Input id="name" name="Name" placeholder="Your Name" />
                   </div>
                    <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-1">Email</label>
-                    <Input id="email" type="email" placeholder="Your Email Address" />
+                    <Input id="email" name="Email" type="email" placeholder="Your Email Address" />
                   </div>
                    <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground/80 mb-1">Message</label>
-                    <Textarea id="message" placeholder="Your message, prayer request, or testimony..." rows={5} />
+                    <Textarea id="message" name="Message" placeholder="Your message, prayer request, or testimony..." rows={5} />
                   </div>
                   <Button type="submit" size="lg">Send Message</Button>
                 </form>

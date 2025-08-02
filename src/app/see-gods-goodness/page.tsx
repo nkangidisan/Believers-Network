@@ -1,9 +1,14 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gallery - See God's Goodness",
+  description: "A gallery of moments capturing the powerful move of God in our ministry. See photos from school missions, baptisms, prayer events, and more.",
+};
 
 const galleryImages = {
     schoolMissions: [

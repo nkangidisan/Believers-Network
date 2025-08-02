@@ -4,6 +4,12 @@ import GetInvolvedSection from "@/components/home/get-involved-section";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, Pray } from "lucide-react";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get Involved",
+  description: "Join the mission! Discover ways you can get involved with Believers' Network, from volunteering and praying with us to joining a mission trip.",
+};
 
 export default function GetInvolved() {
   return (

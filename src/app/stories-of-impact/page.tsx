@@ -4,6 +4,12 @@ import StoriesSection from "@/components/home/stories-section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PlusCircle } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stories of Impact",
+  description: "Read powerful testimonies and stories of lives transformed by the grace of God through the ministry of Believers' Network. Be encouraged and inspired.",
+};
 
 export default function StoriesOfImpact() {
   return (

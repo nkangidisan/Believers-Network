@@ -1,10 +1,15 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Receive Salvation - A New Beginning with Jesus",
+  description: "The most important decision you can make. Learn about God's gift of salvation and pray the salvation prayer to begin your new life in Christ today.",
+};
 
 export default function Salvation() {
   return (
@@ -52,7 +57,7 @@ export default function Salvation() {
                         <CardDescription>Let us know you made a decision.</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <form action="mailto:hello@believersnetwork.com" method="post" encType="text/plain" className="space-y-4">
+                        <form action="mailto:hello@believersnetwork.com?subject=I%20Received%20Christ!" method="post" encType="text/plain" className="space-y-4">
                             <Input name="name" placeholder="Your Name" required />
                             <Input name="contact" placeholder="Your Phone Number or Email" required />
                             <Input name="location" placeholder="Your City/Country" required/>

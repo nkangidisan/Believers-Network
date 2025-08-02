@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://believersnetwork.com/sitemap.xml

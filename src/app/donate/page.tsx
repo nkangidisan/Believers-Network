@@ -5,6 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Heart, CreditCard, HelpCircle, Phone, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Donate",
+  description: "Partner with us to spread the Gospel. Your generous donation fuels our mission to reach every student, every campus, and every nation. Give today.",
+};
 
 export default function Donate() {
   return (
