@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Mail, Phone, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "../ui/button";
@@ -65,7 +64,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:hello@believersnetwork.com" className="hover:text-primary transition-colors">hello@believersnetwork.com</a>
+                <a href="mailto:hello@believersnetworks.com" className="hover:text-primary transition-colors">hello@believersnetworks.com</a>
               </li>
             </ul>
           </div>

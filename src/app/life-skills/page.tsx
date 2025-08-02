@@ -97,7 +97,7 @@ export default function LifeSkills() {
                                     <Mail className="h-6 w-6 text-accent" />
                                     <div>
                                         <h3 className="font-semibold">Email</h3>
-                                        <a href="mailto:hello@believersnetwork.com" className="text-foreground/80 hover:text-primary">hello@believersnetwork.com</a>
+                                        <a href="mailto:hello@believersnetworks.com" className="text-foreground/80 hover:text-primary">hello@believersnetworks.com</a>
                                     </div>
                                 </div>
                             </CardContent>
@@ -110,7 +110,7 @@ export default function LifeSkills() {
                                 <CardDescription>Let us know you're interested.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form action="mailto:hello@believersnetwork.com?subject=Life%20Skills%20Inquiry" method="post" encType="text/plain" className="space-y-4">
+                                <form action="mailto:hello@believersnetworks.com?subject=Life%20Skills%20Inquiry" method="post" encType="text/plain" className="space-y-4">
                                     <Input name="name" placeholder="Your Name" required />
                                     <Input name="contact" placeholder="Your Phone Number or Email" required />
                                     <Input name="skill_interest" placeholder="Which skill are you interested in?" required />

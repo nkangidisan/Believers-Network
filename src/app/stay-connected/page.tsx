@@ -33,7 +33,7 @@ export default function StayConnected() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="font-headline text-3xl font-bold mb-6">Send us a Message</h2>
-                <form action="mailto:hello@believersnetwork.com" method="post" encType="text/plain" className="space-y-4">
+                <form action="mailto:hello@believersnetworks.com" method="post" encType="text/plain" className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-1">Name</label>
                     <Input id="name" name="Name" placeholder="Your Name" />
@@ -73,7 +73,7 @@ export default function StayConnected() {
                             <Mail className="h-6 w-6 text-accent" />
                              <div>
                                 <h3 className="font-semibold">Email</h3>
-                                <a href="mailto:hello@believersnetwork.com" className="text-foreground/80 hover:text-primary">hello@believersnetwork.com</a>
+                                <a href="mailto:hello@believersnetworks.com" className="text-foreground/80 hover:text-primary">hello@believersnetworks.com</a>
                             </div>
                         </div>
                     </CardContent>
