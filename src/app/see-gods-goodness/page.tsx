@@ -12,22 +12,22 @@ export const metadata: Metadata = {
 
 const galleryImages = {
     schoolMissions: [
-        { src: "/gallery/mission1.jpg", alt: "Student Revival" },
-        { src: "/gallery/mission2.jpg", alt: "Community Outreach" },
-        { src: "/gallery/mission3.jpg", alt: "School Evangelism" },
-        { src: "/gallery/mission4.jpg", alt: "Missions Outreach" },
-        { src: "/gallery/mission5.jpg", alt: "Global Missions" },
-        { src: "/gallery/mission6.jpg", alt: "Discipleship Group" },
+        { src: "/school-evag.jpg", alt: "Student Revival" },
+        { src: "/missions1.jpg", alt: "Community Outreach" },
+        { src: "/sponsored.jpg", alt: "School Evangelism" },
+        { src: "/outreach.jpg", alt: "Missions Outreach" },
+        { src: "/community1.jpg", alt: "Global Missions" },
+        { src: "/discipleship.jpg", alt: "Discipleship Group" },
     ],
     baptisms: [
-        { src: "/gallery/baptism1.jpg", alt: "Baptism 1" },
-        { src: "/gallery/baptism2.jpg", alt: "Baptism 2" },
-        { src: "/gallery/baptism3.jpg", alt: "Baptism 3" },
+        { src: "/seegiving.jpg", alt: "Baptism 1" },
+        { src: "/paci.jpeg", alt: "Baptism 2" },
+        { src: "/heroback.jpg", alt: "Baptism 3" },
     ],
     prayerEvents: [
-        { src: "/gallery/prayer1.jpg", alt: "Worship Event" },
-        { src: "/gallery/prayer2.jpg", alt: "Prayer Meeting" },
-        { src: "/gallery/prayer3.jpg", alt: "Impact of Giving" },
+        { src: "/back2.jpg", alt: "Worship Event" },
+        { src: "/seegiving.jpg", alt: "Prayer Meeting" },
+        { src: "/og-image.jpg", alt: "Impact of Giving" },
         { src: "/visionbearer.jpg", alt: "Founder speaking at event" },
         { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique" }
     ],

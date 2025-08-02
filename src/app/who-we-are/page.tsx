@@ -23,19 +23,19 @@ const teamMembers = [
     { 
         name: "Nkangi Disan", 
         role: "CEO", 
-        image: "/team/ceo.jpg",
+        image: "/paci.jpeg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence."
     },
     { 
         name: "Missions Team", 
         role: "Head of Missions", 
-        image: "/team/missions.jpg", 
+        image: "/missions1.jpg", 
         description: "Spearheading our global outreach efforts, taking the Gospel to the furthest corners of the earth."
     },
     { 
         name: "Community Outreach", 
         role: "Outreach Coordinator", 
-        image: "/team/community.jpg",
+        image: "/community1.jpg",
         description: "Organizing local events and programs that demonstrate God's love through practical service and support."
     },
 ]
