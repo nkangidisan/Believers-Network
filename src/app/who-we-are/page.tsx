@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhoWeAreSection from "@/components/home/who-we-are-section";
-import { CheckCircle, Flame, Handshake, MessageSquareQuote, Linkedin } from "lucide-react";
+import { CheckCircle, Flame, Handshake, MessageSquareQuote } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";

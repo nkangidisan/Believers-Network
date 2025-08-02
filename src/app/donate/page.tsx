@@ -2,7 +2,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, CreditCard, HelpCircle, Phone, ArrowRight } from "lucide-react";
+import { CreditCard, ArrowRight, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -81,7 +81,7 @@ export default function Donate() {
                         <p className="text-lg text-foreground/80">"Because of your support, we were able to provide Bibles to over 500 new believers at a recent high school outreach. Many of them had never owned a Bible before. Thank you for putting God's Word into their hands!"</p>
                         <cite className="block mt-2 font-semibold">- Outreach Team Lead</cite>
                     </div>
-                    <Image src="/seegiving1.jpg" data-ai-hint="community help" alt="Giving Impact" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="https://placehold.co/600x400.png" data-ai-hint="community help" alt="Giving Impact" width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>
