@@ -12,25 +12,24 @@ export const metadata: Metadata = {
 
 const galleryImages = {
     schoolMissions: [
-        { src: "/campus.jpg", alt: "Student Revival", aiHint: "campus revival" },
-        { src: "/community.jpg", alt: "Community Outreach", aiHint: "community help" },
-        { src: "/school-evag.jpg", alt: "School Evangelism", aiHint: "school evangelism" },
-        { src: "/outreach.jpg", alt: "Missions Outreach", aiHint: "outreach missions" },
-        { src: "/missions.jpg", alt: "Global Missions", aiHint: "global missions" },
-        { src: "/discipleship.jpg", alt: "Discipleship Group", aiHint: "discipleship group" },
-        { src: "/sponsored.jpg", alt: "Sponsored Program", aiHint: "sponsored program" },
-        { src: "/seegiving.jpg", alt: "Giving Impact", aiHint: "community help" },
+        { src: "/gallery/mission1.jpg", alt: "Student Revival" },
+        { src: "/gallery/mission2.jpg", alt: "Community Outreach" },
+        { src: "/gallery/mission3.jpg", alt: "School Evangelism" },
+        { src: "/gallery/mission4.jpg", alt: "Missions Outreach" },
+        { src: "/gallery/mission5.jpg", alt: "Global Missions" },
+        { src: "/gallery/mission6.jpg", alt: "Discipleship Group" },
     ],
     baptisms: [
-        { src: "/baptism1.jpg", alt: "Baptism 1", aiHint: "water baptism" },
-        { src: "/baptism2.jpg", alt: "Baptism 2", aiHint: "water baptism" },
+        { src: "/gallery/baptism1.jpg", alt: "Baptism 1" },
+        { src: "/gallery/baptism2.jpg", alt: "Baptism 2" },
+        { src: "/gallery/baptism3.jpg", alt: "Baptism 3" },
     ],
     prayerEvents: [
-        { src: "/heroback.jpg", alt: "Worship Event", aiHint: "worship event" },
-        { src: "/back6.jpg", alt: "Prayer Meeting", aiHint: "prayer meeting" },
-        { src: "/givingimpact.jpg", alt: "Impact of Giving", aiHint: "community support" },
-        { src: "/visionbearer.jpg", alt: "Founder speaking at event", aiHint: "man portrait" },
-        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique", aiHint: "portrait man" }
+        { src: "/gallery/prayer1.jpg", alt: "Worship Event" },
+        { src: "/gallery/prayer2.jpg", alt: "Prayer Meeting" },
+        { src: "/gallery/prayer3.jpg", alt: "Impact of Giving" },
+        { src: "/visionbearer.jpg", alt: "Founder speaking at event" },
+        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique" }
     ],
 };
 
@@ -62,21 +61,21 @@ export default function SeeGodsGoodness() {
               <TabsContent value="schoolMissions">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.schoolMissions.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} data-ai-hint={img.aiHint} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
                   ))}
                 </div>
               </TabsContent>
               <TabsContent value="baptisms">
                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.baptisms.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} data-ai-hint={img.aiHint} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
                   ))}
                 </div>
               </TabsContent>
               <TabsContent value="prayerEvents">
                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.prayerEvents.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} data-ai-hint={img.aiHint} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
                   ))}
                 </div>
               </TabsContent>

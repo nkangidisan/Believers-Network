@@ -86,7 +86,7 @@ export default function SponsorAProgram() {
                         <h2 className="font-headline text-3xl font-bold mb-4">Impact of Sponsorship</h2>
                         <p className="text-lg text-foreground/80">When you sponsor a program, you are not just funding an event; you are investing in eternal destinies. The image you see is from a past outreach in Kampala, Uganda, funded entirely by a single sponsor. Over 200 students gave their lives to Jesus that day. This is the fruit of your partnership.</p>
                     </div>
-                    <Image src="https://placehold.co/600x400.png" data-ai-hint="sponsored program" alt="Sponsored Program" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/sponsored.jpg" alt="Sponsored Program" width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>

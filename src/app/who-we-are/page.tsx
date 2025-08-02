@@ -17,29 +17,25 @@ const teamMembers = [
     { 
         name: "Iradukunda Pacifique", 
         role: "Founder & Vision Bearer", 
-        image: "/paci.jpeg", 
-        aiHint: "man portrait",
+        image: "/pacifique.jpg", 
         description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision of the ministry."
     },
     { 
         name: "Nkangi Disan", 
         role: "CEO", 
-        image: "/NkangiDisan1234.jpg", 
-        aiHint: "man portrait",
+        image: "/team/ceo.jpg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence."
     },
     { 
         name: "Missions Team", 
         role: "Head of Missions", 
-        image: "/missions.JPG", 
-        aiHint: "global missions",
+        image: "/team/missions.jpg", 
         description: "Spearheading our global outreach efforts, taking the Gospel to the furthest corners of the earth."
     },
     { 
         name: "Community Outreach", 
         role: "Outreach Coordinator", 
-        image: "/community.JPG", 
-        aiHint: "community help",
+        image: "/team/community.jpg",
         description: "Organizing local events and programs that demonstrate God's love through practical service and support."
     },
 ]
@@ -150,7 +146,7 @@ export default function WhoWeAre() {
                     {teamMembers.map(member => (
                         <Card key={member.name} className="text-center border-0 shadow-lg">
                             <CardContent className="p-0">
-                                <Image src={member.image} alt={member.name} data-ai-hint={member.aiHint} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
                                 <div className="p-4">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                                     <p className="text-primary font-semibold">{member.role}</p>
