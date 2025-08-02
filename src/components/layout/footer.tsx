@@ -15,11 +15,11 @@ const pageLinks = [
     { href: "/who-we-are", label: "Who We Are" },
     { href: "/stories-of-impact", label: "Stories of Impact" },
     { href: "/get-involved", label: "Get Involved" },
+    { href: "/see-gods-goodness", label: "Gallery" },
     { href: "/donate", label: "Donate" },
     { href: "/sponsor-a-program", label: "Sponsor a Program" },
     { href: "/financials", label: "Financials" },
     { href: "/daily-devotionals", label: "Daily Devotionals" },
-    { href: "/see-gods-goodness", label: "Gallery" },
     { href: "/stay-connected", label: "Stay Connected" },
     { href: "/salvation", label: "Receive Salvation" },
 ]
