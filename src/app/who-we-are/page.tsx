@@ -24,7 +24,8 @@ const teamMembers = [
         name: "Nkangi Disan", 
         role: "CEO", 
         image: "/NkangiDisan1234.jpg",
-        description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence."
+        description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence.",
+        linkedin: "https://www.linkedin.com/in/disan-nkangi-7ab2b62a9/"
     },
 ]
 
@@ -131,10 +132,16 @@ export default function WhoWeAre() {
                     </p>
                 </div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
-                    {teamMembers.map(member => (
+                    {teamMembers.map((member) => (
                         <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto">
                             <CardContent className="p-0">
-                                <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                {member.linkedin ? (
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                                        <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                    </a>
+                                ) : (
+                                    <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                )}
                                 <div className="p-4">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                                     <p className="text-primary font-semibold">{member.role}</p>
