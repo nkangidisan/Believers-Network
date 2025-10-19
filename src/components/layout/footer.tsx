@@ -5,10 +5,10 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 
 const socialLinks = [
-  { icon: Twitter, href: "#", name: "Twitter" },
-  { icon: Facebook, href: "#", name: "Facebook" },
-  { icon: Instagram, href: "#", name: "Instagram" },
-  { icon: Youtube, href: "#", name: "YouTube" },
+  { icon: Twitter, href: "https://twitter.com/BelieversNetInt", name: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/BelieversNetworkInternational", name: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/believersnetworkintl/", name: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@believersnetworkinternational", name: "YouTube" },
 ];
 
 const pageLinks = [
@@ -22,7 +22,6 @@ const pageLinks = [
     { href: "/financials", label: "Financials" },
     { href: "/daily-devotionals", label: "Daily Devotionals" },
     { href: "/stay-connected", label: "Stay Connected" },
-    { href: "/salvation", label: "Receive Salvation" },
 ]
 
 const activeCountries = ["Kenya", "Uganda", "Tanzania", "Rwanda", "Burundi", "Malawi"];
@@ -34,10 +33,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} />
+              <Image src="/bnlogo.png" alt="Believers' Network International Logo" width={40} height={40} />
               <span className="text-xl font-bold font-headline text-foreground">Believers' Network</span>
             </Link>
-            <p className="text-muted-foreground">Transforming Lives. Impacting Nations. Spreading the Gospel.</p>
+            <p className="text-muted-foreground">A faith-based non-profit organization focused on school ministry and youth empowerment.</p>
              <div className="flex space-x-2">
               {socialLinks.map((social) => (
                 <Button key={social.name} variant="ghost" size="icon" asChild>
@@ -80,14 +79,14 @@ export default function Footer() {
            <div className="space-y-4">
             <h3 className="text-lg font-semibold font-headline uppercase tracking-wider text-foreground">Quick Links</h3>
              <ul className="space-y-2">
-                {pageLinks.slice(0, 7).map(link => (
+                {pageLinks.map(link => (
                     <li key={link.href}><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
                 ))}
              </ul>
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Believers' Network. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Believers' Network International. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

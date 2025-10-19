@@ -9,12 +9,12 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/heroback.jpg"
-          alt="A diverse group of youth in a moment of worship and prayer"
+          alt="A diverse group of youth in a moment of worship and prayer during a school ministry event by Believers' Network International."
           layout="fill"
           objectFit="cover"
           className="brightness-50 object-center"
           priority
-          data-ai-hint="worship youth"
+          data-ai-hint="worship youth prayer"
         />
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
@@ -34,7 +34,7 @@ export default function HeroSection() {
             className="max-w-3xl mx-auto text-lg md:text-xl text-white/90 animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >
-            Join a global move of God reaching students, schools, and communities across Africa and beyond.
+            Join a global non-profit organization reaching students, schools, and communities across Africa and beyond through faith-based initiatives.
           </p>
         </div>
         <div 

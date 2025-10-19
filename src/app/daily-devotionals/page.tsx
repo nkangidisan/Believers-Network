@@ -24,11 +24,6 @@ import { useToast } from '@/hooks/use-toast';
 import { getPersonalizedDevotional } from '../actions';
 import type { PersonalizedDevotionalOutput } from '@/ai/flows/personalized-devotionals';
 import { Loader2 } from 'lucide-react';
-import { Metadata } from 'next';
-
-// This is a client component, so we can't export metadata directly.
-// We'll rely on the metadata from layout.tsx for this page, 
-// or you could implement dynamic metadata generation if needed.
 
 export default function DailyDevotionals() {
   const [isLoading, setIsLoading] = useState(false);
@@ -79,10 +74,10 @@ export default function DailyDevotionals() {
         <section className="w-full py-20 md:py-28 bg-primary/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-headline text-4xl md:text-5xl font-bold">
-              Daily Devotionals
+              AI-Powered Daily Devotionals
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              Start your day with a word from God, personalized just for you.
+              Receive a personalized word of encouragement. Generate a unique devotional based on your spiritual needs and preferred topics like faith, hope, and love.
             </p>
           </div>
         </section>
@@ -93,7 +88,7 @@ export default function DailyDevotionals() {
               <CardHeader>
                 <CardTitle className="font-headline">Generate Your Devotional</CardTitle>
                 <CardDescription>
-                  Tell us a bit about yourself to receive a personalized devotional.
+                  Tell us a bit about yourself to receive a personalized devotional for your walk with God.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -101,7 +96,7 @@ export default function DailyDevotionals() {
                   <div className="space-y-2">
                     <Label htmlFor="spiritualMaturityLevel">Spiritual Maturity Level</Label>
                     <Select name="spiritualMaturityLevel" required>
-                      <SelectTrigger id="spiritualMaturityLevel">
+                      <SelectTrigger id="spiritualMaturityLevel" aria-label="Select your spiritual maturity level">
                         <SelectValue placeholder="Select your level" />
                       </SelectTrigger>
                       <SelectContent>
@@ -116,7 +111,7 @@ export default function DailyDevotionals() {
                     <Input
                       id="preferredTopics"
                       name="preferredTopics"
-                      placeholder="e.g., Faith, Love, Forgiveness"
+                      placeholder="e.g., Faith, Love, Forgiveness, Hope"
                       required
                     />
                   </div>

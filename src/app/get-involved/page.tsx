@@ -7,8 +7,9 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get Involved",
-  description: "Join the mission! Discover ways you can get involved with Believers' Network, from volunteering and praying with us to joining a mission trip.",
+  title: "Get Involved with Our Non-Profit Ministry | Volunteer & Pray",
+  description: "Join our faith-based mission! Discover ways to get involved with Believers' Network International, from volunteering for school ministry to praying with us.",
+  keywords: ["get involved", "volunteer non-profit", "mission trips", "pray for ministry", "support youth empowerment", "faith-based volunteer"],
 };
 
 export default function GetInvolved() {
@@ -16,14 +17,14 @@ export default function GetInvolved() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-         <section id="get-involved" className="w-full py-20 md:py-28 bg-primary/10">
+         <section id="get-involved-hero" className="w-full py-20 md:py-28 bg-primary/10">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                 <h1 className="font-headline text-4xl md:text-5xl font-bold">
                     Get Involved
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-                    You are a vital part of what God is doing. There are many ways to join the mission and make an eternal impact.
+                    You are a vital part of what God is doing in the young generation. There are many ways to join the mission and make an eternal impact.
                 </p>
                 </div>
             </div>
@@ -38,9 +39,9 @@ export default function GetInvolved() {
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h3 className="font-headline text-2xl font-bold mb-4">Pray With Us</h3>
-                        <p className="text-lg text-foreground/80">Prayer is the engine of our ministry. We believe in the power of prayer to break down barriers, open doors, and bring heaven to earth. Join our global team of prayer warriors who stand with us for revival. Your prayers are essential for the advancement of the Gospel.</p>
+                        <p className="text-lg text-foreground/80">Prayer is the engine of our ministry. We believe in the power of prayer to break down barriers, open doors for school ministry, and bring revival to the young generation. Join our global team of prayer warriors who stand with us for revival. Your prayers are essential for the advancement of the Gospel.</p>
                     </div>
-                    <Image src="/back2.jpg" data-ai-hint="prayer meeting" alt="Prayer" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/back2.jpg" data-ai-hint="prayer meeting youth" alt="A group of young people praying together at a Believers' Network International event." width={600} height={400} className="rounded-lg shadow-lg" />
                  </div>
             </div>
          </section>

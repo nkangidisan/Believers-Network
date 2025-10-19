@@ -7,8 +7,9 @@ import { PlusCircle } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Stories of Impact",
-  description: "Read powerful testimonies and stories of lives transformed by the grace of God through the ministry of Believers' Network. Be encouraged and inspired.",
+  title: "Stories of Impact | Testimonies from Our Faith-Based Ministry",
+  description: "Read powerful testimonies from our non-profit's school ministry and youth empowerment programs. Be encouraged by stories of lives transformed by God's grace.",
+  keywords: ["ministry stories of impact", "Christian testimonies", "student ministry testimonies", "lives transformed by faith", "faith-based non-profit stories"],
 };
 
 export default function StoriesOfImpact() {
@@ -23,7 +24,7 @@ export default function StoriesOfImpact() {
                         Stories of Impact
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-                        God is moving powerfully. Here are just a few stories of lives being transformed by His grace.
+                        God is moving powerfully. Here are just a few stories of lives being transformed by His grace in the young generation.
                     </p>
                 </div>
             </div>

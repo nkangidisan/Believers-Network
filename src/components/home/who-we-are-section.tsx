@@ -19,7 +19,7 @@ export default function WhoWeAreSection() {
               <cite className="block mt-2 text-md text-foreground/70">— Iradukunda Pacifique, Founder</cite>
             </blockquote>
             <p className="text-lg text-foreground/80">
-              Believers' Network is led by a passionate servant of God with a heart for revival among the youth. Their journey of faith and dedication to the Great Commission is the driving force behind our mission.
+              Believers' Network International is led by a passionate servant of God with a heart for revival in school ministry. His journey of faith and dedication to the Great Commission is the driving force behind our mission to empower the young generation.
             </p>
             <Button asChild size="lg">
               <Link href="/who-we-are">
@@ -31,11 +31,11 @@ export default function WhoWeAreSection() {
           <div className="order-1 lg:order-2">
             <Image
               src="/paci.jpeg"
-              alt="Portrait of the Vision Bearer, Iradukunda Pacifique"
+              alt="Portrait of Iradukunda Pacifique, Founder of Believers' Network International, a non-profit organization for school ministry."
               width={600}
               height={700}
               className="rounded-lg shadow-2xl object-cover w-full h-full"
-              data-ai-hint="portrait man"
+              data-ai-hint="portrait man faith leader"
             />
           </div>
         </div>

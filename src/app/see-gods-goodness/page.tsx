@@ -6,30 +6,31 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gallery - See God's Goodness",
-  description: "A gallery of moments capturing the powerful move of God in our ministry. See photos from school missions, baptisms, prayer events, and more.",
+  title: "Gallery - See God's Goodness in Our Ministry",
+  description: "A gallery of moments from our non-profit ministry. See photos from school ministry, baptisms, prayer events, and youth empowerment initiatives.",
+  keywords: ["ministry gallery", "school missions photos", "student baptism", "youth prayer events", "faith-based outreach", "non-profit impact"],
 };
 
 const galleryImages = {
     schoolMissions: [
-        { src: "/_MG_9115.JPG", alt: "Student Revival" },
-        { src: "/missions1.jpg", alt: "Community Outreach" },
-        { src: "/sponsored.jpg", alt: "School Evangelism" },
-        { src: "/outreach.jpg", alt: "Missions Outreach" },
-        { src: "/community1.jpg", alt: "Global Missions" },
-        { src: "/discipleship.jpg", alt: "Discipleship Group" },
+        { src: "/_MG_9115.JPG", alt: "Students worshiping during a school ministry outreach event by Believers' Network International." },
+        { src: "/missions1.jpg", alt: "A large group of students gathered for a school evangelism event." },
+        { src: "/sponsored.jpg", alt: "Students participating in a sponsored school program focused on youth empowerment." },
+        { src: "/outreach.jpg", alt: "The Believers' Network International team during a missions outreach in Africa." },
+        { src: "/community1.jpg", alt: "Global missions team interacting with a local community during an outreach program." },
+        { src: "/discipleship.jpg", alt: "A discipleship group for new believers in our student ministry." },
     ],
     baptisms: [
-        { src: "/heroback.jpg", alt: "Baptism 1" },
-        { src: "/paci.jpeg", alt: "Baptism 2" },
-        { src: "/heroback.jpg", alt: "Baptism 3" },
+        { src: "/heroback.jpg", alt: "A young person being baptized as a public declaration of their faith." },
+        { src: "/paci.jpeg", alt: "Founder Iradukunda Pacifique with a newly baptized member of the young generation." },
+        { src: "/_MG_9115.JPG", alt: "Joyful celebration following a baptism service for students." },
     ],
     prayerEvents: [
-        { src: "/back2.jpg", alt: "Worship Event" },
-        { src: "/community1.jpg", alt: "Prayer Meeting" },
-        { src: "/og-image.jpg", alt: "Impact of Giving" },
-        { src: "/visionbearer.jpg", alt: "Founder speaking at event" },
-        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique" }
+        { src: "/back2.jpg", alt: "Passionate worship and prayer during a youth conference event." },
+        { src: "/community1.jpg", alt: "A community prayer meeting organized by our non-profit organization." },
+        { src: "/og-image.jpg", alt: "A visual collage showing the impact of giving on our global missions and prayer events." },
+        { src: "/visionbearer.jpg", alt: "Founder Iradukunda Pacifique speaking at a prayer and empowerment event." },
+        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique, a leader in faith-based initiatives." }
     ],
 };
 
@@ -61,21 +62,27 @@ export default function SeeGodsGoodness() {
               <TabsContent value="schoolMissions">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.schoolMissions.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <div key={`school-mission-${index}`} className="relative aspect-video w-full h-full overflow-hidden rounded-lg shadow-md">
+                        <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+                    </div>
                   ))}
                 </div>
               </TabsContent>
               <TabsContent value="baptisms">
                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.baptisms.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <div key={`baptism-${index}`} className="relative aspect-video w-full h-full overflow-hidden rounded-lg shadow-md">
+                        <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+                    </div>
                   ))}
                 </div>
               </TabsContent>
               <TabsContent value="prayerEvents">
                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
                   {galleryImages.prayerEvents.map((img, index) => (
-                    <Image key={index} src={img.src} alt={img.alt} width={600} height={400} className="rounded-lg shadow-md object-cover w-full h-full aspect-video" />
+                    <div key={`prayer-event-${index}`} className="relative aspect-video w-full h-full overflow-hidden rounded-lg shadow-md">
+                        <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
+                    </div>
                   ))}
                 </div>
               </TabsContent>

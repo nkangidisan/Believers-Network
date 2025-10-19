@@ -8,8 +8,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Donate",
-  description: "Partner with us to spread the Gospel. Your generous donation fuels our mission to reach every student, every campus, and every nation. Give today.",
+  title: "Donate to Our Ministry | Support Youth Empowerment",
+  description: "Partner with our non-profit organization to spread the Gospel. Your donation fuels our school ministry and mission to empower the young generation. Give today.",
+  keywords: ["donate", "support non-profit", "Christian charity", "give to missions", "school ministry donation", "youth empowerment support"],
 };
 
 export default function Donate() {
@@ -20,8 +21,8 @@ export default function Donate() {
         <section className="w-full py-20 md:py-28 bg-primary/10">
           <div className="container mx-auto px-4 text-center">
              <div className="max-w-3xl mx-auto">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-200">
-                    Partner with us to Spread the Gospel
+                <h1 className="font-headline text-4xl md:text-5xl font-bold">
+                    Partner with Us to Spread the Gospel
                 </h1>
                 <p className="mt-4 text-lg text-foreground/80">
                     Your generous donation fuels our mission to reach every student, every campus, and every nation with the life-transforming message of Jesus Christ. Every gift makes a significant impact.
@@ -81,7 +82,7 @@ export default function Donate() {
                         <p className="text-lg text-foreground/80">"Because of your support, we were able to provide Bibles to over 500 new believers at a recent high school outreach. Many of them had never owned a Bible before. Thank you for putting God's Word into their hands!"</p>
                         <cite className="block mt-2 font-semibold">- Outreach Team Lead</cite>
                     </div>
-                    <Image src="/seegiving.jpg" data-ai-hint="giving impact" alt="Giving Impact" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/missions1.jpg" data-ai-hint="giving impact student outreach" alt="Students at a Believers' Network International school outreach event, showing the impact of donations." width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>

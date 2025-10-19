@@ -6,8 +6,9 @@ import { Download, BarChart2 } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Financial Transparency",
-  description: "We are committed to honoring God and our partners through faithful stewardship. View and download our annual impact and financial reports.",
+  title: "Financial Transparency | Believers' Network International",
+  description: "As a faith-based non-profit organization, we are committed to honoring God and our partners through faithful stewardship. View our financial reports.",
+  keywords: ["financial transparency", "non-profit financials", "ministry accountability", "stewardship", "annual report"],
 };
 
 const reports = [
@@ -36,14 +37,14 @@ export default function Financials() {
                 <div className="text-center mb-12">
                      <h2 className="font-headline text-3xl font-bold">Our Commitment to Stewardship</h2>
                      <p className="mt-4 text-lg text-foreground/80">
-                         Believers' Network is committed to the highest standards of financial integrity and accountability. We believe that every resource given to us is a sacred trust from God and our partners, to be used for the advancement of the Gospel. Our financial records are maintained with care and are available to our partners to ensure full transparency.
+                         Believers' Network International is committed to the highest standards of financial integrity and accountability. We believe that every resource given to us is a sacred trust from God and our partners, to be used for the advancement of the Gospel. Our financial records are maintained with care and are available to our partners to ensure full transparency.
                      </p>
                 </div>
                 
                 <Card className="shadow-lg">
                     <CardHeader>
                         <CardTitle className="font-headline flex items-center gap-2"><BarChart2 className="text-accent"/> Annual Reports</CardTitle>
-                        <CardDescription>Download our annual impact reports to see a detailed breakdown of our activities and financial stewardship.</CardDescription>
+                        <CardDescription>Download our annual impact reports to see a detailed breakdown of our school ministry activities and financial stewardship.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <ul className="space-y-4">

@@ -9,8 +9,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Who We Are",
-  description: "Meet the team behind Believers' Network, including our founder Iradukunda Pacifique. Learn about our mission, vision, and the passion that drives us.",
+  title: "Who We Are | About Our Faith-Based Non-Profit Organization",
+  description: "Meet the team behind Believers' Network International, including our founder Iradukunda Pacifique. Learn about our mission for school ministry and youth empowerment.",
+  keywords: ["about us", "our mission", "our vision", "faith-based leadership", "non-profit team", "Iradukunda Pacifique", "Nkangi Disan"],
 };
 
 const teamMembers = [
@@ -18,7 +19,7 @@ const teamMembers = [
         name: "Iradukunda Pacifique", 
         role: "Founder & Vision Bearer", 
         image: "/paci.jpeg", 
-        description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision of the ministry."
+        description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision for school ministry and empowering the young generation."
     },
     { 
         name: "Nkangi Disan", 
@@ -41,7 +42,7 @@ export default function WhoWeAre() {
                         Who We Are
                     </h1>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-                        We are a family of believers, united by a passion to see lives transformed by the power of Jesus Christ.
+                        We are a family of believers, a non-profit organization united by a passion to see the young generation transformed by the power of Jesus Christ.
                     </p>
                 </div>
             </div>
@@ -77,13 +78,13 @@ export default function WhoWeAre() {
                 <Card className="shadow-2xl">
                     <CardHeader className="text-center">
                         <CardTitle className="font-headline text-3xl md:text-4xl">Vision Bearer – Iradukunda Pacifique</CardTitle>
-                        <CardDescription className="text-lg italic text-primary">From the classroom floor to the nations of the world — the calling of a soul on fire for Jesus.</CardDescription>
+                        <CardDescription className="text-lg italic text-primary">From the classroom floor to the nations — the calling of a soul on fire for Jesus.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-8 text-lg text-foreground/80">
                         <p>In 2018, a young man named Iradukunda Pacifique received a divine mandate during a time of deep prayer and fasting: <strong className="text-accent">"Go to the students. Take My Word to the schools."</strong></p>
                         <p>He obeyed — not with money, not with fame, but with fire. Armed with nothing more than a Bible, a notebook, and unwavering faith, he stepped into his first school with trembling hands and a burning heart. What followed was the beginning of a supernatural movement.</p>
-                        <p>Students began repenting. Teachers were convicted. The fire of the Gospel caught flame — and the birth of Believers’ Network began.</p>
-                        <p>Today, Pacifique leads not as a CEO, but as a servant-leader. He prays, fasts, teaches, travels, and equips a new generation of soul-winners across nations.</p>
+                        <p>Students began repenting. Teachers were convicted. The fire of the Gospel caught flame — and the birth of Believers’ Network International began.</p>
+                        <p>Today, Pacifique leads not as a CEO, but as a servant-leader. He prays, fasts, teaches, travels, and equips a new generation of soul-winners across nations for school ministry.</p>
                         <p className="font-bold text-center text-xl">His life testifies to one unshakable truth: <br/> <span className="text-primary">When God finds a yielded vessel, nations can be transformed.</span></p>
 
                         <div className="grid md:grid-cols-2 gap-8 pt-8">
@@ -91,7 +92,7 @@ export default function WhoWeAre() {
                                 <h3 className="font-headline text-2xl flex items-center gap-2 mb-4"><Flame className="text-accent"/> His Passion</h3>
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Raising young evangelists from school benches to global stages</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Taking the Gospel to overlooked communities</span></li>
+                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Taking the Gospel to overlooked communities and the young generation</span></li>
                                     <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Training intercessors, disciple-makers, and frontline missionaries</span></li>
                                     <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Ensuring that no student graduates without hearing about Jesus</span></li>
                                 </ul>
@@ -136,11 +137,11 @@ export default function WhoWeAre() {
                         <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto">
                             <CardContent className="p-0">
                                 {member.linkedin ? (
-                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                                        <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name}'s LinkedIn profile`}>
+                                        <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
                                     </a>
                                 ) : (
-                                    <Image src={member.image} alt={member.name} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
+                                    <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
                                 )}
                                 <div className="p-4">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>

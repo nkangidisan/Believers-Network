@@ -11,22 +11,22 @@ const stories = [
     image: "/community1.jpg",
     category: "Community Impact",
     title: "Hope and Healing in the Community",
-    excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village.",
-    aiHint: "community impact"
+    excerpt: "Read about our recent outreach program that brought essential supplies and the message of hope to a rural village in Africa.",
+    aiHint: "community impact outreach"
   },
   {
     image: "/outreach.jpg",
     category: "Outreach",
     title: "A Life Changed During an Outreach",
-    excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip in a neighboring country.",
-    aiHint: "outreach missions"
+    excerpt: "A volunteer shares their transformative experience serving on a short-term mission trip with our non-profit organization.",
+    aiHint: "outreach missions volunteer"
   },
   {
     image: "/missions1.jpg",
-    category: "Missions",
+    category: "School Ministry",
     title: "Taking the Gospel to the Nations",
-    excerpt: "See how our missions team is making a difference in unreached communities across the globe.",
-    aiHint: "global missions"
+    excerpt: "See how our missions team is making a difference in unreached communities and schools across the globe.",
+    aiHint: "global missions school ministry"
   },
 ];
 
@@ -39,7 +39,7 @@ export default function StoriesSection() {
             Stories of Impact
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-            God is moving powerfully. Here are just a few stories of lives being transformed.
+            God is moving powerfully. Here are just a few stories of lives being transformed in the young generation.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 gap-8">

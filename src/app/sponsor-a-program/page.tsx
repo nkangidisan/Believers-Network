@@ -8,8 +8,9 @@ import { CheckCircle } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sponsor a Program",
-  description: "Be a catalyst for revival. Your sponsorship of a school assembly or mission allows us to bring the hope of the Gospel directly to thousands of students.",
+  title: "Sponsor a School Ministry Program | Youth Empowerment",
+  description: "Be a catalyst for revival. Your sponsorship of a school assembly or mission allows our non-profit to bring the hope of the Gospel to thousands of students.",
+  keywords: ["sponsor a program", "school ministry sponsorship", "youth outreach program", "support student evangelism", "Christian non-profit sponsorship"],
 };
 
 const sponsorshipLevels = [
@@ -41,7 +42,7 @@ export default function SponsorAProgram() {
         <section className="w-full py-20 md:py-28 bg-primary/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-headline text-4xl md:text-5xl font-bold">
-              Sponsor a Program
+              Sponsor a School Ministry Program
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               Your sponsorship allows us to bring the hope of the Gospel directly to thousands of students. Be the catalyst for revival in a school.
@@ -53,7 +54,7 @@ export default function SponsorAProgram() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-headline text-3xl font-bold">Sponsorship Levels</h2>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Choose a level of support that fits your capacity and passion.</p>
+              <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Choose a level of support that fits your capacity and passion to empower the young generation.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {sponsorshipLevels.map(level => (
@@ -86,7 +87,7 @@ export default function SponsorAProgram() {
                         <h2 className="font-headline text-3xl font-bold mb-4">Impact of Sponsorship</h2>
                         <p className="text-lg text-foreground/80">When you sponsor a program, you are not just funding an event; you are investing in eternal destinies. The image you see is from a past outreach in Kampala, Uganda, funded entirely by a single sponsor. Over 200 students gave their lives to Jesus that day. This is the fruit of your partnership.</p>
                     </div>
-                    <Image src="/sponsored.jpg" data-ai-hint="sponsored outreach" alt="Sponsored Program" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/sponsored.jpg" data-ai-hint="sponsored school outreach" alt="Students at a sponsored school outreach program by Believers' Network International." width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>

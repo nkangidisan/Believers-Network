@@ -9,7 +9,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Receive Salvation - A New Beginning with Jesus",
-  description: "The most important decision you can make. Learn about God's gift of salvation and pray the salvation prayer to begin your new life in Christ today.",
+  description: "The most important decision. Learn about God's gift of salvation and pray the salvation prayer to begin your new life in Christ with Believers' Network International.",
+  keywords: ["receive salvation", "salvation prayer", "new life in Christ", "accept Jesus", "Christian faith", "born again"],
 };
 
 export default function Salvation() {

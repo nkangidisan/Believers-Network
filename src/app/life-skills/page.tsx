@@ -9,8 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Life Skills Training",
-  description: "Empowering youth for ministry and the marketplace with practical skills like photography, graphic design, baking, and music. Learn a skill, shape your future.",
+  title: "Life Skills Training for Youth Empowerment | Believers' Network",
+  description: "Empowering the young generation for ministry and the marketplace with practical skills like photography, graphic design, baking, and music. Learn a skill, shape your future.",
+  keywords: ["life skills training", "youth empowerment programs", "vocational training for youth", "photography courses", "graphic design training", "music lessons for ministry"],
 };
 
 
@@ -48,7 +49,7 @@ export default function LifeSkills() {
               Learn a Skill, Shape Your Future
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              We believe in empowering you with practical skills that not only enrich your life but also equip you for the work of the ministry and the marketplace.
+              We believe in empowering the young generation with practical skills that enrich their lives and equip them for ministry and the marketplace.
             </p>
           </div>
         </section>
@@ -57,7 +58,7 @@ export default function LifeSkills() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Skills Training Programs</h2>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Explore the hands-on training we offer to help you grow your talents.</p>
+                    <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Explore the hands-on training we offer to help you grow your God-given talents.</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {skills.map((skill) => (

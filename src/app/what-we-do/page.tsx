@@ -8,8 +8,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "What We Do",
-  description: "Learn about our core pillars: school evangelism, discipleship for new believers, and local and international outreach and missions. See how we're transforming lives.",
+  title: "What We Do | School Ministry, Discipleship, & Missions",
+  description: "Learn about the core pillars of our faith-based non-profit: school evangelism, discipleship for the young generation, and local & international missions.",
+  keywords: ["what we do", "school ministry", "student discipleship", "international missions", "youth evangelism", "non-profit programs"],
 };
 
 export default function WhatWeDo() {
@@ -33,16 +34,16 @@ export default function WhatWeDo() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h2 className="font-headline text-3xl font-bold mb-4">School Evangelism</h2>
-                        <p className="text-lg text-foreground/80 mb-6">We are passionate about bringing the life-changing message of Jesus Christ to students right where they are. Through dynamic school assemblies, campus-wide outreach events, and one-on-one conversations, we create opportunities for young people to encounter God's love and truth. Our goal is to see a revival sweep through the educational institutions of every nation we reach.</p>
+                        <p className="text-lg text-foreground/80 mb-6">We are passionate about bringing the life-changing message of Jesus Christ to students right where they are. Through dynamic school assemblies, campus-wide outreach events, and one-on-one conversations, we create opportunities for the young generation to encounter God's love and truth. Our goal is to see a revival sweep through the educational institutions of every nation we reach.</p>
                         <Button asChild>
                             <Link href="/sponsor-a-program">Sponsor an Outreach</Link>
                         </Button>
                     </div>
-                    <Image src="/school-evag.jpg" data-ai-hint="school evangelism" alt="School Evangelism" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/school-evag.jpg" data-ai-hint="school evangelism students" alt="Students engaged in a school evangelism event by Believers' Network International." width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                     <Image src="/discipleship.jpg" data-ai-hint="discipleship group" alt="Discipleship" width={600} height={400} className="rounded-lg shadow-lg md:order-2" />
+                     <Image src="/discipleship.jpg" data-ai-hint="youth discipleship group" alt="A youth discipleship group studying the Bible, a core part of our student ministry." width={600} height={400} className="rounded-lg shadow-lg md:order-2" />
                     <div className="md:order-1">
                         <h2 className="font-headline text-3xl font-bold mb-4">Discipleship</h2>
                         <p className="text-lg text-foreground/80 mb-6">Salvation is just the beginning of a lifelong journey with Christ. We are committed to discipleship, helping new believers grow in their faith. We provide mentorship, Bible studies, and a supportive community where individuals can deepen their relationship with God, understand His Word, and learn to walk in the power of the Holy Spirit. </p>
@@ -60,7 +61,7 @@ export default function WhatWeDo() {
                             <Link href="/get-involved">Join a Mission Trip</Link>
                         </Button>
                     </div>
-                    <Image src="/outreach.jpg" data-ai-hint="outreach missions" alt="Outreach & Missions" width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/outreach.jpg" data-ai-hint="international outreach missions" alt="Our missions team during an international outreach, representing our faith-based initiative." width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
             </div>
         </section>
@@ -68,7 +69,7 @@ export default function WhatWeDo() {
         <section className="w-full py-20 md:py-28 bg-muted">
             <div className="container mx-auto px-4 text-center">
                  <h2 className="font-headline text-3xl md:text-4xl font-bold">Partner With Our Mission</h2>
-                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Your support makes this work possible. Partner with us financially or sponsor a specific mission to help us reach more souls for Christ.</p>
+                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Your support makes this work possible. Partner with us financially or sponsor a specific school ministry program to help us reach more souls for Christ.</p>
                  <div className="mt-8 flex justify-center gap-4">
                     <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground">
                         <Link href="/donate">Give Now</Link>

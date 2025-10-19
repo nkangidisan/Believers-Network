@@ -9,8 +9,9 @@ import { Mail, Phone } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Stay Connected",
-  description: "Contact us! We'd love to hear from you. Send us a message, prayer request, or testimony. Find our phone number, WhatsApp, and email address.",
+  title: "Contact Our Faith-Based Non-Profit | Believers' Network",
+  description: "Contact Believers' Network International. We'd love to hear from you. Send our non-profit a message, prayer request, or testimony about our school ministry.",
+  keywords: ["contact faith-based non-profit", "contact Believers' Network International", "ministry contact", "prayer request", "share testimony"],
 };
 
 export default function StayConnected() {
@@ -24,7 +25,7 @@ export default function StayConnected() {
               Stay Connected
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-              We'd love to hear from you. Whether you have a question, a testimony, or want to get involved, please reach out.
+              We'd love to hear from you. Whether you have a question about our school ministry, a testimony, or want to get involved, please reach out.
             </p>
           </div>
         </section>
