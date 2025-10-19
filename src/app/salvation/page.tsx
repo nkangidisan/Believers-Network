@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -57,7 +58,7 @@ export default function Salvation() {
                         <CardDescription>Let us know you made a decision.</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <form className="space-y-4">
+                        <form action="mailto:hello@believersnetworkintl.org" method="post" encType="text/plain" className="space-y-4">
                             <Input name="name" placeholder="Your Name" required />
                             <Input name="contact" placeholder="Your Phone Number or Email" required />
                             <Input name="location" placeholder="Your City/Country" required/>

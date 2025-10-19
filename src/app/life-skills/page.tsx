@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -95,7 +96,7 @@ export default function LifeSkills() {
                                     <Mail className="h-6 w-6 text-accent" />
                                     <div>
                                         <h3 className="font-semibold">Email</h3>
-                                        <a href="mailto:hello@believersnetworks.com" className="text-foreground/80 hover:text-primary">hello@believersnetworks.com</a>
+                                        <a href="mailto:hello@believersnetworkintl.org" className="text-foreground/80 hover:text-primary">hello@believersnetworkintl.org</a>
                                     </div>
                                 </div>
                             </CardContent>
@@ -108,7 +109,7 @@ export default function LifeSkills() {
                                 <CardDescription>Let us know you're interested.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-4">
+                                <form action="mailto:hello@believersnetworkintl.org" method="post" encType="text/plain" className="space-y-4">
                                     <Input name="name" placeholder="Your Name" required />
                                     <Input name="contact" placeholder="Your Phone Number or Email" required />
                                     <Input name="skill_interest" placeholder="Which skill are you interested in?" required />
