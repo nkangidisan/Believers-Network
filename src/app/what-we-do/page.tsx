@@ -18,18 +18,11 @@ export default function WhatWeDo() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/community1.jpg"
-            alt="School Ministry"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="school ministry students"
-          />
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-12 text-white">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">What We Do</h1>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+                <h1 className="font-headline text-4xl md:text-5xl font-bold">What We Do</h1>
+                <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 Our ministry is focused on three core pillars to transform lives and impact nations for Christ.
                 </p>
             </div>

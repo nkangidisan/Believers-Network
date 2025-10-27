@@ -27,12 +27,6 @@ const teamMembers = [
         image: "/NkangiDisan1234.jpg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence.",
         linkedin: "https://www.linkedin.com/in/disan-nkangi-7ab2b62a9/"
-    },
-    {
-        name: "Bugingo Alice Linzy",
-        role: "Secretary",
-        image: "/Bugingo Alice linzy.jpg",
-        description: "Handling administrative duties and ensuring smooth communication within the organization."
     }
 ]
 
@@ -41,20 +35,13 @@ export default function WhoWeAre() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
-            alt="Who we are"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="team ministry"
-          />
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-12 text-white">
-                    <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h1 className="font-headline text-4xl md:text-5xl font-bold">
                         Who We Are
                     </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
+                    <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                         We are a family of believers, a non-profit organization united by a passion to see the young generation transformed by the power of Jesus Christ.
                     </p>
                 </div>

@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,6 @@ import { Camera, Paintbrush, Cake, Music, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Life Skills Training for Youth Empowerment | Believers' Network",
@@ -44,19 +42,12 @@ export default function LifeSkills() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
-            alt="Life Skills"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="skills training youth"
-          />
-          <div className="container mx-auto px-4 text-center relative z-10 text-white">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold">
               Learn a Skill, Shape Your Future
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               We believe in empowering the young generation with practical skills that enrich their lives and equip them for ministry and the marketplace.
             </p>
           </div>
@@ -118,7 +109,7 @@ export default function LifeSkills() {
                                 <CardDescription>Let us know you're interested.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form action="mailto:hello@believersnetworkintl.org" method="post" encType="text/plain" className="space-y-4">
+                                <form className="space-y-4">
                                     <Input name="name" placeholder="Your Name" required />
                                     <Input name="contact" placeholder="Your Phone Number or Email" required />
                                     <Input name="skill_interest" placeholder="Which skill are you interested in?" required />

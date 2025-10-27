@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, BarChart2 } from "lucide-react";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Financial Transparency | Believers' Network International",
@@ -22,19 +21,12 @@ export default function Financials() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
-            alt="Financial Transparency"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="financial report graph"
-          />
-          <div className="container mx-auto px-4 text-center relative z-10 text-white">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold">
               Financial Transparency
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               We are committed to honoring God and our partners through faithful stewardship. Your trust is sacred to us.
             </p>
           </div>

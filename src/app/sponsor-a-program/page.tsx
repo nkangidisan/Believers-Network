@@ -39,19 +39,12 @@ export default function SponsorAProgram() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
-            alt="Sponsor a program"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="sponsor program youth"
-          />
-          <div className="container mx-auto px-4 text-center relative z-10 text-white">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold">
               Sponsor a School Ministry Program
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               Your sponsorship allows us to bring the hope of the Gospel directly to thousands of students. Be the catalyst for revival in a school.
             </p>
           </div>

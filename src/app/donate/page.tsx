@@ -18,20 +18,13 @@ export default function Donate() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
-          <Image
-            src="/heroback.jpg"
-            alt="Donate to our ministry"
-            fill
-            className="object-cover z-0 brightness-50"
-            data-ai-hint="giving donation hands"
-          />
-          <div className="container mx-auto px-4 text-center relative z-10 text-white">
+        <section className="w-full py-20 md:py-28 bg-primary/10">
+          <div className="container mx-auto px-4 text-center">
              <div className="max-w-3xl mx-auto">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
+                <h1 className="font-headline text-4xl md:text-5xl font-bold">
                     Partner with Us to Spread the Gospel
                 </h1>
-                <p className="mt-4 text-lg text-white/90 drop-shadow-md">
+                <p className="mt-4 text-lg text-foreground/80">
                     Your generous donation fuels our mission to reach every student, every campus, and every nation with the life-transforming message of Jesus Christ. Every gift makes a significant impact.
                 </p>
             </div>
