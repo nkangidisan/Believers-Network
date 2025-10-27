@@ -1,12 +1,21 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { HeartHandshake } from "lucide-react";
+import { useInView } from 'react-intersection-observer';
+import { cn } from "@/lib/utils";
 
 export default function PartnerSection() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
+
   return (
-    <section id="partner" className="w-full py-20 md:py-28 bg-primary/5">
+    <section id="partner" ref={ref} className="w-full py-20 md:py-28 bg-primary/5">
         <div className="container mx-auto px-4 text-center">
-             <div className="max-w-3xl mx-auto">
+             <div className={cn("max-w-3xl mx-auto transition-all duration-700 ease-out", inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8")}>
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">
                     Partner with us to Spread the Gospel
                 </h2>

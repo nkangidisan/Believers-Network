@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useInView } from 'react-intersection-observer';
+import { cn } from "@/lib/utils";
 
 const stories = [
   {
@@ -31,10 +33,15 @@ const stories = [
 ];
 
 export default function StoriesSection() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
   return (
-    <section id="stories" className="w-full py-20 md:py-28 bg-background">
+    <section id="stories" ref={ref} className="w-full py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className={cn("text-center mb-12 transition-opacity duration-700 ease-out", inView ? "opacity-100" : "opacity-0")}>
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
             Stories of Impact
           </h2>
@@ -43,28 +50,30 @@ export default function StoriesSection() {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
-          {stories.map((story) => (
-            <Card key={story.title} className="overflow-hidden shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <Image
-                src={story.image}
-                alt={story.title}
-                width={600}
-                height={400}
-                className="w-full h-48 object-cover"
-                data-ai-hint={story.aiHint}
-              />
-              <CardContent className="p-6">
-                <p className="text-sm text-primary font-semibold mb-2">{story.category}</p>
-                <h3 className="font-headline text-xl font-bold mb-3">{story.title}</h3>
-                <p className="text-foreground/80 mb-4">{story.excerpt}</p>
-                <Link href="/stories-of-impact" className="font-bold text-accent hover:underline">
-                  Read More <ArrowRight className="inline h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
+          {stories.map((story, index) => (
+             <div key={story.title} className={cn("transition-all duration-700 ease-out", inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8")} style={{ transitionDelay: `${index * 200}ms` }}>
+                <Card className="overflow-hidden shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                  <Image
+                    src={story.image}
+                    alt={story.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-48 object-cover"
+                    data-ai-hint={story.aiHint}
+                  />
+                  <CardContent className="p-6">
+                    <p className="text-sm text-primary font-semibold mb-2">{story.category}</p>
+                    <h3 className="font-headline text-xl font-bold mb-3">{story.title}</h3>
+                    <p className="text-foreground/80 mb-4">{story.excerpt}</p>
+                    <Link href="/stories-of-impact" className="font-bold text-accent hover:underline">
+                      Read More <ArrowRight className="inline h-4 w-4" />
+                    </Link>
+                  </CardContent>
+                </Card>
+            </div>
           ))}
         </div>
-         <div className="text-center mt-12">
+         <div className={cn("text-center mt-12 transition-opacity duration-700 ease-out", inView ? "opacity-100" : "opacity-0")} style={{ transitionDelay: '600ms' }}>
             <Button asChild size="lg">
                 <Link href="/stories-of-impact">
                     See All Stories

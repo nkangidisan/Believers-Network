@@ -1,7 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { HandHeart, School, HeartHandshake } from "lucide-react";
 import Link from "next/link";
+import { useInView } from 'react-intersection-observer';
+import { cn } from "@/lib/utils";
+
 
 const waysToHelp = [
   {
@@ -28,10 +33,15 @@ const waysToHelp = [
 ];
 
 export default function GetInvolvedSection() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
   return (
-    <section id="get-involved" className="w-full py-20 md:py-28 bg-muted">
+    <section id="get-involved" ref={ref} className="w-full py-20 md:py-28 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className={cn("text-center mb-12 transition-opacity duration-700 ease-out", inView ? "opacity-100" : "opacity-0")}>
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
             Get Involved
           </h2>
@@ -40,24 +50,26 @@ export default function GetInvolvedSection() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {waysToHelp.map((way) => (
-            <Card key={way.title} className="flex flex-col text-center shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <CardHeader>
-                <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
-                    {way.icon}
-                </div>
-                <CardTitle className="font-headline text-2xl pt-2">{way.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow flex flex-col">
-                <CardDescription className="text-base flex-grow">{way.description}</CardDescription>
-                <Button asChild className="mt-6 bg-accent hover:bg-accent/90">
-                  <Link href={way.href}>{way.cta}</Link>
-                </Button>
-              </CardContent>
-            </Card>
+          {waysToHelp.map((way, index) => (
+             <div key={way.title} className={cn("transition-all duration-700 ease-out", inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8")} style={{ transitionDelay: `${index * 200}ms` }}>
+                <Card className="flex flex-col text-center shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                  <CardHeader>
+                    <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
+                        {way.icon}
+                    </div>
+                    <CardTitle className="font-headline text-2xl pt-2">{way.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <CardDescription className="text-base flex-grow">{way.description}</CardDescription>
+                    <Button asChild className="mt-6 bg-accent hover:bg-accent/90">
+                      <Link href={way.href}>{way.cta}</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+            </div>
           ))}
         </div>
-        <div className="text-center mt-12">
+        <div className={cn("text-center mt-12 transition-opacity duration-700 ease-out", inView ? "opacity-100" : "opacity-0")} style={{ transitionDelay: '600ms' }}>
             <Button asChild size="lg">
                 <Link href="/get-involved">Get Involved Now</Link>
             </Button>
