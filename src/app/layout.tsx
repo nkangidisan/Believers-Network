@@ -78,9 +78,8 @@ export default function RootLayout({
       "email": "hello@believersnetworkintl.org"
     },
     "sameAs": [
-      "https://www.facebook.com/BelieversNetworkInternational",
       "https://www.instagram.com/believersnetworkintl/",
-      "https://www.youtube.com/@believersnetworkinternational"
+      "https://www.youtube.com/@Iradukundapacifiquebenjamin"
     ]
   };
   return (

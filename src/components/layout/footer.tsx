@@ -1,14 +1,12 @@
 
 import Link from "next/link";
-import { Mail, Phone, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, Instagram, Youtube } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
 const socialLinks = [
-  { icon: Twitter, href: "https://twitter.com/BelieversNetInt", name: "Twitter" },
-  { icon: Facebook, href: "https://www.facebook.com/BelieversNetworkInternational", name: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/believersnetworkintl/", name: "Instagram" },
-  { icon: Youtube, href: "https://www.youtube.com/@believersnetworkinternational", name: "YouTube" },
+  { icon: Youtube, href: "https://www.youtube.com/@Iradukundapacifiquebenjamin", name: "YouTube" },
 ];
 
 const pageLinks = [

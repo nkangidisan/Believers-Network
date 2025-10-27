@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Handshake } from "lucide-react";
@@ -48,9 +49,8 @@ export default function WhoWeAre() {
       "name": "Believers' Network International"
     },
     "sameAs": [
-        "https://www.facebook.com/BelieversNetworkInternational",
         "https://www.instagram.com/believersnetworkintl/",
-        "https://www.youtube.com/@believersnetworkinternational"
+        "https://www.youtube.com/@Iradukundapacifiquebenjamin"
     ],
     "description": "Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide. As the Founder of Believer's Network International, he is committed to spreading the Gospel and empowering the young generation."
   };
@@ -146,10 +146,10 @@ export default function WhoWeAre() {
                                 <div className="relative w-full h-96">
                                     {member.linkedin ? (
                                         <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name}'s LinkedIn profile`}>
-                                            <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" />
+                                            <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
                                         </a>
                                     ) : (
-                                        <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" />
+                                        <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
                                     )}
                                 </div>
                                 <div className="p-4 flex flex-col flex-grow">
