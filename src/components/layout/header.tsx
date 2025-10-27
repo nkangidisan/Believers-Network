@@ -16,7 +16,6 @@ const navLinks = [
   { href: "/get-involved", label: "Get Involved" },
   { href: "/life-skills", label: "Life Skills" },
   { href: "/salvation", label: "Receive Salvation" },
-  { href: "/stay-connected", label: "Stay Connected" },
 ];
 
 export default function Header() {
@@ -52,7 +51,7 @@ export default function Header() {
             </span>
           </Link>
         </div>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -64,15 +63,18 @@ export default function Header() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-4">
-          <Button asChild className="hidden md:flex bg-gold hover:bg-gold/90 text-gold-foreground">
+          <Button asChild className="hidden lg:flex bg-gold hover:bg-gold/90 text-gold-foreground">
               <Link href="/donate">Donate Now</Link>
+          </Button>
+          <Button asChild variant="outline" className="hidden lg:flex">
+             <Link href="/stay-connected">Stay Connected</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
                 size="icon"
-                className={`md:hidden transition-colors ${isTransparent ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
+                className={`lg:hidden transition-colors ${isTransparent ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
                 aria-label="Open navigation menu"
               >
                 <Menu className="h-5 w-5" />
@@ -94,7 +96,7 @@ export default function Header() {
                     </Button>
                 </div>
                 <nav className="mt-8 flex flex-col gap-6">
-                  {[...navLinks, { href: "/donate", label: "Donate" }].map((link) => (
+                  {[...navLinks, { href: "/stay-connected", label: "Stay Connected" }].map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -105,6 +107,11 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
+                 <div className="mt-auto flex flex-col gap-4">
+                    <Button asChild className="w-full bg-gold hover:bg-gold/90 text-gold-foreground" onClick={() => setIsOpen(false)}>
+                        <Link href="/donate">Donate Now</Link>
+                    </Button>
+                 </div>
               </div>
             </SheetContent>
           </Sheet>
