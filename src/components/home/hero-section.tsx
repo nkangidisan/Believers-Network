@@ -9,6 +9,7 @@ import { Compass, User, Heart, Volume2, VolumeX } from "lucide-react";
 export default function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const playerRef = useRef<any>(null);
+  const mobilePlayerRef = useRef<any>(null);
 
   useEffect(() => {
     const tag = document.createElement('script');
@@ -37,11 +38,31 @@ export default function HeroSection() {
           }
         }
       });
+      mobilePlayerRef.current = new (window as any).YT.Player('youtube-player-mobile', {
+        videoId: 'Exs6flEtJpQ',
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          loop: 1,
+          playlist: 'Exs6flEtJpQ',
+          controls: 0,
+          showinfo: 0,
+          rel: 0,
+        },
+        events: {
+          onReady: (event: any) => {
+            event.target.playVideo();
+          }
+        }
+      });
     };
 
     return () => {
       if (playerRef.current) {
         playerRef.current.destroy();
+      }
+       if (mobilePlayerRef.current) {
+        mobilePlayerRef.current.destroy();
       }
       delete (window as any).onYouTubeIframeAPIReady;
     }
@@ -49,14 +70,22 @@ export default function HeroSection() {
   }, []);
 
   const toggleMute = () => {
+    const isCurrentlyMuted = isMuted;
     if (playerRef.current) {
-      if (isMuted) {
+      if (isCurrentlyMuted) {
         playerRef.current.unMute();
       } else {
         playerRef.current.mute();
       }
-      setIsMuted(!isMuted);
     }
+     if (mobilePlayerRef.current) {
+      if (isCurrentlyMuted) {
+        mobilePlayerRef.current.unMute();
+      } else {
+        mobilePlayerRef.current.mute();
+      }
+    }
+    setIsMuted(!isCurrentlyMuted);
   };
 
 
@@ -64,6 +93,17 @@ export default function HeroSection() {
     <section id="home" className="relative w-full flex flex-col md:h-screen md:items-center md:justify-center overflow-hidden">
       <div className="block md:hidden h-96 w-full relative">
         <div id="youtube-player-mobile" className="absolute top-0 left-0 w-full h-full"></div>
+         <div className="absolute top-4 right-4 z-20">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleMute}
+            className="text-white bg-white/10 border-white/20 hover:bg-white/20"
+          >
+            {isMuted ? <VolumeX /> : <Volume2 />}
+            <span className="sr-only">{isMuted ? 'Unmute' : 'Mute'}</span>
+          </Button>
+        </div>
       </div>
       <div className="absolute inset-0 z-0 h-full w-full hidden md:block">
          <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 brightness-50"></div>
