@@ -18,11 +18,18 @@ export default function WhatWeDo() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold">What We Do</h1>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
+          <Image
+            src="/community1.jpg"
+            alt="School Ministry"
+            fill
+            className="object-cover z-0 brightness-50"
+            data-ai-hint="school ministry students"
+          />
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-12 text-white">
+                <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">What We Do</h1>
+                <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
                 Our ministry is focused on three core pillars to transform lives and impact nations for Christ.
                 </p>
             </div>
@@ -39,7 +46,7 @@ export default function WhatWeDo() {
                             <Link href="/sponsor-a-program">Sponsor an Outreach</Link>
                         </Button>
                     </div>
-                    <Image src="/school-evag.jpg" data-ai-hint="school evangelism students" alt="Students engaged in a school evangelism event by Believers' Network International." width={600} height={400} className="rounded-lg shadow-lg" />
+                    <Image src="/missions1.jpg" data-ai-hint="school evangelism students" alt="Students engaged in a school evangelism event by Believers' Network International." width={600} height={400} className="rounded-lg shadow-lg" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -17,13 +17,20 @@ export default function GetInvolved() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-         <section id="get-involved-hero" className="w-full py-20 md:py-28 bg-primary/10">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                <h1 className="font-headline text-4xl md:text-5xl font-bold">
+         <section id="get-involved-hero" className="w-full py-20 md:py-28 bg-primary/10 relative">
+            <Image
+                src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
+                alt="Get Involved"
+                fill
+                className="object-cover z-0 brightness-50"
+                data-ai-hint="volunteer mission"
+            />
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-12 text-white">
+                <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
                     Get Involved
                 </h1>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
                     You are a vital part of what God is doing in the young generation. There are many ways to join the mission and make an eternal impact.
                 </p>
                 </div>

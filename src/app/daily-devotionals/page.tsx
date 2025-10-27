@@ -24,6 +24,7 @@ import { useToast } from '@/hooks/use-toast';
 import { getPersonalizedDevotional } from '../actions';
 import type { PersonalizedDevotionalOutput } from '@/ai/flows/personalized-devotionals';
 import { Loader2 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function DailyDevotionals() {
   const [isLoading, setIsLoading] = useState(false);
@@ -71,12 +72,19 @@ export default function DailyDevotionals() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold">
+        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
+          <Image
+            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
+            alt="Daily Devotionals"
+            fill
+            className="object-cover z-0 brightness-50"
+            data-ai-hint="devotional bible study"
+          />
+          <div className="container mx-auto px-4 text-center relative z-10 text-white">
+            <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
               AI-Powered Daily Devotionals
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
               Receive a personalized word of encouragement. Generate a unique devotional based on your spiritual needs and preferred topics like faith, hope, and love.
             </p>
           </div>

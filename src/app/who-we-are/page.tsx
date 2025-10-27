@@ -28,6 +28,12 @@ const teamMembers = [
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence.",
         linkedin: "https://www.linkedin.com/in/disan-nkangi-7ab2b62a9/"
     },
+    {
+        name: "Bugingo Alice Linzy",
+        role: "Secretary",
+        image: "/Bugingo Alice linzy.jpg",
+        description: "Handling administrative duties and ensuring smooth communication within the organization."
+    }
 ]
 
 export default function WhoWeAre() {
@@ -35,13 +41,20 @@ export default function WhoWeAre() {
     <div className="flex min-h-screen w-full flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-20 md:py-28 bg-primary/10">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h1 className="font-headline text-4xl md:text-5xl font-bold">
+        <section className="w-full py-20 md:py-28 bg-primary/10 relative">
+          <Image
+            src="/WhatsApp Image 2024-07-25 at 16.32.22_e9154a1e.jpg"
+            alt="Who we are"
+            fill
+            className="object-cover z-0 brightness-50"
+            data-ai-hint="team ministry"
+          />
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-12 text-white">
+                    <h1 className="font-headline text-4xl md:text-5xl font-bold drop-shadow-md">
                         Who We Are
                     </h1>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                    <p className="mt-4 max-w-2xl mx-auto text-lg text-white/90 drop-shadow-md">
                         We are a family of believers, a non-profit organization united by a passion to see the young generation transformed by the power of Jesus Christ.
                     </p>
                 </div>
@@ -113,17 +126,19 @@ export default function WhoWeAre() {
                         God has assembled a dedicated team to carry this vision forward.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
                     {teamMembers.map((member) => (
                         <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto">
                             <CardContent className="p-0">
-                                {member.linkedin ? (
-                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name}'s LinkedIn profile`}>
-                                        <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
-                                    </a>
-                                ) : (
-                                    <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} width={400} height={400} className="w-full h-auto rounded-t-lg object-cover" />
-                                )}
+                                <div className="relative w-full h-96">
+                                    {member.linkedin ? (
+                                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name}'s LinkedIn profile`}>
+                                            <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" />
+                                        </a>
+                                    ) : (
+                                        <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" />
+                                    )}
+                                </div>
                                 <div className="p-4">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                                     <p className="text-primary font-semibold">{member.role}</p>
