@@ -41,18 +41,19 @@ export default function Salvation() {
 
             <Card className="my-12 bg-muted shadow-lg">
                 <CardHeader>
-                    <CardTitle className="font-headline text-center">The Salvation Prayer</CardTitle>
+                    <CardTitle className="font-headline text-center">Prayer of salvation</CardTitle>
+                     <CardDescription className="text-center pt-2">Kindly say this prayer with all your heart and believe it:</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <p className="text-xl italic text-center font-semibold">
-                        "Dear Lord Jesus, I know that I am a sinner, and I ask for Your forgiveness. I believe You died for my sins and rose from the dead. I turn from my sins and invite You to come into my heart and life. I want to trust and follow You as my Lord and Savior. In Your name, Amen."
+                        "O Lord God, I believe with all my heart in Jesus Christ, Son of the living God. I believe He died for me and God raised Him from the dead. I believe He is alive today. I confess with my mouth that Jesus Christ is the Lord of my life from this day. Through Him and in His Name, I have eternal life. I am born again. Thank you Lord, for saving my soul! I am now a child of God. Hallelujah!"
                     </p>
                 </CardContent>
             </Card>
 
              <div className="text-center">
                 <h2 className="font-headline text-3xl font-bold mb-4">I Received Christ!</h2>
-                <p className="text-lg text-foreground/80 mb-6">If you prayed this prayer, congratulations! You have begun a new life in Christ. We would love to connect with you and help you on your journey. Please let us know about your decision.</p>
+                <p className="text-lg text-foreground/80 mb-6">Kindly fill the form below to receive materials to help build your new relationship with God.</p>
                 <Card className="max-w-md mx-auto">
                     <CardHeader>
                         <CardTitle className="font-headline">Welcome to the Family!</CardTitle>

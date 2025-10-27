@@ -14,7 +14,7 @@ export default function HeroSection() {
           allowFullScreen
           title="Background Video"
         ></iframe>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
         <div className="max-w-4xl space-y-6">
