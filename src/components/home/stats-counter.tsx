@@ -91,13 +91,14 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section id="impact" ref={ref} className="w-full py-20 md:py-28 bg-muted">
-      <div className="container mx-auto px-4">
+    <section id="impact" ref={ref} className="relative w-full py-20 md:py-28 bg-muted text-white" style={{ backgroundImage: "url(/reach.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="container relative mx-auto px-4">
         <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
                 Our Global Impact
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-white/80">
                 By God's grace, our network is growing and reaching thousands across the world.
             </p>
         </div>
@@ -113,7 +114,7 @@ export default function StatsCounter() {
                   />
                 )}
               </div>
-              <p className="mt-2 text-lg font-medium text-foreground/80">
+              <p className="mt-2 text-lg font-medium text-white/80">
                 {stat.label}
               </p>
             </div>
