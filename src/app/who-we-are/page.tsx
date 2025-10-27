@@ -8,9 +8,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Who We Are | About Our Faith-Based Non-Profit Organization",
-  description: "Meet the team behind Believers' Network International, including our founder Iradukunda Pacifique. Learn about our mission for school ministry and youth empowerment.",
-  keywords: ["about us", "our mission", "our vision", "faith-based leadership", "non-profit team", "Iradukunda Pacifique", "Nkangi Disan"],
+  title: "About Iradukunda Pacifique Benjamin | Founder, Believers' Network International",
+  description: "Learn about Iradukunda Pacifique Benjamin, a Global Minister, Innovator, and the Founder & Vision Bearer of Believers' Network International, a faith-based non-profit organization focused on school ministry and youth empowerment.",
+  keywords: ["Iradukunda Pacifique Benjamin", "Iradukunda Pacifique", "Believers' Network International", "Pacifique Essence", "about us", "our mission", "our vision", "faith-based leadership", "non-profit team", "Nkangi Disan"],
 };
 
 const teamMembers = [
@@ -36,8 +36,31 @@ const teamMembers = [
 ]
 
 export default function WhoWeAre() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Iradukunda Pacifique Benjamin",
+    "jobTitle": "Founder & Vision Bearer",
+    "url": "https://believersnetworkintl.org/who-we-are",
+    "image": "https://believersnetworkintl.org/paci.jpeg",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Believers' Network International"
+    },
+    "sameAs": [
+        "https://www.facebook.com/BelieversNetworkInternational",
+        "https://www.instagram.com/believersnetworkintl/",
+        "https://www.youtube.com/@believersnetworkinternational"
+    ],
+    "description": "Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide. As the Founder of Believer's Network International, he is committed to spreading the Gospel and empowering the young generation."
+  };
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       <Header />
       <main className="flex-1">
         <section className="w-full py-20 md:py-28 bg-primary/10">
@@ -118,8 +141,8 @@ export default function WhoWeAre() {
                 </div>
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
                     {teamMembers.map((member) => (
-                        <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto">
-                            <CardContent className="p-0">
+                        <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto flex flex-col">
+                            <CardContent className="p-0 flex flex-col flex-grow">
                                 <div className="relative w-full h-96">
                                     {member.linkedin ? (
                                         <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name}'s LinkedIn profile`}>
@@ -129,10 +152,10 @@ export default function WhoWeAre() {
                                         <Image src={member.image} alt={`Portrait of ${member.name}, ${member.role} of Believers' Network International`} fill style={{objectFit: 'cover', objectPosition: 'top'}} className="rounded-t-lg" />
                                     )}
                                 </div>
-                                <div className="p-4">
+                                <div className="p-4 flex flex-col flex-grow">
                                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                                     <p className="text-primary font-semibold">{member.role}</p>
-                                    <p className="text-foreground/70 mt-2 text-sm">{member.description}</p>
+                                    <p className="text-foreground/70 mt-2 text-sm flex-grow">{member.description}</p>
                                 </div>
                             </CardContent>
                         </Card>
