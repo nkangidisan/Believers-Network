@@ -80,31 +80,12 @@ export default function WhoWeAre() {
                         <CardTitle className="font-headline text-3xl md:text-4xl">Vision Bearer – Iradukunda Pacifique</CardTitle>
                         <CardDescription className="text-lg italic text-primary">From the classroom floor to the nations — the calling of a soul on fire for Jesus.</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-8 text-lg text-foreground/80">
-                        <p>In 2018, a young man named Iradukunda Pacifique received a divine mandate during a time of deep prayer and fasting: <strong className="text-accent">"Go to the students. Take My Word to the schools."</strong></p>
-                        <p>He obeyed — not with money, not with fame, but with fire. Armed with nothing more than a Bible, a notebook, and unwavering faith, he stepped into his first school with trembling hands and a burning heart. What followed was the beginning of a supernatural movement.</p>
-                        <p>Students began repenting. Teachers were convicted. The fire of the Gospel caught flame — and the birth of Believers’ Network International began.</p>
-                        <p>Today, Pacifique leads not as a CEO, but as a servant-leader. He prays, fasts, teaches, travels, and equips a new generation of soul-winners across nations for school ministry.</p>
-                        <p className="font-bold text-center text-xl">His life testifies to one unshakable truth: <br/> <span className="text-primary">When God finds a yielded vessel, nations can be transformed.</span></p>
-
-                        <div className="grid md:grid-cols-2 gap-8 pt-8">
-                            <div>
-                                <h3 className="font-headline text-2xl flex items-center gap-2 mb-4"><Flame className="text-accent"/> His Passion</h3>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Raising young evangelists from school benches to global stages</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Taking the Gospel to overlooked communities and the young generation</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Training intercessors, disciple-makers, and frontline missionaries</span></li>
-                                    <li className="flex items-start gap-3"><CheckCircle className="text-accent h-5 w-5 mt-1 shrink-0" /> <span>Ensuring that no student graduates without hearing about Jesus</span></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <h3 className="font-headline text-2xl flex items-center gap-2 mb-4"><MessageSquareQuote className="text-accent"/> His Message</h3>
-                                <blockquote className="border-l-4 border-primary pl-4 italic text-xl">
-                                    “This is not about crowds, clicks, or popularity. It’s about souls. It’s about Jesus. It’s about eternity.”
-                                    <cite className="block mt-2 text-md not-italic text-foreground/70">— Iradukunda Pacifique</cite>
-                                </blockquote>
-                            </div>
-                        </div>
+                    <CardContent className="space-y-4 text-lg text-foreground/80">
+                        <h3 className="font-bold text-xl">Iradukunda Pacifique Benjamin: Global Minister, Innovator, and Leader</h3>
+                        <p>Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide.</p>
+                        <p>As a Global Minister and Philanthropist, he is the Founder of Believer's Network International (@believersnetworkintl). This evangelical ministry is committed to Spreading the Gospel through outreaches in communities, street evangelism, and strategic engagement with schools and educational institutions. His work is dedicated to connecting people to the power of God through prayer, worship, and discipleship, empowering individuals to become ambassadors of Christ and agents of transformation globally.</p>
+                        <p>Complementing his ministry is his role as the CEO of Pacifique Essence (@pacifiqueessence), a versatile tech company with expertise in branding, graphics, web design, photography, videography, and app development. This enterprise reflects his commitment to leveraging digital tools and creative strategy to build, communicate, and expand influence.</p>
+                        <p>Iradukunda Pacifique Benjamin's journey is one of holistic impact: guiding spiritual growth through diverse evangelistic efforts while harnessing technological prowess to build a global legacy.</p>
 
                         <div className="pt-8 text-center">
                             <h3 className="font-headline text-2xl flex items-center justify-center gap-2 mb-4"><Handshake className="text-accent"/> Let’s Join Hands</h3>

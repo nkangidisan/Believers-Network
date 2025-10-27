@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, User, Heart, Compass } from "lucide-react";
@@ -6,16 +5,15 @@ import { ArrowRight, User, Heart, Compass } from "lucide-react";
 export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="/heroback.jpg"
-          alt="A diverse group of youth in a moment of worship and prayer during a school ministry event by Believers' Network International."
-          layout="fill"
-          objectFit="cover"
-          className="brightness-50 object-center"
-          priority
-          data-ai-hint="worship youth prayer"
-        />
+      <div className="absolute inset-0 z-0">
+        <iframe
+          className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 brightness-50"
+          src="https://www.youtube.com/embed/Exs6flEtJpQ?autoplay=1&mute=1&loop=1&playlist=Exs6flEtJpQ&controls=0&showinfo=0&rel=0"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="Background Video"
+        ></iframe>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
