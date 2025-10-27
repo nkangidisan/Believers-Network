@@ -1,6 +1,5 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import WhoWeAreSection from "@/components/home/who-we-are-section";
 import { Handshake } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -77,8 +76,6 @@ export default function WhoWeAre() {
             </div>
         </section>
         
-        <WhoWeAreSection />
-
         <section className="py-20 md:py-28 bg-muted">
             <div className="container mx-auto px-4 max-w-4xl">
                 <Card className="shadow-2xl">
