@@ -74,7 +74,7 @@ export default function DailyDevotionals() {
         <section className="w-full py-20 md:py-28 bg-primary/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-headline text-4xl md:text-5xl font-bold">
-              AI-Powered Daily Devotionals
+              Daily Devotionals
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
               Receive a personalized word of encouragement. Generate a unique devotional based on your spiritual needs and preferred topics like faith, hope, and love.
