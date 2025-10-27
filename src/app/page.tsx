@@ -2,7 +2,7 @@ import Header from "@/components/layout/header";
 import HeroSection from "@/components/home/hero-section";
 import StatsCounter from "@/components/home/stats-counter";
 import WhatWeDoSection from "@/components/home/what-we-do-section";
-import WhoWeAreSection from "@/components/home/who-we-are-section";
+import SalvationSection from "@/components/home/salvation-section";
 import StoriesSection from "@/components/home/stories-section";
 import GetInvolvedSection from "@/components/home/get-involved-section";
 import DonateSection from "@/components/home/donate-section";
@@ -17,7 +17,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <StatsCounter />
-        <WhoWeAreSection />
+        <SalvationSection />
         <WhatWeDoSection />
         <StoriesSection />
         <DevotionalSection />
