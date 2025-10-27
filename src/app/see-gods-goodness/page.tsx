@@ -30,7 +30,10 @@ const galleryImages = {
         { src: "/community1.jpg", alt: "A community prayer meeting organized by our non-profit organization." },
         { src: "/og-image.jpg", alt: "A visual collage showing the impact of giving on our global missions and prayer events." },
         { src: "/visionbearer.jpg", alt: "Founder Iradukunda Pacifique speaking at a prayer and empowerment event." },
-        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique, a leader in faith-based initiatives." }
+        { src: "/pacifique.jpg", alt: "Portrait of the Vision Bearer, Iradukunda Pacifique, a leader in faith-based initiatives." },
+        { src: "/WhatsApp Image 2024-05-24 at 19.29.28 (1).jpeg", alt: "A prayer event with many attendees." },
+        { src: "/WhatsApp Image 2024-05-24 at 19.29.28 (2).jpeg", alt: "Worship during a prayer event." },
+        { src: "/WhatsApp Image 2024-05-24 at 19.29.28.jpeg", alt: "A speaker at a prayer event." },
     ],
 };
 
