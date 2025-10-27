@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhoWeAreSection from "@/components/home/who-we-are-section";
-import { CheckCircle, Flame, Handshake, MessageSquareQuote } from "lucide-react";
+import { Handshake } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,12 @@ const teamMembers = [
         image: "/NkangiDisan1234.jpg",
         description: "Providing strategic leadership and operational oversight to ensure the ministry's vision is executed with excellence.",
         linkedin: "https://www.linkedin.com/in/disan-nkangi-7ab2b62a9/"
+    },
+    {
+        name: "Bugingo Alice Linzy",
+        role: "Secretary",
+        image: "/Bugingo Alice linzy.jpg",
+        description: "Managing communications and administrative duties, ensuring smooth operations for our growing non-profit organization."
     }
 ]
 
