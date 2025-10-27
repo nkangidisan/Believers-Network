@@ -109,7 +109,7 @@ export default function LifeSkills() {
                                 <CardDescription>Let us know you're interested.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-4">
+                                <form action="mailto:hello@believersnetworkintl.org" method="post" encType="text/plain" className="space-y-4">
                                     <Input name="name" placeholder="Your Name" required />
                                     <Input name="contact" placeholder="Your Phone Number or Email" required />
                                     <Input name="skill_interest" placeholder="Which skill are you interested in?" required />
