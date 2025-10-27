@@ -5,8 +5,8 @@ import { ArrowRight, User, Heart, Compass } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
+    <section id="home" className="relative w-full flex flex-col md:h-screen md:items-center md:justify-center overflow-hidden">
+      <div className="relative md:absolute md:inset-0 md:z-0 h-96 md:h-full w-full">
         <iframe
           className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2 brightness-50"
           src="https://www.youtube.com/embed/Exs6flEtJpQ?autoplay=1&mute=1&loop=1&playlist=Exs6flEtJpQ&controls=0&showinfo=0&rel=0"
@@ -17,7 +17,7 @@ export default function HeroSection() {
         ></iframe>
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white container mx-auto px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center text-white container mx-auto px-4 py-16 md:py-0">
         <div className="max-w-4xl space-y-6">
           <h1 
             className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up"
