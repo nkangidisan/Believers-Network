@@ -31,16 +31,17 @@ const marqueeItemsBottom = [
 
 const Marquee = ({ items, reverse = false }: { items: typeof marqueeItemsTop, reverse?: boolean }) => (
     <div className="relative flex w-full overflow-hidden group">
-      <div className={`flex w-max ${reverse ? 'marquee-reverse' : 'marquee'} group-hover:pause`}>
+      <div className={`flex w-max ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} group-hover:[animation-play-state:paused]`}>
         {[...items, ...items].map((item, index) => (
-          <div key={index} className="w-[400px] h-[250px] mx-4 shrink-0">
+          <div key={index} className="w-[90vw] md:w-[400px] h-[250px] mx-4 shrink-0">
               <Card className="relative w-full h-full text-white overflow-hidden group/card">
                 <Image 
                   src={item.imageUrl} 
                   alt={item.title} 
                   data-ai-hint={item.aiHint}
                   fill 
-                  className="object-cover transition-transform duration-500 ease-in-out group-hover/card:scale-110" 
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover/card:scale-110"
+                  sizes="(max-width: 768px) 90vw, 400px"
                 />
                 <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover/card:bg-black/70"></div>
                 <div className="relative z-10 flex flex-col justify-end h-full p-6">
@@ -117,7 +118,7 @@ export default function WhatWeDo() {
             <div className="container mx-auto px-4 text-center">
                  <h2 className="font-headline text-3xl md:text-4xl font-bold">Partner With Our Mission</h2>
                  <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">Your support makes this work possible. Partner with us financially or sponsor a specific school ministry program to help us reach more souls for Christ.</p>
-                 <div className="mt-8 flex justify-center gap-4">
+                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                     <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground">
                         <Link href="/donate">Give Now</Link>
                     </Button>

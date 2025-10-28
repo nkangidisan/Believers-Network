@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -21,6 +22,8 @@ const navLinks = [
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +39,42 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const headerClasses = cn(
+    'fixed top-0 z-50 w-full transition-all duration-300',
+    isScrolled ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-b-transparent'
+  );
+
+  const textClasses = cn(
+    'transition-colors',
+    isScrolled || !isHomePage ? 'text-foreground' : 'text-white'
+  );
+  
+  const linkClasses = cn(
+    'transition-colors uppercase tracking-wider',
+    isScrolled || !isHomePage ? 'text-foreground hover:text-primary' : 'text-white hover:text-primary'
+  );
+
+  const buttonOutlineClasses = cn(
+    'hidden lg:flex transition-colors',
+    isScrolled || !isHomePage ? '' : 'text-white border-white/50 hover:bg-white/10'
+  );
+
+  const mobileButtonClasses = cn(
+      'lg:hidden transition-colors',
+      isScrolled || !isHomePage ? 'text-foreground' : 'text-white bg-white/10 border-white/20 hover:bg-white/20'
+  )
+
+  const logoClasses = cn(
+    isScrolled || !isHomePage ? '' : 'invert'
+  )
 
   return (
-    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-b-transparent'}`}>
+    <header className={headerClasses}>
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} className={!isScrolled ? 'invert' : ''} />
-            <span className={`font-bold font-headline text-xl transition-colors ${!isScrolled ? 'text-white' : 'text-foreground'}`}>
+            <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} className={logoClasses} />
+            <span className={`font-bold font-headline text-xl ${textClasses}`}>
               Believers' Network
             </span>
           </Link>
@@ -53,7 +84,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors uppercase tracking-wider ${!isScrolled ? 'text-white hover:text-primary' : 'text-foreground hover:text-primary'}`}
+              className={linkClasses}
             >
               {link.label}
             </Link>
@@ -63,7 +94,7 @@ export default function Header() {
           <Button asChild className="hidden lg:flex bg-gold hover:bg-gold/90 text-gold-foreground">
               <Link href="/donate">Donate Now</Link>
           </Button>
-          <Button asChild variant="outline" className={`hidden lg:flex transition-colors ${!isScrolled ? 'text-white border-white/50 hover:bg-white/10' : ''}`}>
+          <Button asChild variant="outline" className={buttonOutlineClasses}>
              <Link href="/stay-connected">Stay Connected</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -71,7 +102,7 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className={`lg:hidden transition-colors ${!isScrolled ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
+                className={mobileButtonClasses}
                 aria-label="Open navigation menu"
               >
                 <Menu className="h-5 w-5" />

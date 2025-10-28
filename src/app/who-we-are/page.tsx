@@ -151,9 +151,9 @@ export default function WhoWeAre() {
                         God has assembled a dedicated team to carry this vision forward.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                     {teamMembers.map((member) => (
-                        <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto flex flex-col">
+                        <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm w-full flex flex-col">
                             <CardContent className="p-0 flex flex-col flex-grow">
                                 <div className="relative w-full h-96">
                                     {member.linkedin ? (
