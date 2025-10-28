@@ -62,7 +62,7 @@ export default function HeroSection() {
     <section id="home" className="w-full bg-primary/10">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-8 md:gap-12 min-h-screen pt-24 md:pt-16">
         
-        <div className="w-full h-[30vh] md:h-[60vh] relative rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.3s'}}>
+        <div className="w-full max-w-4xl h-[30vh] md:h-[60vh] relative rounded-lg overflow-hidden shadow-2xl animate-fade-in-up" style={{ animationDelay: '0.3s'}}>
            <div id="youtube-player" className="absolute top-0 left-0 w-full h-full"></div>
             <div className="absolute top-2 right-2 z-20">
               <Button

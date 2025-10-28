@@ -1,4 +1,5 @@
 
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Handshake } from "lucide-react";
@@ -106,30 +107,35 @@ export default function WhoWeAre() {
         </section>
         
         <section className="py-20 md:py-28 bg-muted">
-            <div className="container mx-auto px-4 max-w-4xl">
-                <Card className="shadow-2xl">
-                    <CardHeader className="text-center">
-                        <CardTitle className="font-headline text-3xl md:text-4xl">Vision Bearer – Iradukunda Pacifique</CardTitle>
-                        <CardDescription className="text-lg italic text-primary">From the classroom floor to the nations — the calling of a soul on fire for Jesus.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4 text-lg text-foreground/80">
-                        <h3 className="font-bold text-xl">Iradukunda Pacifique Benjamin: Global Minister, Innovator, and Leader</h3>
-                        <p>Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide.</p>
-                        <p>As a Global Minister and Philanthropist, he is the Founder of Believer's Network International (@believersnetworkintl). This evangelical ministry is committed to Spreading the Gospel through outreaches in communities, street evangelism, and strategic engagement with schools and educational institutions. His work is dedicated to connecting people to the power of God through prayer, worship, and discipleship, empowering individuals to become ambassadors of Christ and agents of transformation globally.</p>
-                        <p>Complementing his ministry is his role as the CEO of Pacifique Essence (@pacifiqueessence), a versatile tech company with expertise in branding, graphics, web design, photography, videography, and app development. This enterprise reflects his commitment to leveraging digital tools and creative strategy to build, communicate, and expand influence.</p>
-                        <p>Iradukunda Pacifique Benjamin's journey is one of holistic impact: guiding spiritual growth through diverse evangelistic efforts while harnessing technological prowess to build a global legacy.</p>
+            <div className="container mx-auto px-4 max-w-6xl">
+                <Card className="shadow-2xl overflow-hidden md:grid md:grid-cols-5">
+                    <div className="md:col-span-2">
+                         <Image src="/pac.jpeg" alt="Iradukunda Pacifique Benjamin, Founder of Believers' Network International" width={400} height={600} className="object-cover w-full h-full object-top"/>
+                    </div>
+                    <div className="md:col-span-3">
+                        <CardHeader className="text-center">
+                            <CardTitle className="font-headline text-3xl md:text-4xl">Vision Bearer – Iradukunda Pacifique</CardTitle>
+                            <CardDescription className="text-lg italic text-primary">From the classroom floor to the nations — the calling of a soul on fire for Jesus.</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4 text-lg text-foreground/80">
+                            <h3 className="font-bold text-xl">Iradukunda Pacifique Benjamin: Global Minister, Innovator, and Leader</h3>
+                            <p>Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide.</p>
+                            <p>As a Global Minister and Philanthropist, he is the Founder of Believer's Network International (@believersnetworkintl). This evangelical ministry is committed to Spreading the Gospel through outreaches in communities, street evangelism, and strategic engagement with schools and educational institutions. His work is dedicated to connecting people to the power of God through prayer, worship, and discipleship, empowering individuals to become ambassadors of Christ and agents of transformation globally.</p>
+                            <p>Complementing his ministry is his role as the CEO of Pacifique Essence (@pacifiqueessence), a versatile tech company with expertise in branding, graphics, web design, photography, videography, and app development. This enterprise reflects his commitment to leveraging digital tools and creative strategy to build, communicate, and expand influence.</p>
+                            <p>Iradukunda Pacifique Benjamin's journey is one of holistic impact: guiding spiritual growth through diverse evangelistic efforts while harnessing technological prowess to build a global legacy.</p>
 
-                        <div className="pt-8 text-center">
-                            <h3 className="font-headline text-2xl flex items-center justify-center gap-2 mb-4"><Handshake className="text-accent"/> Let’s Join Hands</h3>
-                            <p className="mb-6">You too can stand with the vision and be part of this global Gospel movement:</p>
-                            <div className="flex flex-wrap justify-center gap-4">
-                                <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground"><Link href="/donate">Support the Vision – Donate Now</Link></Button>
-                                <Button asChild size="lg" variant="outline"><Link href="/sponsor-a-program">Become a School Mission Partner</Link></Button>
-                                <Button asChild size="lg" variant="outline"><Link href="/get-involved">Pray for the Movement</Link></Button>
-                                <Button asChild size="lg" variant="outline"><Link href="/stories-of-impact">Read His Full Testimony</Link></Button>
+                            <div className="pt-8 text-center">
+                                <h3 className="font-headline text-2xl flex items-center justify-center gap-2 mb-4"><Handshake className="text-accent"/> Let’s Join Hands</h3>
+                                <p className="mb-6">You too can stand with the vision and be part of this global Gospel movement:</p>
+                                <div className="flex flex-wrap justify-center gap-4">
+                                    <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-gold-foreground"><Link href="/donate">Support the Vision – Donate Now</Link></Button>
+                                    <Button asChild size="lg" variant="outline"><Link href="/sponsor-a-program">Become a School Mission Partner</Link></Button>
+                                    <Button asChild size="lg" variant="outline"><Link href="/get-involved">Pray for the Movement</Link></Button>
+                                    <Button asChild size="lg" variant="outline"><Link href="/stories-of-impact">Read His Full Testimony</Link></Button>
+                                </div>
                             </div>
-                        </div>
-                    </CardContent>
+                        </CardContent>
+                    </div>
                 </Card>
             </div>
         </section>
