@@ -20,15 +20,12 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isTransparent, setIsTransparent] = React.useState(true);
-  const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
   React.useEffect(() => {
-    const isHomePage = pathname === '/';
-
     const handleScroll = () => {
-      const transparent = isHomePage && window.scrollY <= 20;
-      setIsTransparent(transparent);
+      const scrolled = window.scrollY > 10;
+      setIsScrolled(scrolled);
     };
     
     // Set initial state
@@ -37,16 +34,16 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, []);
 
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isTransparent ? 'bg-transparent border-b-transparent' : 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'}`}>
+    <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-b-transparent'}`}>
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} className={isTransparent ? 'invert' : ''} />
-            <span className={`font-bold font-headline text-xl transition-colors ${isTransparent ? 'text-white' : 'text-foreground'}`}>
+            <Image src="/bnlogo.png" alt="Believers' Network Logo" width={40} height={40} className={!isScrolled ? 'invert' : ''} />
+            <span className={`font-bold font-headline text-xl transition-colors ${!isScrolled ? 'text-white' : 'text-foreground'}`}>
               Believers' Network
             </span>
           </Link>
@@ -56,7 +53,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors uppercase tracking-wider ${isTransparent ? 'text-white hover:text-primary' : 'text-foreground hover:text-primary'}`}
+              className={`transition-colors uppercase tracking-wider ${!isScrolled ? 'text-white hover:text-primary' : 'text-foreground hover:text-primary'}`}
             >
               {link.label}
             </Link>
@@ -66,7 +63,7 @@ export default function Header() {
           <Button asChild className="hidden lg:flex bg-gold hover:bg-gold/90 text-gold-foreground">
               <Link href="/donate">Donate Now</Link>
           </Button>
-          <Button asChild variant="outline" className="hidden lg:flex">
+          <Button asChild variant="outline" className={`hidden lg:flex transition-colors ${!isScrolled ? 'text-white border-white/50 hover:bg-white/10' : ''}`}>
              <Link href="/stay-connected">Stay Connected</Link>
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -74,7 +71,7 @@ export default function Header() {
               <Button
                 variant="outline"
                 size="icon"
-                className={`lg:hidden transition-colors ${isTransparent ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
+                className={`lg:hidden transition-colors ${!isScrolled ? 'text-white bg-white/10 border-white/20 hover:bg-white/20' : 'text-foreground'}`}
                 aria-label="Open navigation menu"
               >
                 <Menu className="h-5 w-5" />
