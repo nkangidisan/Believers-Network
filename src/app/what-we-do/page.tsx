@@ -10,8 +10,51 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "What We Do | School Ministry, Discipleship, & Missions",
   description: "Learn about the core pillars of our faith-based non-profit: school evangelism, discipleship for the young generation, and local & international missions.",
-  keywords: ["what we do", "school ministry", "student discipleship", "international missions", "youth evangelism", "non-profit programs"],
+  keywords: ["what we do", "school ministry", "student discipleship", "international missions", "youth evangelism", "non-profit programs", "street evangelism", "prison ministry", "community outreach", "charity"],
 };
+
+const marqueeItemsTop = [
+  { title: "Street Evangelism", description: "Taking the Gospel to the streets, meeting people where they are.", imageUrl: "https://picsum.photos/seed/street/600/400", aiHint: "street evangelism" },
+  { title: "Prison Ministry", description: "Bringing hope and restoration to the incarcerated through God's word.", imageUrl: "https://picsum.photos/seed/prison/600/400", aiHint: "prison ministry" },
+  { title: "Skills Training", description: "Equipping individuals with practical skills for a brighter future.", imageUrl: "https://picsum.photos/seed/skills/600/400", aiHint: "skills training" },
+  { title: "Community Outreach", description: "Serving and uplifting communities with love and practical support.", imageUrl: "https://picsum.photos/seed/community/600/400", aiHint: "community outreach" },
+  { title: "Hospitals", description: "Offering prayer, comfort, and support to patients and their families.", imageUrl: "https://picsum.photos/seed/hospital/600/400", aiHint: "hospital ministry" },
+];
+
+const marqueeItemsBottom = [
+  { title: "Working with Organisations", description: "Collaborating with like-minded organizations to amplify our impact.", imageUrl: "https://picsum.photos/seed/organisations/600/400", aiHint: "team collaboration" },
+  { title: "Office & Workplace Ministry", description: "Bringing faith and encouragement into the professional sphere.", imageUrl: "https://picsum.photos/seed/offices/600/400", aiHint: "workplace prayer" },
+  { title: "Charity Initiatives", description: "Extending a helping hand to those in need through various charity projects.", imageUrl: "https://picsum.photos/seed/charity/600/400", aiHint: "charity donation" },
+  { title: "Orphanage Support", description: "Caring for the fatherless and providing them with love, support, and hope.", imageUrl: "https://picsum.photos/seed/orphanage/600/400", aiHint: "children orphanage" },
+  { title: "Marketplace Evangelism", description: "Sharing the good news in bustling marketplaces and commercial centers.", imageUrl: "https://picsum.photos/seed/market/600/400", aiHint: "local market" },
+];
+
+
+const Marquee = ({ items, reverse = false }: { items: typeof marqueeItemsTop, reverse?: boolean }) => (
+  <div className="relative flex w-full overflow-hidden group">
+    <div className={`flex w-max animate-[30s_marquee] group-hover:pause ${reverse ? 'animate-[30s_marquee-reverse]' : ''}`}>
+      {[...items, ...items].map((item, index) => (
+        <div key={index} className="w-[400px] h-[250px] mx-4 shrink-0">
+            <Card className="relative w-full h-full text-white overflow-hidden group/card">
+              <Image 
+                src={item.imageUrl} 
+                alt={item.title} 
+                data-ai-hint={item.aiHint}
+                fill 
+                className="object-cover transition-transform duration-500 ease-in-out group-hover/card:scale-110" 
+              />
+              <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover/card:bg-black/70"></div>
+              <div className="relative z-10 flex flex-col justify-end h-full p-6">
+                <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
+                <p className="text-white/80">{item.description}</p>
+              </div>
+            </Card>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 
 export default function WhatWeDo() {
   return (
@@ -23,13 +66,18 @@ export default function WhatWeDo() {
             <div className="text-center mb-12">
                 <h1 className="font-headline text-4xl md:text-5xl font-bold">What We Do</h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-                Our ministry is focused on three core pillars to transform lives and impact nations for Christ.
+                Our ministry is focused on a diverse range of activities to transform lives and impact nations for Christ, reaching people in all walks of life.
                 </p>
             </div>
           </div>
         </section>
         
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 space-y-8">
+            <Marquee items={marqueeItemsTop} />
+            <Marquee items={marqueeItemsBottom} reverse={true} />
+        </section>
+
+        <section className="py-20 md:py-28 bg-muted">
             <div className="container mx-auto px-4 space-y-20">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>

@@ -86,3 +86,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .marquee {
+    animation: marquee-horizontal linear infinite;
+  }
+  .marquee-reverse {
+    animation: marquee-horizontal-reverse linear infinite;
+  }
+
+  @keyframes marquee-horizontal {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes marquee-horizontal-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
