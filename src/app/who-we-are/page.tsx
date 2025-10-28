@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Iradukunda Pacifique Benjamin | Founder, Believers' Network International",
   description: "Learn about Iradukunda Pacifique Benjamin, a Global Minister, Innovator, and the Founder & Vision Bearer of Believers' Network International, a faith-based non-profit organization focused on school ministry and youth empowerment.",
-  keywords: ["Iradukunda Pacifique Benjamin", "Iradukunda Pacifique", "Believers' Network International", "Pacifique Essence", "about us", "our mission", "our vision", "faith-based leadership", "non-profit team", "Nkangi Disan"],
+  keywords: ["Iradukunda Pacifique Benjamin", "Iradukunda Pacifique", "Believers' Network International", "Pacifique Essence", "about us", "our mission", "our vision", "faith-based leadership", "non-profit team", "Nkangi Disan", "Chris Apple"],
 };
 
 const teamMembers = [
@@ -29,10 +29,16 @@ const teamMembers = [
         linkedin: "https://www.linkedin.com/in/disan-nkangi-7ab2b62a9/"
     },
     {
-        name: "Bugingo Alice Linzy",
+        name: "Bugingo Alice linzy",
         role: "Secretary",
         image: "/Bugingo Alice linzy.jpg",
         description: "Managing communications and administrative duties, ensuring smooth operations for our growing non-profit organization."
+    },
+    {
+        name: "Chris Apple",
+        role: "Head of Media",
+        image: "/Chris Apple.jpg",
+        description: "Spearheading our media and content strategy, capturing the move of God and sharing it with the world."
     }
 ]
 
@@ -139,7 +145,7 @@ export default function WhoWeAre() {
                         God has assembled a dedicated team to carry this vision forward.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
                     {teamMembers.map((member) => (
                         <Card key={member.name} className="text-center border-0 shadow-lg max-w-sm mx-auto flex flex-col">
                             <CardContent className="p-0 flex flex-col flex-grow">

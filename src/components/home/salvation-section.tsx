@@ -21,7 +21,7 @@ export default function SalvationSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div
             className={cn(
-              "order-2 lg:order-1 space-y-6 transition-all duration-700 ease-out",
+              "order-2 lg:order-2 space-y-6 transition-all duration-700 ease-out",
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
           >
@@ -82,17 +82,17 @@ export default function SalvationSection() {
           </div>
           <div
             className={cn(
-              "order-1 lg:order-2 transition-all duration-700 ease-out delay-200",
+              "order-1 lg:order-1 transition-all duration-700 ease-out delay-200",
               inView ? "opacity-100 scale-100" : "opacity-0 scale-95"
             )}
           >
             <Image
-              src="/salv.jpeg"
-              alt="A joyful person celebrating their new faith, representing the salvation offered by the non-profit organization."
+              src="/prayer salv.jpeg"
+              alt="A person in prayer, representing the prayer of salvation."
               width={600}
               height={700}
               className="rounded-lg shadow-2xl object-cover w-full h-full aspect-[4/5]"
-              data-ai-hint="joyful faith salvation"
+              data-ai-hint="prayer salvation faith"
             />
           </div>
         </div>
