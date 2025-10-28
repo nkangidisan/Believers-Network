@@ -1,6 +1,5 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import WhatWeDoSection from "@/components/home/what-we-do-section";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,29 +30,29 @@ const marqueeItemsBottom = [
 
 
 const Marquee = ({ items, reverse = false }: { items: typeof marqueeItemsTop, reverse?: boolean }) => (
-  <div className="relative flex w-full overflow-hidden group">
-    <div className={`flex w-max animate-[30s_marquee] group-hover:pause ${reverse ? 'animate-[30s_marquee-reverse]' : ''}`}>
-      {[...items, ...items].map((item, index) => (
-        <div key={index} className="w-[400px] h-[250px] mx-4 shrink-0">
-            <Card className="relative w-full h-full text-white overflow-hidden group/card">
-              <Image 
-                src={item.imageUrl} 
-                alt={item.title} 
-                data-ai-hint={item.aiHint}
-                fill 
-                className="object-cover transition-transform duration-500 ease-in-out group-hover/card:scale-110" 
-              />
-              <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover/card:bg-black/70"></div>
-              <div className="relative z-10 flex flex-col justify-end h-full p-6">
-                <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
-                <p className="text-white/80">{item.description}</p>
-              </div>
-            </Card>
-        </div>
-      ))}
+    <div className="relative flex w-full overflow-hidden group">
+      <div className={`flex w-max ${reverse ? 'marquee-reverse' : 'marquee'} group-hover:pause`}>
+        {[...items, ...items].map((item, index) => (
+          <div key={index} className="w-[400px] h-[250px] mx-4 shrink-0">
+              <Card className="relative w-full h-full text-white overflow-hidden group/card">
+                <Image 
+                  src={item.imageUrl} 
+                  alt={item.title} 
+                  data-ai-hint={item.aiHint}
+                  fill 
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover/card:scale-110" 
+                />
+                <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover/card:bg-black/70"></div>
+                <div className="relative z-10 flex flex-col justify-end h-full p-6">
+                  <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
+                  <p className="text-white/80">{item.description}</p>
+                </div>
+              </Card>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 
 
 export default function WhatWeDo() {

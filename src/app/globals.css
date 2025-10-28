@@ -89,27 +89,9 @@
 
 @layer utilities {
   .marquee {
-    animation: marquee-horizontal linear infinite;
+    animation: marquee-horizontal 30s linear infinite;
   }
   .marquee-reverse {
-    animation: marquee-horizontal-reverse linear infinite;
-  }
-
-  @keyframes marquee-horizontal {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
-  @keyframes marquee-horizontal-reverse {
-    from {
-      transform: translateX(-50%);
-    }
-    to {
-      transform: translateX(0);
-    }
+    animation: marquee-horizontal-reverse 30s linear infinite;
   }
 }
