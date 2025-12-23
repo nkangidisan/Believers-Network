@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -60,12 +61,23 @@ export default function Donate() {
                             <CardDescription>For bank transfers or other international methods.</CardDescription>
                         </CardHeader>
                         <CardContent className="flex flex-col h-full">
-                           <div className="flex-grow">
-                             <p className="text-foreground/80">We are currently setting up our international bank accounts for easier giving. In the meantime, please contact us for the best way to send your support from abroad.</p>
+                           <div className="flex-grow space-y-4">
+                                <div>
+                                    <h3 className="font-bold text-lg">Bank Name:</h3>
+                                    <p className="text-foreground/80">Centenary Bank Uganda</p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-lg">Account Number:</h3>
+                                    <p className="text-foreground/80">3204728285</p>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-lg">Account Holder Name:</h3>
+                                    <p className="text-foreground/80">Iradukunda Pacifique</p>
+                                </div>
                            </div>
                             <Button asChild className="w-full mt-4">
                                <Link href="/stay-connected">
-                                 Contact Us for Details <ArrowRight className="ml-2 h-4 w-4"/>
+                                 Contact Us for other methods <ArrowRight className="ml-2 h-4 w-4"/>
                                </Link>
                             </Button>
                         </CardContent>
