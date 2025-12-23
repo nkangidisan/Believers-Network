@@ -29,14 +29,11 @@ export default function HeroSection() {
     }
 
     (window as any).onYouTubeIframeAPIReady = () => {
-      const initialMuteState = isMobile ? 0 : 1;
-      setIsMuted(initialMuteState === 1);
-
       playerRef.current = new (window as any).YT.Player('youtube-player', {
         videoId: 'Exs6flEtJpQ',
         playerVars: {
           autoplay: 1,
-          mute: initialMuteState,
+          mute: 1, // Start muted to ensure autoplay
           loop: 1,
           playlist: 'Exs6flEtJpQ',
           controls: 0,
@@ -58,7 +55,7 @@ export default function HeroSection() {
       }
       delete (window as any).onYouTubeIframeAPIReady;
     }
-  }, [isMobile]);
+  }, []);
 
   const toggleMute = () => {
     if (playerRef.current && typeof playerRef.current.isMuted === 'function') {
@@ -73,17 +70,17 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative flex flex-col md:justify-center bg-black text-white overflow-hidden md:min-h-screen pt-16">
-      {/* Video Container - Spans full screen on desktop, is a block on mobile */}
-      <div className="relative w-full h-[56.25vw] max-h-[400px] md:absolute md:top-0 md:left-0 md:h-full md:max-h-full z-0">
+    <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen pt-16">
+      {/* Video Container */}
+      <div className="absolute top-0 left-0 w-full h-full z-0">
         <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
       </div>
 
-      {/* Overlay for Desktop */}
-      <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
       
       {/* Content Container */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20 bg-black md:bg-transparent">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
         <div className="max-w-3xl space-y-6">
           <h1
             className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up"
@@ -142,7 +139,7 @@ export default function HeroSection() {
       </div>
 
       {/* Mute/Unmute button */}
-      <div className="absolute top-20 right-4 z-30 md:top-4">
+      <div className="absolute top-20 right-4 z-30">
           <Button
             variant="outline"
             size="icon"
