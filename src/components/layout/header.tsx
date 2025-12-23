@@ -41,7 +41,7 @@ export default function Header() {
 
   const headerClasses = cn(
     'fixed top-0 z-50 w-full transition-all duration-300',
-    isScrolled ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-b-transparent'
+    isScrolled || !isHomePage ? 'border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60' : 'bg-transparent border-transparent'
   );
 
   const textClasses = cn(
@@ -61,7 +61,7 @@ export default function Header() {
 
   const mobileButtonClasses = cn(
       'lg:hidden transition-colors',
-      isScrolled || !isHomePage ? 'text-foreground' : 'text-white bg-white/10 border-white/20 hover:bg-white/20'
+      isScrolled || !isHomePage ? 'text-foreground' : 'text-white hover:bg-white/10'
   )
 
   const logoClasses = cn(
