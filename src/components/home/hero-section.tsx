@@ -69,18 +69,14 @@ export default function HeroSection() {
     }
   };
 
-  return (
-    <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen pt-16">
-      {/* Video Container */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
-      </div>
+  const VideoPlayer = () => (
+    <div className="relative w-full" style={isMobile ? {paddingTop: '56.25%'} : {}}>
+        <div id="youtube-player" className={cn("w-full h-full", isMobile ? "absolute top-0 left-0" : "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" )} style={{pointerEvents: 'none'}}></div>
+    </div>
+  );
 
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-      
-      {/* Content Container */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
+  const Content = () => (
+     <div className={cn("flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20", isMobile ? "container mx-auto px-4" : "relative z-20 container mx-auto px-4")}>
         <div className="max-w-3xl space-y-6">
           <h1
             className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up"
@@ -137,6 +133,24 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
+  );
+
+  return (
+    <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen pt-16">
+      {!isMobile && (
+        <>
+        {/* Video Container */}
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <VideoPlayer />
+        </div>
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+        </>
+      )}
+      
+      {isMobile && <VideoPlayer />}
+      
+      <Content />
 
       {/* Mute/Unmute button */}
       <div className="absolute top-20 right-4 z-30">
