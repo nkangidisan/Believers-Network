@@ -37,14 +37,18 @@ export default function HeroSection() {
           showinfo: 0,
           rel: 0,
           modestbranding: 1,
+          playsinline: 1,
+          playbackquality: 'large' // Faster loading
         },
         events: {
           onReady: (event: any) => {
             event.target.playVideo();
-            // On mobile, unmute by default, but only after onReady to avoid issues
             if (window.innerWidth < 768) {
-              event.target.unMute();
-              setIsMuted(false);
+              // On mobile, we start unmuted, but let's respect the initial state
+              // The user can tap to unmute.
+            } else {
+                 event.target.mute();
+                 setIsMuted(true);
             }
           }
         }
@@ -152,7 +156,7 @@ export default function HeroSection() {
           {/* Video Container */}
           <div className="absolute top-0 left-0 w-full h-full z-0">
             <div className="relative w-full h-full">
-              <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
+              <div id="youtube-player" className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
             </div>
           </div>
           {/* Overlay */}
