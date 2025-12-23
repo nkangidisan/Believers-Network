@@ -9,6 +9,16 @@ import { cn } from "@/lib/utils";
 export default function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
   const playerRef = useRef<any>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   useEffect(() => {
     const tag = document.createElement('script');
@@ -19,11 +29,14 @@ export default function HeroSection() {
     }
 
     (window as any).onYouTubeIframeAPIReady = () => {
+      const initialMuteState = isMobile ? 0 : 1;
+      setIsMuted(initialMuteState === 1);
+
       playerRef.current = new (window as any).YT.Player('youtube-player', {
         videoId: 'Exs6flEtJpQ',
         playerVars: {
           autoplay: 1,
-          mute: 1,
+          mute: initialMuteState,
           loop: 1,
           playlist: 'Exs6flEtJpQ',
           controls: 0,
@@ -45,7 +58,7 @@ export default function HeroSection() {
       }
       delete (window as any).onYouTubeIframeAPIReady;
     }
-  }, []);
+  }, [isMobile]);
 
   const toggleMute = () => {
     if (playerRef.current && typeof playerRef.current.isMuted === 'function') {
@@ -60,7 +73,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative flex flex-col md:justify-center md:min-h-screen bg-black text-white overflow-hidden">
+    <section id="home" className="relative flex flex-col md:justify-center bg-black text-white overflow-hidden md:min-h-screen pt-16">
       {/* Video Container - Spans full screen on desktop, is a block on mobile */}
       <div className="relative w-full h-[56.25vw] max-h-[400px] md:absolute md:top-0 md:left-0 md:h-full md:max-h-full z-0">
         <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
@@ -129,7 +142,7 @@ export default function HeroSection() {
       </div>
 
       {/* Mute/Unmute button */}
-      <div className="absolute top-4 right-4 z-30">
+      <div className="absolute top-20 right-4 z-30 md:top-4">
           <Button
             variant="outline"
             size="icon"
