@@ -17,10 +17,7 @@ export default function HeroSection() {
     };
     checkIsMobile();
     window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
 
-  useEffect(() => {
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
@@ -44,12 +41,18 @@ export default function HeroSection() {
         events: {
           onReady: (event: any) => {
             event.target.playVideo();
+            // On mobile, unmute by default, but only after onReady to avoid issues
+            if (window.innerWidth < 768) {
+              event.target.unMute();
+              setIsMuted(false);
+            }
           }
         }
       });
     };
-
+    
     return () => {
+      window.removeEventListener('resize', checkIsMobile);
       if (playerRef.current && typeof playerRef.current.destroy === 'function') {
         playerRef.current.destroy();
       }
@@ -70,16 +73,16 @@ export default function HeroSection() {
   };
 
   const VideoPlayer = () => (
-    <div className="relative w-full" style={isMobile ? {paddingTop: '56.25%'} : {}}>
-        <div id="youtube-player" className={cn("w-full h-full", isMobile ? "absolute top-0 left-0" : "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" )} style={{pointerEvents: 'none'}}></div>
+    <div className="relative w-full h-full">
+        <div id="youtube-player" className="absolute top-0 left-0 w-full h-full" style={{pointerEvents: 'none'}}></div>
     </div>
   );
 
   const Content = () => (
-     <div className={cn("flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20", isMobile ? "container mx-auto px-4" : "relative z-20 container mx-auto px-4")}>
+     <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
         <div className="max-w-3xl space-y-6">
           <h1
-            className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up"
+            className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up text-white"
             style={{ animationDelay: '0.2s' }}
           >
             Transforming Lives.
@@ -113,7 +116,7 @@ export default function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="font-bold text-base border-white/50 hover:bg-white/10"
+            className="font-bold text-base border-white/50 hover:bg-white/10 text-white"
           >
             <Link href="/who-we-are">
               <User className="mr-2 h-5 w-5" />
@@ -137,21 +140,27 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen pt-16">
-      {!isMobile && (
+      {isMobile ? (
         <>
-        {/* Video Container */}
-        <div className="absolute top-0 left-0 w-full h-full z-0">
-          <VideoPlayer />
-        </div>
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+          <div className="relative w-full aspect-video">
+            <VideoPlayer />
+          </div>
+          <Content />
+        </>
+      ) : (
+        <>
+          {/* Video Container */}
+          <div className="absolute top-0 left-0 w-full h-full z-0">
+            <div className="relative w-full h-full">
+              <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
+            </div>
+          </div>
+          {/* Overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
+          <Content />
         </>
       )}
       
-      {isMobile && <VideoPlayer />}
-      
-      <Content />
-
       {/* Mute/Unmute button */}
       <div className="absolute top-20 right-4 z-30">
           <Button
