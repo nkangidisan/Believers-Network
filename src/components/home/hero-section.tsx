@@ -59,26 +59,16 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="flex flex-col min-h-screen bg-background">
-      <div className="relative w-full h-[50vh] md:h-[60vh]">
-        <div id="youtube-player" className="absolute top-0 left-0 w-full h-full"></div>
-         <div className="absolute top-4 right-4 z-20">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={toggleMute}
-            className="text-white bg-black/20 border-white/30 hover:bg-black/40"
-          >
-            {isMuted ? <VolumeX /> : <Volume2 />}
-            <span className="sr-only">{isMuted ? 'Unmute' : 'Mute'}</span>
-          </Button>
-        </div>
+    <section id="home" className="relative flex flex-col items-center justify-center min-h-screen bg-background text-white overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <div id="youtube-player" className="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
       </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
       
-      <div className="container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
+       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
         <div className="max-w-3xl space-y-6">
           <h1
-            className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight text-foreground drop-shadow-lg animate-fade-in-up"
+            className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
             Transforming Lives.
@@ -88,7 +78,7 @@ export default function HeroSection() {
             Spreading the Gospel.
           </h1>
           <p
-            className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 animate-fade-in-up"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-white/80 animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >
             Join a global non-profit organization reaching students, schools, and communities across Africa and beyond through faith-based initiatives.
@@ -112,7 +102,7 @@ export default function HeroSection() {
             asChild
             size="lg"
             variant="outline"
-            className="font-bold text-base"
+            className="font-bold text-base border-white/50 hover:bg-white/10"
           >
             <Link href="/who-we-are">
               <User className="mr-2 h-5 w-5" />
@@ -131,6 +121,17 @@ export default function HeroSection() {
             </Link>
           </Button>
         </div>
+      </div>
+      <div className="absolute top-4 right-4 z-20">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleMute}
+            className="text-white bg-black/20 border-white/30 hover:bg-black/40"
+          >
+            {isMuted ? <VolumeX /> : <Volume2 />}
+            <span className="sr-only">{isMuted ? 'Unmute' : 'Mute'}</span>
+          </Button>
       </div>
     </section>
   );
