@@ -77,16 +77,13 @@ export default function BookHero() {
           className="relative flex justify-center perspective-[2500px]"
         >
           <div className="relative w-[320px] h-[480px] md:w-[550px] md:h-[825px] group">
-            {/* Divine Aura Glow Stroke */}
+            {/* Divine Aura Glow (Soft background glow, no hard stroke) */}
             <div className="absolute inset-0 -m-4 rounded-[2rem] bg-gradient-to-r from-gold/40 via-primary/20 to-gold/40 blur-2xl opacity-50 animate-pulse group-hover:opacity-100 transition-opacity duration-1000" />
             
-            {/* Inner Luminous Stroke */}
-            <div className="absolute inset-0 rounded-2xl ring-2 ring-gold/30 ring-offset-4 ring-offset-background/50 z-20 pointer-events-none group-hover:ring-gold/60 transition-all duration-500" />
-
             <motion.div
               animate={{ y: [0, -25, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative z-10 w-full h-full shadow-[0_60px_120px_-20px_rgba(0,0,0,0.6)] rounded-2xl overflow-hidden border border-white/10"
+              className="relative z-10 w-full h-full shadow-[0_60px_120px_-20px_rgba(0,0,0,0.6)] rounded-2xl overflow-hidden"
             >
               <Image
                 src="/bookMOCK.png"
