@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription, SheetHeader } from "@/components/ui/sheet";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -88,6 +88,12 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="glass border-white/10 p-0">
+            <SheetHeader className="sr-only">
+              <SheetTitle>Navigation Menu</SheetTitle>
+              <SheetDescription>
+                Access different sections of the Believers' Network International website.
+              </SheetDescription>
+            </SheetHeader>
             <div className="flex flex-col h-full p-8">
               <div className="flex items-center justify-between mb-12">
                 <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
