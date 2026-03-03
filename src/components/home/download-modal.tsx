@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -15,6 +14,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { CheckCircle2, Lock, ArrowRight, Loader2, Sparkles, AlertCircle, Download } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import Link from 'next/link';
 
 interface DownloadModalProps {
   isOpen: boolean;
@@ -22,7 +22,7 @@ interface DownloadModalProps {
 }
 
 export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
-  const [step, setStep] = useState<'options' | 'access-code' | 'purchase' | 'success'>('options');
+  const [step, setStep] = useState<'options' | 'access-code' | 'success'>('options');
   const [code, setCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -45,14 +45,6 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
     } else {
       setError('Invalid access code. Please try again or purchase the book.');
     }
-    setIsLoading(false);
-  };
-
-  const handlePurchase = async () => {
-    setIsLoading(true);
-    // Simulate checkout
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setStep('success');
     setIsLoading(false);
   };
 
@@ -94,8 +86,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                   <Lock className="w-6 h-6 text-gold group-hover:scale-110 transition-transform" />
                 </button>
 
-                <button
-                  onClick={() => setStep('purchase')}
+                <Link
+                  href="/donate"
+                  onClick={reset}
                   className="group flex items-center justify-between p-6 rounded-2xl bg-accent/10 hover:bg-accent/20 border border-accent/20 transition-all text-left"
                 >
                   <div>
@@ -103,7 +96,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                     <p className="text-sm text-foreground/60">50,000 UGX / $20</p>
                   </div>
                   <ArrowRight className="w-6 h-6 text-accent group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </motion.div>
           )}
@@ -146,43 +139,6 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                 <Button variant="ghost" className="w-full" onClick={() => setStep('options')}>
                   Go back
                 </Button>
-              </div>
-            </motion.div>
-          )}
-
-          {step === 'purchase' && (
-            <motion.div
-              key="purchase"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-8 space-y-6"
-            >
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold">Complete Purchase</DialogTitle>
-                <DialogDescription>
-                  Securely purchase your digital copy of the New Life Book.
-                </DialogDescription>
-              </DialogHeader>
-
-              <div className="space-y-6">
-                <div className="p-6 rounded-2xl glass border-white/5 bg-white/5 text-center">
-                    <span className="text-sm uppercase tracking-widest text-foreground/40 block mb-1">Total Amount</span>
-                    <span className="text-4xl font-bold">$20.00</span>
-                </div>
-                
-                <div className="grid gap-3">
-                    <Button
-                        className="w-full h-14 text-lg font-bold bg-accent text-accent-foreground rounded-xl shadow-lg shadow-accent/20"
-                        onClick={handlePurchase}
-                        disabled={isLoading}
-                    >
-                        {isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : 'Pay with Mobile Money / Card'}
-                    </Button>
-                    <Button variant="ghost" className="w-full" onClick={() => setStep('options')}>
-                        Go back
-                    </Button>
-                </div>
               </div>
             </motion.div>
           )}

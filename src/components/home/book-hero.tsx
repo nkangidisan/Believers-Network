@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Sparkles, Download, CreditCard } from 'lucide-react';
 import { useState } from 'react';
 import DownloadModal from './download-modal';
+import Link from 'next/link';
 
 export default function BookHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,13 +54,15 @@ export default function BookHero() {
               Download with Code
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
               className="h-16 px-8 text-lg font-bold glass rounded-full border-foreground/10 hover:bg-foreground/5"
-              onClick={() => setIsModalOpen(true)}
             >
-              <CreditCard className="mr-2 h-5 w-5" />
-              Buy Now – $20
+              <Link href="/donate">
+                <CreditCard className="mr-2 h-5 w-5" />
+                Buy Now – $20
+              </Link>
             </Button>
           </div>
         </motion.div>
