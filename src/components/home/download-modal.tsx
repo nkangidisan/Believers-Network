@@ -13,7 +13,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { CheckCircle2, Lock, ArrowRight, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import { CheckCircle2, Lock, ArrowRight, Loader2, Sparkles, AlertCircle, Download } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface DownloadModalProps {
