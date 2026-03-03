@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import BookHero from "@/components/home/book-hero";
 import StatsCounter from "@/components/home/stats-counter";
@@ -11,7 +10,6 @@ import LifeSkillsSection from "@/components/home/life-skills-section";
 import DevotionalSection from "@/components/home/devotional-section";
 import DonateSection from "@/components/home/donate-section";
 import PartnerSection from "@/components/home/partner-section";
-import { Sparkles, BookOpen } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -42,7 +40,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
                   <Image
-                    src="/book cover infront.jpg"
+                    src="/book cover infront.jpg.jpeg"
                     alt="New Life Book Front Cover"
                     fill
                     className="object-cover"
@@ -53,7 +51,7 @@ export default function Home() {
                 </div>
                 <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
                   <Image
-                    src="/book cover back.jpg"
+                    src="/book cover back.jpg.jpeg"
                     alt="New Life Book Back Cover"
                     fill
                     className="object-cover"

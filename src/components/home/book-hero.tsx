@@ -1,10 +1,9 @@
-
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Sparkles, Download, CreditCard } from 'lucide-react';
+import { Sparkles, Download, CreditCard } from 'lucide-react';
 import { useState } from 'react';
 import DownloadModal from './download-modal';
 
@@ -83,7 +82,7 @@ export default function BookHero() {
               className="relative z-10 w-full h-full shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] rounded-lg overflow-hidden border border-white/5"
             >
               <Image
-                src="/book mockup.jpg"
+                src="/book mockup.jpg.jpeg"
                 alt="New Life Book Mockup"
                 fill
                 className="object-cover"
