@@ -8,21 +8,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { ChevronRight, Globe, School, Users, Zap, Heart } from "lucide-react";
+import { ChevronRight, Globe, School, Users, Zap, Heart, Sparkles } from "lucide-react";
 import { useRef } from "react";
 
 const marqueeItemsTop = [
-  { title: "Street Evangelism", description: "Meeting souls where they are.", imageUrl: "https://picsum.photos/seed/street/800/600", aiHint: "street evangelism" },
-  { title: "Prison Ministry", description: "Bringing light to dark places.", imageUrl: "https://picsum.photos/seed/prison/800/600", aiHint: "prison ministry" },
-  { title: "Skills Training", description: "Equipping for the marketplace.", imageUrl: "https://picsum.photos/seed/skills/800/600", aiHint: "skills training" },
-  { title: "Community Outreach", description: "Loving our neighbors in action.", imageUrl: "https://picsum.photos/seed/community/800/600", aiHint: "community outreach" },
+  { title: "Street Evangelism", description: "Meeting souls where they are in the heart of our cities.", imageUrl: "/outreach.jpg", aiHint: "street evangelism" },
+  { title: "Prison Ministry", description: "Bringing light and hope to dark places.", imageUrl: "/community1.jpg", aiHint: "prison ministry" },
+  { title: "Skills Training", description: "Equipping a generation for the global marketplace.", imageUrl: "/sponsored.jpg", aiHint: "skills training" },
+  { title: "Community Outreach", description: "Demonstrating God's love through practical action.", imageUrl: "/_MG_9115.JPG", aiHint: "community outreach" },
 ];
 
 const marqueeItemsBottom = [
-  { title: "Hospital Ministry", description: "Prayers for the sick and weary.", imageUrl: "https://picsum.photos/seed/hospital/800/600", aiHint: "hospital ministry" },
-  { title: "Workplace Faith", description: "Revival in the professional sphere.", imageUrl: "https://picsum.photos/seed/offices/800/600", aiHint: "workplace prayer" },
-  { title: "Orphanage Support", description: "Caring for the fatherless.", imageUrl: "https://picsum.photos/seed/orphanage/800/600", aiHint: "children orphanage" },
-  { title: "Marketplace Gospel", description: "Light in the commercial centers.", imageUrl: "https://picsum.photos/seed/market/800/600", aiHint: "local market" },
+  { title: "Hospital Ministry", description: "Prayers for the sick and weary in their time of need.", imageUrl: "/WhatsApp Image 2024-05-24 at 19.29.28 (1).jpeg", aiHint: "hospital ministry" },
+  { title: "Workplace Faith", description: "Igniting revival in the professional and corporate sphere.", imageUrl: "/WhatsApp Image 2024-05-24 at 19.29.28 (2).jpeg", aiHint: "workplace prayer" },
+  { title: "Orphanage Support", description: "Caring for the fatherless with divine compassion.", imageUrl: "/missions1.jpg", aiHint: "children orphanage" },
+  { title: "Marketplace Gospel", description: "Being a light in the commercial centers of the world.", imageUrl: "/back2.jpg", aiHint: "local market" },
 ];
 
 const Marquee = ({ items, reverse = false }: { items: typeof marqueeItemsTop, reverse?: boolean }) => (
@@ -30,27 +30,32 @@ const Marquee = ({ items, reverse = false }: { items: typeof marqueeItemsTop, re
     <motion.div 
       initial={{ x: reverse ? "-50%" : 0 }}
       animate={{ x: reverse ? 0 : "-50%" }}
-      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       className="flex w-max shrink-0"
     >
       {[...items, ...items, ...items].map((item, index) => (
-        <div key={index} className="w-[300px] md:w-[450px] mx-4">
-          <Card className="group relative aspect-[16/10] overflow-hidden rounded-2xl border-white/10 bg-black shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+        <div key={index} className="w-[300px] md:w-[500px] mx-6">
+          <Card className="group relative aspect-[16/10] overflow-hidden rounded-[2rem] border-white/5 bg-black shadow-2xl transition-all duration-700 hover:scale-[1.03] hover:shadow-primary/20">
             <Image 
               src={item.imageUrl} 
               alt={item.title} 
               data-ai-hint={item.aiHint}
               fill 
-              className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-80"
-              sizes="(max-width: 768px) 300px, 450px"
+              className="object-cover opacity-70 transition-transform duration-1000 group-hover:scale-110 group-hover:opacity-90"
+              sizes="(max-width: 768px) 300px, 500px"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-              <h3 className="font-headline text-2xl md:text-3xl font-bold text-white mb-2">{item.title}</h3>
-              <p className="text-white/70 text-sm md:text-base line-clamp-2 transform translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+              <div className="flex items-center gap-2 mb-2 text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Our Impact</span>
+              </div>
+              <h3 className="font-headline text-2xl md:text-4xl font-bold text-white mb-2 leading-tight">{item.title}</h3>
+              <p className="text-white/70 text-sm md:text-lg line-clamp-2 transform translate-y-6 opacity-0 transition-all duration-700 group-hover:translate-y-0 group-hover:opacity-100">
                 {item.description}
               </p>
             </div>
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem] pointer-events-none" />
           </Card>
         </div>
       ))}
@@ -91,11 +96,11 @@ const PillarSection = ({
             <Icon className="w-5 h-5" />
             <span className="text-sm font-bold uppercase tracking-widest">Core Pillar</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">{title}</h2>
-          <p className="text-xl text-foreground/70 leading-relaxed mb-10 max-w-xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">{title}</h2>
+          <p className="text-xl text-foreground/70 leading-relaxed mb-10 max-w-xl font-medium">
             {description}
           </p>
-          <Button asChild size="lg" className="h-14 px-8 rounded-full bg-primary text-primary-foreground font-bold group shadow-xl shadow-primary/20">
+          <Button asChild size="lg" className="h-16 px-10 rounded-full bg-primary text-primary-foreground font-bold group shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
             <Link href={href}>
               {cta}
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -108,16 +113,17 @@ const PillarSection = ({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className={`relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] ${reverse ? 'lg:order-1' : ''}`}
+          className={`relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5 ${reverse ? 'lg:order-1' : ''} group`}
         >
           <Image 
             src={image} 
             alt={title} 
             fill 
             data-ai-hint={aiHint}
-            className="object-cover transition-transform duration-1000 hover:scale-105"
+            className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
           />
-          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2rem]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[3rem]" />
         </motion.div>
       </div>
     </div>
@@ -126,17 +132,13 @@ const PillarSection = ({
 
 export default function WhatWeDo() {
   const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
 
   return (
     <div ref={containerRef} className="flex min-h-screen w-full flex-col bg-background selection:bg-primary selection:text-primary-foreground">
       <Header />
       <main className="flex-1">
         {/* Cinematic Hero */}
-        <section className="relative min-h-[80vh] flex items-center justify-center pt-24 overflow-hidden">
+        <section className="relative min-h-[85vh] flex items-center justify-center pt-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute top-0 left-0 w-full h-full divine-glow opacity-40" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,hsla(var(--primary),0.05)_0%,transparent_70%)] animate-pulse" />
@@ -144,35 +146,38 @@ export default function WhatWeDo() {
 
           <div className="container relative z-10 px-4 mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="space-y-6"
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="space-y-8"
             >
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter">
+              <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass border-gold/20 text-gold font-bold text-xs uppercase tracking-[0.3em]">
+                <Sparkles className="w-4 h-4" />
+                <span>Global Gospel Movement</span>
+              </div>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] text-balance">
                 Our <span className="text-gold">Mission</span>
               </h1>
-              <p className="text-xl md:text-2xl text-foreground/60 max-w-2xl mx-auto font-medium leading-relaxed">
+              <p className="text-xl md:text-2xl lg:text-3xl text-foreground/60 max-w-3xl mx-auto font-medium leading-relaxed">
                 Transforming lives through the Gospel, reaching the unreached, and empowering a generation for Christ.
               </p>
             </motion.div>
           </div>
 
-          {/* Scroll Down Hint */}
           <motion.div 
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30"
           >
-            <span className="text-xs uppercase tracking-[0.3em] font-bold">Discover our work</span>
-            <div className="w-[1px] h-16 bg-gradient-to-b from-foreground to-transparent" />
+            <span className="text-[10px] uppercase tracking-[0.4em] font-bold">Discover our impact</span>
+            <div className="w-[1px] h-20 bg-gradient-to-b from-foreground to-transparent" />
           </motion.div>
         </section>
 
         {/* Dynamic Marquee Gallery */}
-        <section className="py-12 bg-muted/30 relative border-y border-white/5">
+        <section className="py-20 bg-muted/30 relative border-y border-white/5 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10 pointer-events-none" />
-          <div className="space-y-4">
+          <div className="space-y-8">
             <Marquee items={marqueeItemsTop} />
             <Marquee items={marqueeItemsBottom} reverse />
           </div>
@@ -213,36 +218,36 @@ export default function WhatWeDo() {
         </div>
 
         {/* High-Impact CTA */}
-        <section className="relative py-32 overflow-hidden bg-primary/5">
+        <section className="relative py-40 overflow-hidden">
+          <div className="absolute inset-0 bg-primary/5 z-0" />
           <div className="container px-4 mx-auto text-center relative z-10">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto space-y-12"
             >
-              <div className="inline-block p-4 rounded-full bg-primary/10 mb-4">
-                <Heart className="w-12 h-12 text-primary fill-primary/20" />
+              <div className="inline-block p-6 rounded-[2rem] bg-primary/10 mb-6">
+                <Heart className="w-16 h-16 text-primary fill-primary/20" />
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-                Be a Catalyst for <br /> <span className="text-primary">Spiritual Transformation</span>
+              <h2 className="text-5xl md:text-7xl font-bold leading-tight tracking-tighter">
+                Be a Catalyst for <br /> <span className="text-primary">Divine Transformation</span>
               </h2>
-              <p className="text-xl text-foreground/70 max-w-2xl mx-auto font-medium">
+              <p className="text-xl md:text-2xl text-foreground/70 max-w-2xl mx-auto font-medium leading-relaxed">
                 Your partnership fuels our ability to reach every student, every campus, and every nation. Together, we can win souls for Christ.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-6 pt-8">
-                <Button asChild size="lg" className="h-16 px-10 text-lg font-bold bg-gold hover:bg-gold/90 text-gold-foreground rounded-full shadow-2xl shadow-gold/20">
+              <div className="flex flex-col sm:flex-row justify-center gap-8 pt-10">
+                <Button asChild size="lg" className="h-16 px-12 text-xl font-bold bg-gold hover:bg-gold/90 text-gold-foreground rounded-full shadow-[0_20px_50px_-10px_rgba(var(--gold),0.3)] transition-all hover:scale-105">
                   <Link href="/donate">Partner Financially</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="h-16 px-10 text-lg font-bold rounded-full glass border-foreground/10 hover:bg-foreground/5">
+                <Button asChild size="lg" variant="outline" className="h-16 px-12 text-xl font-bold rounded-full glass border-foreground/10 hover:bg-foreground/5 transition-all hover:scale-105">
                   <Link href="/sponsor-a-program">Sponsor a Program</Link>
                 </Button>
               </div>
             </motion.div>
           </div>
 
-          {/* Decorative background light */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
         </section>
       </main>
       <Footer />
