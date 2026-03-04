@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef } from "react";
@@ -6,7 +7,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Default to muted for mobile autoplay compatibility
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
@@ -23,20 +24,18 @@ export default function HeroSection() {
         videoId: 'Exs6flEtJpQ',
         playerVars: {
           autoplay: 1,
-          mute: 0, // Request audio on
+          mute: 1, // Start muted to guarantee autoplay on all devices (iOS/Android/Chrome)
           loop: 1,
           playlist: 'Exs6flEtJpQ',
           controls: 0,
           showinfo: 0,
           rel: 0,
           modestbranding: 1,
-          playsinline: 1,
+          playsinline: 1, // Mandatory for inline playback on iOS
         },
         events: {
           onReady: (event: any) => {
             event.target.playVideo();
-            // Note: Autoplay with sound is often blocked by browsers until user interaction.
-            // We keep it at mute: 0 but provide a toggle.
           }
         }
       });
@@ -64,12 +63,15 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen w-full bg-black overflow-hidden flex flex-col justify-end">
-      {/* Video Background */}
+      {/* Video Background Container */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div id="youtube-player" className="absolute top-1/2 left-1/2 min-w-full min-h-full w-[110vw] h-[110vh] -translate-x-1/2 -translate-y-1/2 scale-110"></div>
+        {/* Scale container to ensure full cover on all aspect ratios */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115vw] h-[115vh] lg:w-[100vw] lg:h-[100vh]">
+             <div id="youtube-player" className="w-full h-full scale-[1.3] lg:scale-110"></div>
+        </div>
       </div>
 
-      {/* Subtle Cinematic Overlays */}
+      {/* Cinematic Overlays */}
       <div className="absolute inset-0 bg-black/10 z-10"></div>
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
 
@@ -109,7 +111,7 @@ export default function HeroSection() {
                 transition={{ duration: 2, repeat: Infinity }}
                 className="flex flex-col items-center gap-2 opacity-40"
             >
-                <ChevronDown className="w-6 h-6" />
+                <ChevronDown className="w-6 h-6 text-white" />
             </motion.div>
         </motion.div>
       </div>

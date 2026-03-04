@@ -47,7 +47,7 @@ export default function Header() {
             <Image src="/bnlogo.png" alt="BNI Logo" width={32} height={32} />
           </div>
           <span className="font-headline font-bold text-xl tracking-tight">
-            Believers' Network
+            Believers&apos; Network Intl
           </span>
         </Link>
 
@@ -91,7 +91,7 @@ export default function Header() {
             <SheetHeader className="sr-only">
               <SheetTitle>Navigation Menu</SheetTitle>
               <SheetDescription>
-                Access different sections of the Believers' Network International website.
+                Access different sections of the Believers&apos; Network Intl website.
               </SheetDescription>
             </SheetHeader>
             <div className="flex flex-col h-full p-8">

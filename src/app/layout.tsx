@@ -10,25 +10,25 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://believersnetworkint
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Believers' Network International | School Ministry & Youth Empowerment",
-    template: "%s | Believers' Network International",
+    default: "Believers' Network Intl | School Ministry & Youth Empowerment",
+    template: "%s | Believers' Network Intl",
   },
-  description: "Believers' Network International is a faith-based non-profit organization dedicated to school ministry, student discipleship, and empowering the young generation across Africa. Join our global mission.",
-  keywords: ["Believers' Network International", "school ministry", "youth empowerment", "non-profit organization", "faith-based initiatives", "student evangelism", "discipleship", "Africa missions", "Christian ministry"],
-  authors: [{ name: "Believers' Network International", url: siteUrl }],
-  creator: "Believers' Network International",
-  publisher: "Believers' Network International",
+  description: "Believers' Network Intl is a faith-based non-profit organization dedicated to school ministry, student discipleship, and empowering the young generation across Africa. Join our global mission.",
+  keywords: ["Believers' Network International", "Believers' Network Intl", "school ministry", "youth empowerment", "non-profit organization", "faith-based initiatives", "student evangelism", "discipleship", "Africa missions", "Christian ministry"],
+  authors: [{ name: "Believers' Network Intl", url: siteUrl }],
+  creator: "Believers' Network Intl",
+  publisher: "Believers' Network Intl",
   openGraph: {
-    title: "Believers' Network International | School Ministry & Youth Empowerment",
+    title: "Believers' Network Intl | School Ministry & Youth Empowerment",
     description: 'A global evangelical movement dedicated to spreading the Gospel, reaching students, and winning souls for Christ across Africa and beyond.',
     url: siteUrl,
-    siteName: "Believers' Network International",
+    siteName: "Believers' Network Intl",
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "A collage of Believers' Network International's impact, showing school ministry and youth empowerment.",
+        alt: "A collage of Believers' Network Intl's impact, showing school ministry and youth empowerment.",
       },
     ],
     locale: 'en_US',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Believers' Network International | School Ministry & Youth Empowerment",
+    title: "Believers' Network Intl | School Ministry & Youth Empowerment",
     description: 'Join our faith-based non-profit in its mission of school ministry and empowering the young generation across Africa.',
     images: [`${siteUrl}/og-image.jpg`],
   },
@@ -68,7 +68,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Believers' Network International",
+    "name": "Believers' Network Intl",
     "url": siteUrl,
     "logo": `${siteUrl}/bnlogo.png`,
     "contactPoint": {

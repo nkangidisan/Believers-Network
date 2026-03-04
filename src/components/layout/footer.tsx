@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/bnlogo.png" alt="Believers' Network International Logo" width={40} height={40} />
-              <span className="text-xl font-bold font-headline text-foreground">Believers' Network</span>
+              <span className="text-xl font-bold font-headline text-foreground">Believers&apos; Network Intl</span>
             </Link>
             <p className="text-muted-foreground">A faith-based non-profit organization focused on school ministry and youth empowerment.</p>
              <div className="flex space-x-2">
@@ -84,7 +84,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Believers' Network International. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Believers&apos; Network Intl. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
