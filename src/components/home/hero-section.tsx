@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Compass, User, Heart, Volume2, VolumeX } from "lucide-react";
+import { Compass, User, Heart, Volume2, VolumeX, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
@@ -30,7 +31,7 @@ export default function HeroSection() {
         videoId: 'Exs6flEtJpQ',
         playerVars: {
           autoplay: 1,
-          mute: 1, // Start muted to ensure autoplay
+          mute: 1,
           loop: 1,
           playlist: 'Exs6flEtJpQ',
           controls: 0,
@@ -38,14 +39,13 @@ export default function HeroSection() {
           rel: 0,
           modestbranding: 1,
           playsinline: 1,
-          playbackquality: 'large' // Faster loading
+          suggestedQuality: 'small'
         },
         events: {
           onReady: (event: any) => {
             event.target.playVideo();
-            if (window.innerWidth < 768) {
-              // On mobile, we start unmuted, but let's respect the initial state
-              // The user can tap to unmute.
+            if (isMobile) {
+                // Keep muted on mobile for autoplay
             } else {
                  event.target.mute();
                  setIsMuted(true);
@@ -62,7 +62,7 @@ export default function HeroSection() {
       }
       delete (window as any).onYouTubeIframeAPIReady;
     }
-  }, []);
+  }, [isMobile]);
 
   const toggleMute = () => {
     if (playerRef.current && typeof playerRef.current.isMuted === 'function') {
@@ -76,107 +76,101 @@ export default function HeroSection() {
     }
   };
 
-  const VideoPlayer = () => (
-    <div className="relative w-full h-full">
-        <div id="youtube-player" className="absolute top-0 left-0 w-full h-full" style={{pointerEvents: 'none'}}></div>
-    </div>
-  );
+  return (
+    <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen">
+      {/* Video Background */}
+      <div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+        <div id="youtube-player" className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 scale-110" style={{pointerEvents: 'none'}}></div>
+      </div>
 
-  const Content = () => (
-     <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-12 md:py-20">
-        <div className="max-w-3xl space-y-6">
-          <h1
-            className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight drop-shadow-lg animate-fade-in-up text-white"
-            style={{ animationDelay: '0.2s' }}
-          >
-            Transforming Lives.
-            <br />
-            Impacting Nations.
-            <br />
-            Spreading the Gospel.
+      {/* Cinematic Overlays */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent z-10"></div>
+
+      {/* Hero Content */}
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center flex-1 text-center py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-4xl space-y-8"
+        >
+          <div className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass border-white/10 text-white font-bold text-xs uppercase tracking-[0.4em] mb-4">
+             <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+             </span>
+             <span>Global Gospel Movement</span>
+          </div>
+
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-[6rem] font-bold leading-[0.9] tracking-tighter text-balance">
+            Transforming Lives.<br />
+            Impacting Nations.<br />
+            Spreading the <span className="text-gold">Gospel.</span>
           </h1>
-          <p
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white/80 animate-fade-in-up"
-            style={{ animationDelay: '0.4s' }}
-          >
+
+          <p className="max-w-2xl mx-auto text-xl md:text-2xl text-white/80 font-medium leading-relaxed">
             Join a global non-profit organization reaching students, schools, and communities across Africa and beyond through faith-based initiatives.
           </p>
-        </div>
-        <div
-          className="mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 animate-fade-in-up"
-          style={{ animationDelay: '0.6s' }}
-        >
-          <Button
-            asChild
-            size="lg"
-            className="font-bold text-base animate-glow shadow-primary group bg-primary/80 hover:bg-primary text-primary-foreground"
-          >
-            <Link href="/what-we-do">
-              <Compass className="mr-2 h-5 w-5" />
-              Explore What We Do
-            </Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="font-bold text-base border-white/50 hover:bg-white/10 text-white"
-          >
-            <Link href="/who-we-are">
-              <User className="mr-2 h-5 w-5" />
-              Meet the Vision Bearer
-            </Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="default"
-            className="font-bold text-base bg-gold hover:bg-gold/90 text-gold-foreground shadow-lg"
-          >
-            <Link href="/donate">
-              <Heart className="mr-2 h-5 w-5" />
-              Donate Now
-            </Link>
-          </Button>
-        </div>
-      </div>
-  );
 
-  return (
-    <section id="home" className="relative flex flex-col justify-center bg-black text-white overflow-hidden min-h-screen pt-16">
-      {isMobile ? (
-        <>
-          <div className="relative w-full aspect-video">
-            <VideoPlayer />
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 pt-8">
+            <Button
+              asChild
+              size="lg"
+              className="h-16 px-10 text-lg font-bold rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/20 hover:scale-105 transition-all"
+            >
+              <Link href="/what-we-do">
+                <Compass className="mr-2 h-6 w-6" />
+                Explore What We Do
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="h-16 px-10 text-lg font-bold rounded-full border-white/20 glass hover:bg-white/10 text-white hover:scale-105 transition-all"
+            >
+              <Link href="/who-we-are">
+                <User className="mr-2 h-6 w-6" />
+                Meet the Vision Bearer
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="h-16 px-10 text-lg font-bold rounded-full bg-gold hover:bg-gold/90 text-gold-foreground shadow-2xl shadow-gold/20 hover:scale-105 transition-all"
+            >
+              <Link href="/donate">
+                <Heart className="mr-2 h-6 w-6" />
+                Donate Now
+              </Link>
+            </Button>
           </div>
-          <Content />
-        </>
-      ) : (
-        <>
-          {/* Video Container */}
-          <div className="absolute top-0 left-0 w-full h-full z-0">
-            <div className="relative w-full h-full">
-              <div id="youtube-player" className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2" style={{pointerEvents: 'none'}}></div>
-            </div>
-          </div>
-          {/* Overlay */}
-          <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-          <Content />
-        </>
-      )}
-      
-      {/* Mute/Unmute button */}
-      <div className="absolute top-20 right-4 z-30">
+        </motion.div>
+      </div>
+
+      {/* Mute Toggle */}
+      <div className="absolute bottom-10 right-10 z-30">
           <Button
             variant="outline"
             size="icon"
             onClick={toggleMute}
-            className="text-white bg-black/20 border-white/30 hover:bg-black/40"
+            className="h-12 w-12 rounded-full text-white bg-black/20 border-white/10 hover:bg-black/40 backdrop-blur-md"
           >
-            {isMuted ? <VolumeX /> : <Volume2 />}
+            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
             <span className="sr-only">{isMuted ? 'Unmute' : 'Mute'}</span>
           </Button>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3 opacity-40"
+      >
+        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Discover the Impact</span>
+        <ChevronDown className="w-5 h-5" />
+      </motion.div>
     </section>
   );
 }
