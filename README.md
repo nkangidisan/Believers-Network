@@ -1,5 +1,5 @@
-# Firebase Studio
+Transforming Lives.
+Impacting Nations.
+Spreading the Gospel.
+Join a global non-profit organization reaching students, schools, and communities across Africa and beyond through faith-based initiatives.
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
