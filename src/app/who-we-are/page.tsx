@@ -2,7 +2,7 @@
 
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { Handshake, Linkedin, Sparkles, Target, Eye, ChevronRight, Quote } from "lucide-react";
+import { Handshake, Linkedin, Sparkles, Target, Eye, ChevronRight, Quote, Book } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ const teamMembers = [
         name: "Iradukunda Pacifique", 
         role: "Founder & Vision Bearer", 
         image: "/paci.jpeg", 
-        description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision for school ministry and empowering the young generation."
+        description: "Leading the charge with a heart for revival, Pacifique carries the foundational vision for school ministry and the author of 'New Life Book'."
     },
     { 
         name: "Nkangi Disan", 
@@ -38,32 +38,30 @@ const teamMembers = [
 ]
 
 export default function WhoWeAre() {
-  const structuredData = {
+  const authorStructuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Iradukunda Pacifique Benjamin",
-    "alternateName": "Iradukunda Pacifique",
-    "jobTitle": "Founder & Vision Bearer",
+    "alternateName": ["Iradukunda Pacifique", "Pacifique Benjamin"],
+    "jobTitle": "Founder, Author, Global Minister",
     "url": "https://believersnetworkintl.org/who-we-are",
     "image": "https://believersnetworkintl.org/pac.jpeg",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Believers' Network International",
-      "url": "https://believersnetworkintl.org"
+    "description": "Iradukunda Pacifique Benjamin is a Global Minister, Author of 'New Life Book', and the Founder of Believers' Network International.",
+    "brand": {
+      "@type": "Brand",
+      "name": "New Life Book"
     },
     "sameAs": [
         "https://www.instagram.com/believersnetworkintl/",
         "https://www.youtube.com/@Iradukundapacifiquebenjamin"
-    ],
-    "description": "Iradukunda Pacifique Benjamin is a Global Minister, Innovator, and the Founder & Vision Bearer of Believers' Network International.",
-    "knowsAbout": ["Evangelism", "School Ministry", "Youth Empowerment", "Discipleship", "Technological Innovation", "Non-Profit Leadership"]
+    ]
   };
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background selection:bg-gold selection:text-gold-foreground">
       <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(authorStructuredData) }}
         />
       <Header />
       <main className="flex-1 overflow-hidden">
@@ -185,29 +183,29 @@ export default function WhoWeAre() {
                             className="lg:col-span-7 space-y-8 lg:pt-12"
                         >
                             <div className="space-y-4">
-                                <h3 className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Vision Bearer</h3>
-                                <h2 className="text-5xl md:text-6xl font-bold leading-tight">Leading the Charge <br /> for <span className="text-gold">Global Revival</span></h2>
+                                <h3 className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Vision Bearer & Author</h3>
+                                <h2 className="text-5xl md:text-6xl font-bold leading-tight">Author of the <span className="text-gold">New Life Book</span></h2>
                             </div>
 
                             <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/70 space-y-6">
-                                <p className="text-xl italic font-medium text-foreground">"From the classroom floor to the nations — the calling of a soul on fire for Jesus."</p>
+                                <p className="text-xl italic font-medium text-foreground">"The calling to win souls for Christ is not just a mission, but a mandate for the generation."</p>
                                 <p>
-                                    Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation to effect profound change worldwide. As a Global Minister and Philanthropist, he is the Founder of Believer's Network International.
+                                    Iradukunda Pacifique Benjamin is a dynamic leader seamlessly blending global ministry with technological innovation. As the Founder and Vision Bearer of Believer's Network International, he has authored the <strong>New Life Book</strong> to provide a spiritual roadmap for new believers.
                                 </p>
                                 <p>
-                                    His work is dedicated to connecting people to the power of God through prayer, worship, and discipleship, empowering individuals to become ambassadors of Christ and agents of transformation globally.
+                                    His work is dedicated to connecting people to the power of God through prayer, worship, and discipleship. Through his books and teachings, he empowers individuals to walk in the Zoe life of God.
                                 </p>
                                 <p>
-                                    Complementing his ministry is his role as the CEO of Pacifique Essence, a versatile tech company. This enterprise reflects his commitment to leveraging digital tools and creative strategy to build, communicate, and expand influence.
+                                    Complementing his ministry is his role as the CEO of Pacifique Essence. He leverages digital strategy and creative tools to expand the influence of the Gospel across nations.
                                 </p>
                             </div>
 
                             <div className="pt-8 grid sm:grid-cols-2 gap-6">
                                 <Button asChild size="lg" className="h-16 rounded-full bg-gold text-gold-foreground font-bold shadow-xl shadow-gold/20 hover:scale-[1.02] transition-transform">
-                                    <Link href="/donate">Support the Vision</Link>
+                                    <Link href="/"><Book className="mr-2 h-5 w-5" /> Get the Book</Link>
                                 </Button>
                                 <Button asChild variant="outline" size="lg" className="h-16 rounded-full glass border-white/10 hover:bg-white/5 font-bold">
-                                    <Link href="/get-involved">Get Involved</Link>
+                                    <Link href="/donate">Partner with Us</Link>
                                 </Button>
                             </div>
                         </motion.div>

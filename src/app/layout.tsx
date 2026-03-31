@@ -1,4 +1,3 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
@@ -10,17 +9,29 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://believersnetworkint
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Believers' Network Intl | School Ministry & Youth Empowerment",
+    default: "Believers' Network Intl | School Ministry & New Life Book",
     template: "%s | Believers' Network Intl",
   },
-  description: "Believers' Network Intl is a faith-based non-profit organization dedicated to school ministry, student discipleship, and empowering the young generation across Africa. Join our global mission.",
-  keywords: ["Believers' Network International", "Believers' Network Intl", "school ministry", "youth empowerment", "non-profit organization", "faith-based initiatives", "student evangelism", "discipleship", "Africa missions", "Christian ministry"],
-  authors: [{ name: "Believers' Network Intl", url: siteUrl }],
-  creator: "Believers' Network Intl",
+  description: "Official site of Believers' Network Intl. Get the 'New Life Book' by Iradukunda Pacifique. Dedicated to school ministry, youth empowerment, and global revival.",
+  keywords: [
+    "New Life Book", 
+    "New Life Book Iradukunda Pacifique", 
+    "Pacifique book", 
+    "Iradukunda book", 
+    "Iradukunda Pacifique book", 
+    "New Life", 
+    "Believers' Network International", 
+    "Believers' Network Intl", 
+    "school ministry", 
+    "youth empowerment", 
+    "Africa missions"
+  ],
+  authors: [{ name: "Iradukunda Pacifique Benjamin", url: siteUrl }],
+  creator: "Iradukunda Pacifique Benjamin",
   publisher: "Believers' Network Intl",
   openGraph: {
-    title: "Believers' Network Intl | School Ministry & Youth Empowerment",
-    description: 'A global evangelical movement dedicated to spreading the Gospel, reaching students, and winning souls for Christ across Africa and beyond.',
+    title: "New Life Book | By Iradukunda Pacifique Benjamin",
+    description: "Discover the 'New Life Book' – a spiritual roadmap for the young generation. Get your copy today via access code or donation.",
     url: siteUrl,
     siteName: "Believers' Network Intl",
     images: [
@@ -28,7 +39,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "A collage of Believers' Network Intl's impact, showing school ministry and youth empowerment.",
+        alt: "New Life Book by Iradukunda Pacifique Benjamin",
       },
     ],
     locale: 'en_US',
@@ -47,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Believers' Network Intl | School Ministry & Youth Empowerment",
-    description: 'Join our faith-based non-profit in its mission of school ministry and empowering the young generation across Africa.',
+    title: "New Life Book | Iradukunda Pacifique",
+    description: "Get the life-transforming New Life Book by Iradukunda Pacifique. Available now.",
     images: [`${siteUrl}/og-image.jpg`],
   },
   icons: {
@@ -58,7 +69,6 @@ export const metadata: Metadata = {
   },
   manifest: `${siteUrl}/manifest.json`,
 };
-
 
 export default function RootLayout({
   children,
@@ -71,6 +81,7 @@ export default function RootLayout({
     "name": "Believers' Network Intl",
     "url": siteUrl,
     "logo": `${siteUrl}/bnlogo.png`,
+    "description": "A global faith-based non-profit organization reaching students and communities.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+256-766-754-286",
@@ -82,6 +93,7 @@ export default function RootLayout({
       "https://www.youtube.com/@Iradukundapacifiquebenjamin"
     ]
   };
+
   return (
     <html lang="en" className="!scroll-smooth dark">
       <head>

@@ -34,6 +34,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     
+    // Access Code verification
     if (code === '693840') {
       confetti({
         particleCount: 150,
@@ -68,9 +69,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               className="p-8 space-y-6"
             >
               <DialogHeader>
-                <DialogTitle className="text-3xl font-bold">Get the Book</DialogTitle>
+                <DialogTitle className="text-3xl font-bold">Get the New Life Book</DialogTitle>
                 <DialogDescription className="text-lg">
-                  Choose how you'd like to receive your copy of the New Life Book.
+                  Choose how you'd like to receive your copy of the official New Life Book.
                 </DialogDescription>
               </DialogHeader>
 
@@ -92,7 +93,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                   className="group flex items-center justify-between p-6 rounded-2xl bg-accent/10 hover:bg-accent/20 border border-accent/20 transition-all text-left"
                 >
                   <div>
-                    <h3 className="text-xl font-bold text-accent">Purchase</h3>
+                    <h3 className="text-xl font-bold text-accent">Purchase Now</h3>
                     <p className="text-sm text-foreground/60">50,000 UGX / $20</p>
                   </div>
                   <ArrowRight className="w-6 h-6 text-accent group-hover:translate-x-1 transition-transform" />
@@ -112,7 +113,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold">Enter Access Code</DialogTitle>
                 <DialogDescription>
-                  Enter your unique 6-digit code to unlock your free download.
+                  Enter your unique 6-digit code to unlock your free download of the New Life Book.
                 </DialogDescription>
               </DialogHeader>
 
@@ -134,7 +135,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                   onClick={handleVerifyCode}
                   disabled={isLoading || code.length !== 6}
                 >
-                  {isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : 'Unlock Now'}
+                  {isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : 'Unlock Book'}
                 </Button>
                 <Button variant="ghost" className="w-full" onClick={() => setStep('options')}>
                   Go back
@@ -163,9 +164,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               </div>
 
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold">Divine Access Granted!</h2>
+                <h2 className="text-3xl font-bold">Access Granted!</h2>
                 <p className="text-foreground/60">
-                  Your journey through the New Life Book begins now. Your download is ready.
+                  Your journey through the New Life Book by Iradukunda Pacifique begins now.
                 </p>
               </div>
 
@@ -173,9 +174,9 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                 asChild
                 className="w-full h-14 text-lg font-bold bg-gold text-gold-foreground rounded-xl shadow-xl shadow-gold/30"
               >
-                <a href="/new life book copy.pdf" download onClick={reset}>
+                <a href="/new life book.pdf" download onClick={reset}>
                     <Download className="mr-2 h-5 w-5" />
-                    Download PDF
+                    Download New Life Book
                 </a>
               </Button>
             </motion.div>
